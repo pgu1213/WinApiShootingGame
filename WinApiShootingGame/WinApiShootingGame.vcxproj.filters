@@ -48,9 +48,6 @@
     <ClInclude Include="00.Manager\99.SingTonManager\SingTonManager.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="01.Object\00.Default\CActor.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Client.cpp">
@@ -72,9 +69,6 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="01.Object\00.Default\CObject.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="01.Object\00.Default\CActor.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

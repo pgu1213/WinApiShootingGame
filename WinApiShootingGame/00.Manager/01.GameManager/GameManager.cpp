@@ -36,4 +36,5 @@ void GameManager::Update(float DeltaTime)
 	}
 
     // TODO - 씬 업데이트
+    // GetList > 리스트 새로 업데이트만 시키고
 }

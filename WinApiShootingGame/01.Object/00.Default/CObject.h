@@ -6,7 +6,7 @@ protected:
 
 public:
     virtual void Init();
-    virtual void Update(float DeltaSeconds);
+    virtual void Update(float DeltaTime);
     virtual void Release();
 
     unsigned int GetObjectID() const; // 오브젝트 ID 반환

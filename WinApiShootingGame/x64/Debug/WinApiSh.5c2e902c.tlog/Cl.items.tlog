@@ -1,7 +1,6 @@
 C:\Dev\WinApiShootingGame\WinApiShootingGame\00.Manager\MainManager.cpp;C:\Dev\WinApiShootingGame\WinApiShootingGame\x64\Debug\MainManager.obj
 C:\Dev\WinApiShootingGame\WinApiShootingGame\00.Manager\01.GameManager\GameManager.cpp;C:\Dev\WinApiShootingGame\WinApiShootingGame\x64\Debug\GameManager.obj
 C:\Dev\WinApiShootingGame\WinApiShootingGame\01.Object\00.Default\CObject.cpp;C:\Dev\WinApiShootingGame\WinApiShootingGame\x64\Debug\CObject.obj
-C:\Dev\WinApiShootingGame\WinApiShootingGame\01.Object\00.Default\CActor.cpp;C:\Dev\WinApiShootingGame\WinApiShootingGame\x64\Debug\CActor.obj
 C:\Dev\WinApiShootingGame\WinApiShootingGame\pch.cpp;C:\Dev\WinApiShootingGame\WinApiShootingGame\x64\Debug\pch.obj
 C:\Dev\WinApiShootingGame\WinApiShootingGame\Client.cpp;C:\Dev\WinApiShootingGame\WinApiShootingGame\x64\Debug\Client.obj
 C:\Dev\WinApiShootingGame\WinApiShootingGame\00.Manager\03.TimeManager\TimeManager.cpp;C:\Dev\WinApiShootingGame\WinApiShootingGame\x64\Debug\TimeManager.obj

@@ -11,7 +11,7 @@ void CObject::Init()
 {
 }
 
-void CObject::Update(float DeltaSeconds)
+void CObject::Update(float DeltaTime)
 {
 }
 

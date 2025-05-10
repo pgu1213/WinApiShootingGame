@@ -12,7 +12,6 @@
 HINSTANCE hInst;                                // 현재 인스턴스입니다.
 WCHAR szTitle[MAX_LOADSTRING];                  // 제목 표시줄 텍스트입니다.
 WCHAR szWindowClass[MAX_LOADSTRING];            // 기본 창 클래스 이름입니다.
-MainManager CMainManager;   // 스택에 저장
 
 // 이 코드 모듈에 포함된 함수의 선언을 전달합니다:
 ATOM                MyRegisterClass(HINSTANCE hInstance);
@@ -48,8 +47,8 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     msg.message = WM_NULL;
 
 	// 게임 매니저 초기화
-    CMainManager.Init();
-    CMainManager.LateInit();
+    MainManager::GetInstance()->Init();
+    MainManager::GetInstance()->LateInit();
 
     // 기본 메시지 루프입니다:
     while (msg.message != WM_QUIT)
@@ -65,7 +64,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
         else
         {
             // 게임 루프
-			CMainManager.Update();
+            MainManager::GetInstance()->Update();
         }
     }
 }
