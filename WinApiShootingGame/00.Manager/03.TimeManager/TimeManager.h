@@ -16,9 +16,9 @@ public:
     static double GetTotalElapsedTimeDouble(); // 필요에 따라 총 경과 시간을 double로 반환하는 함수를 추가할 수 있습니다.
 
 private:
-    static LARGE_INTEGER PreviousCounter; // 이전 프레임의 카운터
-    static LARGE_INTEGER Frequency; // 고성능 카운터의 주파수
-    static float CurrentDeltaTime; // 현재 프레임의 델타 시간
-    static double TotalElapsedTime; // 총 경과 시간
+    static LARGE_INTEGER m_PreviousCounter; // 이전 프레임의 카운터
+    static LARGE_INTEGER m_Frequency; // 고성능 카운터의 주파수
+    static float m_CurrentDeltaTime; // 현재 프레임의 델타 시간
+    static double m_TotalElapsedTime; // 총 경과 시간
 };
 

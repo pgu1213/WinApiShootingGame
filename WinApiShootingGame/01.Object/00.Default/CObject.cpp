@@ -2,7 +2,7 @@
 #include "CObject.h"
 #include "../../00.Manager/03.TimeManager/TimeManager.h"
 
-CObject::CObject(const string& Name) : ObjectID(NextObjectID++), ObjectName(Name), bIsValid(true)
+CObject::CObject(const string& Name) : m_ObjectID(m_NextObjectID++), m_ObjectName(Name), m_bIsValid(true)
 {
 
 }
@@ -21,12 +21,12 @@ void CObject::Release()
 
 unsigned int CObject::GetObjectID() const
 {
-	return ObjectID;
+	return m_ObjectID;
 }
 
 const string& CObject::GetObjectName() const
 {
-	return ObjectName;
+	return m_ObjectName;
 }
 
 bool CObject::IsValid() const
