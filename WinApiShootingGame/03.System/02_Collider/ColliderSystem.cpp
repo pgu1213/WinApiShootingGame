@@ -12,6 +12,10 @@ ColliderSystem::~ColliderSystem() {
     delete m_collider;
 }
 
+void ColliderSystem::Init()
+{
+}
+
 const Collider& ColliderSystem::GetData() const {
     return *m_collider;
 }
@@ -22,10 +26,10 @@ void ColliderSystem::Update(float _deltaTime) {
     }
 }
 
-void ColliderSystem::SetOnCollisionEvent(std::function<void(Entity)> func) {
+void ColliderSystem::SetOnCollisionEvent(std::function<void(CObject*)> func) {
     m_onCollision = func;
 }
 
-void ColliderSystem::InvokeCollisionEvent(Entity other)const {
+void ColliderSystem::InvokeCollisionEvent(CObject* other)const {
     if (m_onCollision) m_onCollision(other);
 }

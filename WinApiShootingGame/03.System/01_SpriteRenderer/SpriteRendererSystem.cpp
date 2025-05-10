@@ -9,7 +9,6 @@ SpriteRendererSystem::SpriteRendererSystem(CObject* owner, HDC hdc) : m_render(n
 {
 	m_owner= owner;
 	
-	m_transform = &m_owner->GetComponent<TransformSystem>()->GetData();
 }
 
 SpriteRendererSystem::~SpriteRendererSystem()
@@ -17,13 +16,21 @@ SpriteRendererSystem::~SpriteRendererSystem()
 	delete m_render;
 }
 
+void SpriteRendererSystem::Init()
+{
+}
+
 void SpriteRendererSystem::Update(float _deltaTime)
 {
-	m_render->rect.left = m_transform->position.x - m_transform->scale.x / 2;
-	m_render->rect.top = m_transform->position.y - m_transform->scale.y / 2;
-	m_render->rect.right = m_transform->position.x + m_transform->scale.x / 2;
-	m_render->rect.bottom = m_transform->position.y + m_transform->scale.y / 2;
-	Ellipse(hdc, m_render->rect.left, m_render->rect.top, m_render->rect.right, m_render->rect.bottom);
+	const Transform& m_transform = m_owner->GetComponent<TransformSystem>()->GetData();
+
+
+		m_render->rect.left = m_transform.position.x - m_transform.scale.x / 2;
+		m_render->rect.top = m_transform.position.y - m_transform.scale.y / 2;
+		m_render->rect.right = m_transform.position.x + m_transform.scale.x / 2;
+		m_render->rect.bottom = m_transform.position.y + m_transform.scale.y / 2;
+		Ellipse(hdc, m_render->rect.left, m_render->rect.top, m_render->rect.right, m_render->rect.bottom);
+	
 }
 
 const SpriteRenderer& SpriteRendererSystem::GetData() const

@@ -10,6 +10,7 @@ private:
 public:
     InputSystem(CObject* owner,GameManager* m_gameManager, InputManager* inputMgr);
     virtual ~InputSystem();
+    virtual void Init() override;
     virtual void Update(float _deltaTime)override;
     const InputData& GetData()const override;
     void ResetInput();

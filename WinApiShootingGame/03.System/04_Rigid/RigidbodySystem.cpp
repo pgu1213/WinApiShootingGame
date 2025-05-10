@@ -13,6 +13,10 @@ RigidbodySystem::~RigidbodySystem()
 	delete m_rigidbody;
 }
 
+void RigidbodySystem::Init()
+{
+}
+
 const Rigidbody& RigidbodySystem::GetData() const
 {
 	return *m_rigidbody;

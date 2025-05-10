@@ -19,6 +19,10 @@ CoolTimeSystem::~CoolTimeSystem()
 	delete m_coolTime;
 }
 
+void CoolTimeSystem::Init()
+{
+}
+
 void CoolTimeSystem::StartCooldown()
 {
 	m_coolTime->currentTime = 0.0f;

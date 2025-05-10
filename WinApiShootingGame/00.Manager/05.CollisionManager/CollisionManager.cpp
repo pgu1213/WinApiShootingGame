@@ -24,23 +24,23 @@ bool CollisionManager::CheckCollision(const Transform& transform_a, const Collid
 
 void CollisionManager::ProcessCollisions()
 {
-    vector<Entity> entities;
+    vector<CObject*> entities;
 
-    for (auto& [id, table] : *gameManager->GetObjectTable()) {
-        if (table.count(typeid(ColliderSystem)) && table.count(typeid(TransformSystem))) {
-            entities.push_back(id);
+    for (auto& [id, obj] : *gameManager->GetEntityTable()) {
+        if (obj->GetComponent<ColliderSystem>() && obj->GetComponent<TransformSystem>()) {
+            entities.push_back(obj);
         }
     }
 
     for (size_t i = 0; i < entities.size(); ++i) {
         for (size_t j = i + 1; j < entities.size(); ++j) {
-            Entity a = entities[i];
-            Entity b = entities[j];
+            CObject* a = entities[i];
+            CObject* b = entities[j];
 
-            auto* aCol = gameManager->GetComponent<ColliderSystem>(a);
-            auto* bCol = gameManager->GetComponent<ColliderSystem>(b);
-            auto* aTrans = gameManager->GetComponent<TransformSystem>(a);
-            auto* bTrans = gameManager->GetComponent<TransformSystem>(b);
+            auto* aCol = a->GetComponent<ColliderSystem>();
+            auto* bCol = b->GetComponent<ColliderSystem>();
+            auto* aTrans = a->GetComponent<TransformSystem>();
+            auto* bTrans = b->GetComponent<TransformSystem>();
 
             if (CheckCollision(aTrans->GetData(), aCol->GetData(),
                 bTrans->GetData(), bCol->GetData())) {

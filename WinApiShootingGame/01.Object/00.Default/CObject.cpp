@@ -9,9 +9,10 @@ CObject::CObject(const string& Name) : /*m_ObjectID(m_NextObjectID++), */ m_Obje
 
 }
 
-void CObject::Init(Entity id, ComponentTable compTable)
+void CObject::Init(Entity id, EntityType type, ComponentTable compTable)
 {
 	m_id = id;
+	m_type = type;
 	m_componentTable = compTable;
 }
 
@@ -19,8 +20,7 @@ void CObject::Update(float DeltaTime)
 {
 	for (auto comp : m_componentTable)
 	{
-		ComponentSystem* system = comp.second;
-		system->Update(DeltaTime);
+		comp.second->Update(DeltaTime);		
 	}
 }
 
@@ -36,6 +36,11 @@ void CObject::Release()
 const Entity& CObject::GetId() const
 {
 	return m_id;
+}
+
+const EntityType& CObject::GetType() const
+{
+	return m_type;
 }
 
 const string& CObject::GetObjectName() const

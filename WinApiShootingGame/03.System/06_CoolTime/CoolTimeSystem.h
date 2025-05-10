@@ -10,6 +10,7 @@ private:
 public:
 	CoolTimeSystem(CObject* owner, CoolTime* coolTime);
 	virtual ~CoolTimeSystem();
+	virtual void Init() override;
 	void StartCooldown();
 	bool CheckActive();
 	void Update(float _deltaTime) override;

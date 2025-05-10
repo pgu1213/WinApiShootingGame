@@ -12,6 +12,10 @@ StateSystem::~StateSystem() {
     delete m_state;
 }
 
+void StateSystem::Init()
+{
+}
+
 void StateSystem::Update(float _deltaTime) {
     if (m_event)
         m_event();

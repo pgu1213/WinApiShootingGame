@@ -9,7 +9,7 @@ private:
 public:
     StateSystem(CObject* onwer, State* state);
     virtual ~StateSystem();
-
+    virtual void Init() override;
     void Update(float _deltaTime) override;
     void TakeDamage(int dmg);
     bool IsDead() const;

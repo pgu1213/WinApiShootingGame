@@ -45,8 +45,7 @@ public:
 	
 	const ObjectTable* GetObjectTable() const;
 	const EntityTable* GetEntityTable() const;
-
-	EntityType GetEntityType(Entity id) const;
+	
 	void AddEntityTable(Entity id);
 
 	template <typename T>

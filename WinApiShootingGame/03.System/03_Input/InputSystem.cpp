@@ -15,6 +15,10 @@ InputSystem::~InputSystem()
     delete m_inputData;
 }
 
+void InputSystem::Init()
+{
+}
+
 const InputData& InputSystem::GetData() const
 {
     return *m_inputData;

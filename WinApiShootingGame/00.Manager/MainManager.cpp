@@ -18,6 +18,7 @@ void MainManager::Init()
     {
         return;
     }
+    GameManager::GetInstance()->Init();
 }
 
 // 늦게 Init되어야 하는 것들
