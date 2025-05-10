@@ -21,7 +21,7 @@ void Object::Release()
 
 unsigned int Object::GetObjectID() const
 {
-	return 0;
+	return ObjectID;
 }
 
 const string& Object::GetObjectName() const

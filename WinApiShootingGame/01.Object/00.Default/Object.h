@@ -2,7 +2,7 @@
 class Object
 {
 protected:
-    Object(const string& Name = "BaseObject");
+    Object(const string& Name = "Object");
 
 public:
     virtual void Init();
