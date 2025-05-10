@@ -3,10 +3,9 @@
 #include "../../02.Component/Rigidbody.h"
 #include "RigidbodySystem.h"
 
-RigidbodySystem::RigidbodySystem(MainGame* maingame, Entity id, Rigidbody* rigid) : m_rigidbody(rigid == nullptr ? new Rigidbody() : rigid)
+RigidbodySystem::RigidbodySystem(CObject* owner, Rigidbody* rigid) : m_rigidbody(rigid == nullptr ? new Rigidbody() : rigid)
 {
-	mainGame = maingame;
-	m_id = id;
+	m_owner = owner;
 }
 
 RigidbodySystem::~RigidbodySystem()
@@ -19,7 +18,7 @@ const Rigidbody& RigidbodySystem::GetData() const
 	return *m_rigidbody;
 }
 
-void RigidbodySystem::Update()
+void RigidbodySystem::Update(float _deltaTime)
 {
 	if (m_event) {
 		m_event();

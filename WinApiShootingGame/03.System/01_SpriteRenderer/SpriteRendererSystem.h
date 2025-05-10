@@ -6,12 +6,12 @@ class SpriteRendererSystem : public ComponentSystem, public IDataProvider<Sprite
 {
 private:
 	SpriteRenderer* m_render;
-	const Transform& m_transform;
+	const Transform* m_transform;
 	HDC hdc;
 public:
-	SpriteRendererSystem(MainGame* maingame, Entity id, HDC hdc);
+	SpriteRendererSystem(CObject* owner, HDC hdc);
 	virtual ~SpriteRendererSystem();
-	virtual void Update() override;
+	virtual void Update(float _deltaTime) override;
 	const SpriteRenderer& GetData()const;
 };
 

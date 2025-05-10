@@ -8,10 +8,9 @@ const CoolTime& CoolTimeSystem::GetData() const
 	return *m_coolTime;
 }
 
-CoolTimeSystem::CoolTimeSystem(MainGame* maingame ,Entity id, CoolTime* coolTime) :m_coolTime(coolTime), isActive(false)
+CoolTimeSystem::CoolTimeSystem(CObject* owner, CoolTime* coolTime) :m_coolTime(coolTime), isActive(false)
 {
-	mainGame = maingame;
-	m_id = id;
+	m_owner = owner;
 	m_lastUpdateTime = GetTickCount64();
 }
 
@@ -32,14 +31,14 @@ bool CoolTimeSystem::CheckActive()
 	return isActive;
 }
 
-void CoolTimeSystem::Update()
+void CoolTimeSystem::Update(float _deltaTime)
 {
 	
 	if (!isActive)
 		return;
 
 	float now = GetTickCount64();
-	float delta = (now - m_lastUpdateTime) / 1000.0f; // ÃÊ ´ÜÀ§
+	float delta = _deltaTime;
 	m_lastUpdateTime = now;
 
 	m_coolTime->currentTime += delta;

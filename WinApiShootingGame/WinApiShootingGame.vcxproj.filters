@@ -105,6 +105,15 @@
     <ClInclude Include="03.System\01_SpriteRenderer\SpriteRendererSystem.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="00.Manager\05.CollisionManager\CollisionManager.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="04.Header\Enum.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="00.Manager\04.InputManager\InputManager.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Client.cpp">
@@ -150,6 +159,12 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="03.System\01_SpriteRenderer\SpriteRendererSystem.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="00.Manager\05.CollisionManager\CollisionManager.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="00.Manager\04.InputManager\InputManager.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

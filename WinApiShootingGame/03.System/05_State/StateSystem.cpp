@@ -3,17 +3,16 @@
 #include "../../02.Component/State.h"
 #include "StateSystem.h"
 
-StateSystem::StateSystem(MainGame* game, Entity id, State* state)
+StateSystem::StateSystem(CObject* owner, State* state)
     : m_state(state) {
-    mainGame = game;
-    m_id = id;
+    m_owner = owner;
 }
 
 StateSystem::~StateSystem() {
     delete m_state;
 }
 
-void StateSystem::Update() {
+void StateSystem::Update(float _deltaTime) {
     if (m_event)
         m_event();
 }

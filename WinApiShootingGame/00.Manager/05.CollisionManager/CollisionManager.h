@@ -1,14 +1,14 @@
 #pragma once
-class MainGame;
+class GameManager;
 class Transform;
 class Collider;
 
 class CollisionManager
 {
 private:
-	MainGame* mainGame;
+	GameManager* gameManager;
 public:
-	CollisionManager(MainGame* mainGame);
+	CollisionManager(GameManager* gameMgr);
 	bool CheckCollision(const Transform& aT, const Collider& aC,
 		const Transform& bT, const Collider& bC);
 	void ProcessCollisions();

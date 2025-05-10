@@ -1,5 +1,5 @@
-#include "../../99_Default/pch.h"
-#include "../../02_Component/InputData.h"
+#include "../../pch.h"
+#include "../../02.Component/InputData.h"
 #include "InputManager.h"
 
 void InputManager::BindActionKey(int keyCode, const string& actionName)

@@ -1,13 +1,13 @@
 #include "../../pch.h"
+#include "../../00.Manager/01.GameManager/GameManager.h"
 #include "../../00.Manager/04.InputManager/InputManager.h"
 #include "../ComponentSystem.h"
 #include "InputSystem.h"
 #include "../../02.Component/InputData.h"
 
-InputSystem::InputSystem(MainGame* maingame, Entity id, InputManager* inputMgr) : m_inputManager(inputMgr), m_inputData(new InputData)
+InputSystem::InputSystem(CObject* owner, GameManager* gameMgr, InputManager* inputMgr) : m_inputManager(inputMgr), m_inputData(new InputData)
 {
-    mainGame = maingame;
-    m_id = id;
+    m_owner = owner;
 }
 
 InputSystem::~InputSystem()
@@ -27,14 +27,14 @@ void InputSystem::ResetInput()
     m_inputData->space = false;
 }
 
-void InputSystem::Update()
+void InputSystem::Update(float _deltaTime)
 {
     //ResetInput();
     m_inputData->horizontal = m_inputManager->GetAxis("Horizontal");
     m_inputData->vertical = m_inputManager->GetAxis("Vertical");
 
     if (m_inputManager->GetKey("Shoot")) {
-        mainGame->SpawnBullet(m_id);
+        m_gameManager->SpawnBullet(m_owner->GetId());
     }
 }
 

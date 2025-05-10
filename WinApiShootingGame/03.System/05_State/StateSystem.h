@@ -7,10 +7,10 @@ private:
     State* m_state;
 
 public:
-    StateSystem(MainGame* game, Entity id, State* state);
+    StateSystem(CObject* onwer, State* state);
     virtual ~StateSystem();
 
-    void Update() override;
+    void Update(float _deltaTime) override;
     void TakeDamage(int dmg);
     bool IsDead() const;
     const State& GetData() const override;

@@ -1,1 +1,29 @@
-﻿
+﻿  GameManager.cpp
+D:\MyProject\WinApiShootingGame\WinApiShootingGame\03.System\00_Transform\TransformSystem.h(2,8): warning C4099: 'Transform': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  (소스 파일 '00.Manager/01.GameManager/GameManager.cpp'을(를) 컴파일하는 중)
+  D:\MyProject\WinApiShootingGame\WinApiShootingGame\00.Manager\05.CollisionManager\CollisionManager.h(3,7):
+  'Transform' 선언을 참조하십시오.
+  
+D:\MyProject\WinApiShootingGame\WinApiShootingGame\03.System\01_SpriteRenderer\SpriteRendererSystem.h(3,8): warning C4099: 'Transform': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  (소스 파일 '00.Manager/01.GameManager/GameManager.cpp'을(를) 컴파일하는 중)
+  D:\MyProject\WinApiShootingGame\WinApiShootingGame\00.Manager\05.CollisionManager\CollisionManager.h(3,7):
+  'Transform' 선언을 참조하십시오.
+  
+D:\MyProject\WinApiShootingGame\WinApiShootingGame\03.System\02_Collider\ColliderSystem.h(3,8): warning C4099: 'Collider': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  (소스 파일 '00.Manager/01.GameManager/GameManager.cpp'을(를) 컴파일하는 중)
+  D:\MyProject\WinApiShootingGame\WinApiShootingGame\00.Manager\05.CollisionManager\CollisionManager.h(4,7):
+  'Collider' 선언을 참조하십시오.
+  
+D:\MyProject\WinApiShootingGame\WinApiShootingGame\02.Component\Transform.h(4,8): warning C4099: 'Transform': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  (소스 파일 '00.Manager/01.GameManager/GameManager.cpp'을(를) 컴파일하는 중)
+  D:\MyProject\WinApiShootingGame\WinApiShootingGame\02.Component\Transform.h(4,8):
+  'Transform' 선언을 참조하십시오.
+  
+D:\MyProject\WinApiShootingGame\WinApiShootingGame\02.Component\Collider.h(4,8): warning C4099: 'Collider': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  (소스 파일 '00.Manager/01.GameManager/GameManager.cpp'을(를) 컴파일하는 중)
+  D:\MyProject\WinApiShootingGame\WinApiShootingGame\02.Component\Collider.h(4,8):
+  'Collider' 선언을 참조하십시오.
+  
+D:\MyProject\WinApiShootingGame\WinApiShootingGame\00.Manager\01.GameManager\GameManager.cpp(76,47): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\MyProject\WinApiShootingGame\WinApiShootingGame\00.Manager\01.GameManager\GameManager.cpp(76,33): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  WinApiShootingGame.vcxproj -> D:\MyProject\WinApiShootingGame\x64\Debug\WinApiShootingGame.exe

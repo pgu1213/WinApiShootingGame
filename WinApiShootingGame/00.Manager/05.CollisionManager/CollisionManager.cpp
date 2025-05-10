@@ -1,12 +1,12 @@
-#include "../../99_Default/pch.h"
+#include "../../pch.h"
 #include "CollisionManager.h"
-#include "../../00_MainGame/MainGame.h"
-#include "../../01_System/02_Collider/ColliderSystem.h"
-#include "../../01_System/00_Transform/TransformSystem.h"
-#include "../../02_Component/Collider.h"
-#include "../../02_Component/Transform.h"
+#include "../01.GameManager/GameManager.h"
+#include "../../03.System/02_Collider/ColliderSystem.h"
+#include "../../03.System/00_Transform/TransformSystem.h"
+#include "../../02.Component/Collider.h"
+#include "../../02.Component/Transform.h"
 
-CollisionManager::CollisionManager(MainGame* mainGame):mainGame(mainGame)
+CollisionManager::CollisionManager(GameManager* gameMgr):gameManager(gameMgr)
 {
 
 }
@@ -26,7 +26,7 @@ void CollisionManager::ProcessCollisions()
 {
     vector<Entity> entities;
 
-    for (auto& [id, table] : *mainGame->GetObjectTable()) {
+    for (auto& [id, table] : *gameManager->GetObjectTable()) {
         if (table.count(typeid(ColliderSystem)) && table.count(typeid(TransformSystem))) {
             entities.push_back(id);
         }
@@ -37,10 +37,10 @@ void CollisionManager::ProcessCollisions()
             Entity a = entities[i];
             Entity b = entities[j];
 
-            auto* aCol = mainGame->GetComponent<ColliderSystem>(a);
-            auto* bCol = mainGame->GetComponent<ColliderSystem>(b);
-            auto* aTrans = mainGame->GetComponent<TransformSystem>(a);
-            auto* bTrans = mainGame->GetComponent<TransformSystem>(b);
+            auto* aCol = gameManager->GetComponent<ColliderSystem>(a);
+            auto* bCol = gameManager->GetComponent<ColliderSystem>(b);
+            auto* aTrans = gameManager->GetComponent<TransformSystem>(a);
+            auto* bTrans = gameManager->GetComponent<TransformSystem>(b);
 
             if (CheckCollision(aTrans->GetData(), aCol->GetData(),
                 bTrans->GetData(), bCol->GetData())) {

@@ -3,10 +3,9 @@
 #include "ColliderSystem.h"
 #include "../../02.Component/Collider.h"
 
-ColliderSystem::ColliderSystem(MainGame* game, Entity id, Collider* collider)
+ColliderSystem::ColliderSystem(CObject* owner, Collider* collider)
     : m_collider(collider) {
-    mainGame = game;
-    m_id = id;
+    m_owner = owner;
 }
 
 ColliderSystem::~ColliderSystem() {
@@ -17,7 +16,7 @@ const Collider& ColliderSystem::GetData() const {
     return *m_collider;
 }
 
-void ColliderSystem::Update() {
+void ColliderSystem::Update(float _deltaTime) {
     if(m_event){
         m_event();
     }

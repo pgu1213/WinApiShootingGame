@@ -8,11 +8,11 @@ private:
 	CoolTime* m_coolTime;
 	bool isActive;			// 쿨타임인지 체크
 public:
-	CoolTimeSystem(MainGame* maingame, Entity id, CoolTime* coolTime);
+	CoolTimeSystem(CObject* owner, CoolTime* coolTime);
 	virtual ~CoolTimeSystem();
 	void StartCooldown();
 	bool CheckActive();
-	void Update() override;
+	void Update(float _deltaTime) override;
 	const CoolTime& GetData() const override;
 
 };

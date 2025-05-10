@@ -110,6 +110,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -135,6 +136,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="00.Manager\04.InputManager\InputManager.h" />
+    <ClInclude Include="00.Manager\05.CollisionManager\CollisionManager.h" />
     <ClInclude Include="00.Manager\99.SingTonManager\SingTonManager.h" />
     <ClInclude Include="02.Component\Collider.h" />
     <ClInclude Include="02.Component\CoolTime.h" />
@@ -153,6 +156,7 @@
     <ClInclude Include="03.System\ComponentSystem.h" />
     <ClInclude Include="03.System\IDataProvider.h" />
     <ClInclude Include="04.Header\Entity.h" />
+    <ClInclude Include="04.Header\Enum.h" />
     <ClInclude Include="04.Header\Extern.h" />
     <ClInclude Include="04.Header\Vector2.h" />
     <ClInclude Include="framework.h" />
@@ -167,6 +171,8 @@
     <ClInclude Include="00.Manager\03.TimeManager\TimeManager.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="00.Manager\04.InputManager\InputManager.cpp" />
+    <ClCompile Include="00.Manager\05.CollisionManager\CollisionManager.cpp" />
     <ClCompile Include="00.Manager\MainManager.cpp" />
     <ClCompile Include="00.Manager\01.GameManager\GameManager.cpp" />
     <ClCompile Include="01.Object\00.Default\CObject.cpp" />

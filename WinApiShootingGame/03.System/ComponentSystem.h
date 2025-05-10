@@ -1,16 +1,15 @@
 #pragma once
+#include "../01.Object/00.Default/CObject.h"
 #include "IDataProvider.h"
-
-class MainGame;
+class CObject;
 
 class ComponentSystem {
 protected:
-    Entity m_id = -1;
-    MainGame* mainGame = nullptr;           // ¿Ã∞… ΩÃ±€≈Ê ¡¢±Ÿ¿∏∑Œ
+    CObject* m_owner;
     function<void()> m_event;
 public:
     ComponentSystem() = default;
     virtual ~ComponentSystem() = default;
-    virtual void Update() abstract;
+    virtual void Update(float _deltaTime) abstract;
     virtual void AddEvent(function<void()> func);
 };

@@ -8,10 +8,10 @@ private:
     function<void(Entity)> m_onCollision;
 
 public:
-    ColliderSystem(MainGame* game, Entity id, Collider* collider);
+    ColliderSystem(CObject* owenr, Collider* collider);
     virtual ~ColliderSystem();
     const Collider& GetData() const override;
-    virtual void Update() override;
+    virtual void Update(float _deltaTime) override;
 
     void SetOnCollisionEvent(function<void(Entity)> func);
     void InvokeCollisionEvent(Entity other)const; 
