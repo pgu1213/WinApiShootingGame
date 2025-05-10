@@ -24,12 +24,10 @@ void MainManager::LateInit()
 
 void MainManager::Update()
 {
-    TimeManager::Update();
+	TimeManager::GetInstance()->Update(); // 매 프레임마다 호출하여 델타 시간 업데이트
 
-    float DeltaTime = TimeManager::GetDeltaTime();
+	float DeltaTime = TimeManager::GetInstance()->GetDeltaTime(); // 현재 프레임의 델타 시간 가져오기
 
-    // mainGame->Update(DeltaTime);
-    // mainGame->Render(); // 렌더링에서도 필요하다면 DeltaTime 활용
 }
 
 void MainManager::Render(HDC hdc)
