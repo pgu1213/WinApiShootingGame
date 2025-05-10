@@ -1,9 +1,13 @@
 #pragma once
-class MainManager
+#include "99.SingTonManager/SingTonManager.h"
+
+class MainManager : public SingleTon<MainManager>
 {
+	friend class SingleTon<MainManager>;
+private:
+	explicit MainManager();
 public:
-	MainManager();
-	~MainManager();
+	virtual ~MainManager();
 public:
 	void Init();
 	void LateInit();

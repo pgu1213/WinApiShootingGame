@@ -6,6 +6,14 @@ LARGE_INTEGER TimeManager::Frequency = { 0 };
 float TimeManager::CurrentDeltaTime = 0.0f;
 double TimeManager::TotalElapsedTime = 0.0;
 
+TimeManager::TimeManager()
+{
+}
+
+TimeManager::~TimeManager()
+{
+}
+
 bool TimeManager::Init()
 {
     // 고성능 카운터의 주파수를 가져와서 사용 가능한지 체크

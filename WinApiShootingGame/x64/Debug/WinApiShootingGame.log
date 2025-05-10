@@ -1,6 +1,4 @@
-﻿  GameManager.cpp
-  TimeManager.cpp
-  MainManager.cpp
-  Object.cpp
+﻿  MainManager.cpp
+  SceneManager.cpp
   코드를 생성하고 있습니다...
   WinApiShootingGame.vcxproj -> C:\Dev\WinApiShootingGame\x64\Debug\WinApiShootingGame.exe

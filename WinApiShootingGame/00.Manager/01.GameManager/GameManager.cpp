@@ -2,27 +2,38 @@
 #include "GameManager.h"
 #include "../03.TimeManager/TimeManager.h"
 
+GameManager::GameManager()
+{
+}
+
+GameManager::~GameManager()
+{
+}
+
+// 씬 관련 설정
 bool GameManager::Init()
 {
-    if (!TimeManager::Init())
-    {
-        return false; // 초기화 실패
-    }
-
     /*
     CurrentScene = new Scene(); 씬 객체 생성
     if (!CurrentScene)
     {
-        return false; // 월드 생성 실패
+        return false;
     }
-    CurrentScene->Init(); // 월드 자체 초기화
+    CurrentScene->Init();
     */
 
-    // Object::Init(); 와 같은 초기화
+    // Object::Init();
 
     return true;
 }
 
-void GameManager::Update()
+// 씬을 Update 하기 위함
+void GameManager::Update(float DeltaTime)
 {
+	if (DeltaTime < 0.0f)
+	{
+		return; // 델타 시간이 유효하지 않으면 업데이트 하지 않음
+	}
+
+    // TODO - 씬 업데이트
 }

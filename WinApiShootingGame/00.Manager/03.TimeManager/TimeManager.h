@@ -5,9 +5,9 @@ class TimeManager : public SingleTon<TimeManager>
 {
 friend class SingleTon<TimeManager>;
 private:
-    TimeManager() = default;
+    explicit TimeManager();
 public:
-    ~TimeManager() = default;
+    virtual ~TimeManager();
 public:
     static bool Init(); // TimeManager 초기화 함수
     static void Update(); // 매 프레임 호출하여 델타 시간을 업데이트하는 함수

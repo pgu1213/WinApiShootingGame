@@ -1,5 +1,6 @@
 #include "../pch.h"
 #include "MainManager.h"
+#include "01.GameManager/GameManager.h"
 #include "03.TimeManager/TimeManager.h"
 
 MainManager::MainManager()
@@ -10,6 +11,7 @@ MainManager::~MainManager()
 {
 }
 
+// 하위 매니저들의 Init을 담당
 void MainManager::Init()
 {
     if (!TimeManager::Init())
@@ -18,6 +20,7 @@ void MainManager::Init()
     }
 }
 
+// 늦게 Init되어야 하는 것들
 void MainManager::LateInit()
 {
 }
@@ -28,6 +31,7 @@ void MainManager::Update()
 
 	float DeltaTime = TimeManager::GetInstance()->GetDeltaTime(); // 현재 프레임의 델타 시간 가져오기
 
+	GameManager::GetInstance()->Update(DeltaTime); // 게임 매니저 업데이트
 }
 
 void MainManager::Render(HDC hdc)

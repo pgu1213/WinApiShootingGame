@@ -10,7 +10,6 @@ public:
 	void Update();
 	void Render(HDC hdc);
 private:
-private:
 	//GameScene* m_pGameScene;
 	//vector<GameScene*> SceneList;
 };

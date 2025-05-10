@@ -136,11 +136,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="00.Manager\99.SingTonManager\SingTonManager.h" />
-    <ClInclude Include="01.Object\00.Default\Actor.h" />
+    <ClInclude Include="01.Object\00.Default\CActor.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="00.Manager\MainManager.h" />
     <ClInclude Include="00.Manager\01.GameManager\GameManager.h" />
-    <ClInclude Include="01.Object\00.Default\Object.h" />
+    <ClInclude Include="01.Object\00.Default\CObject.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="00.Manager\02.SceneManager\SceneManager.h" />
@@ -151,8 +151,8 @@
   <ItemGroup>
     <ClCompile Include="00.Manager\MainManager.cpp" />
     <ClCompile Include="00.Manager\01.GameManager\GameManager.cpp" />
-    <ClCompile Include="01.Object\00.Default\Object.cpp" />
-    <ClCompile Include="01.Object\00.Default\Actor.cpp" />
+    <ClCompile Include="01.Object\00.Default\CObject.cpp" />
+    <ClCompile Include="01.Object\00.Default\CActor.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
