@@ -1,12 +1,8 @@
-#include "../../99_Default/pch.h"
-#include "../../03_Manager/00_InputManager/InputManager.h"
+#include "../../pch.h"
+#include "../../00.Manager/04.InputManager/InputManager.h"
 #include "../ComponentSystem.h"
-#include "../IDataProvider.h"
-
-#include "../../00_MainGame/MainGame.h"
-
-#include "../../02_Component/InputData.h"
 #include "InputSystem.h"
+#include "../../02.Component/InputData.h"
 
 InputSystem::InputSystem(MainGame* maingame, Entity id, InputManager* inputMgr) : m_inputManager(inputMgr), m_inputData(new InputData)
 {

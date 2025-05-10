@@ -1,12 +1,9 @@
-#include "../../99_Default/pch.h"
+#include "../../pch.h"
 #include "../ComponentSystem.h"
-
-#include "../../00_MainGame/MainGame.h"			// 매니저로 가져올 예정
-
 #include "../04_Rigid/RigidbodySystem.h"
 #include "TransformSystem.h"
-#include "../../02_Component/Transform.h"
-#include "../../02_Component/Rigidbody.h"
+#include "../../02.Component/Transform.h"
+#include "../../02.Component/Rigidbody.h"
 
 TransformSystem::TransformSystem(MainGame* maingame, Entity id, Transform* transform) : 
 	m_transform(transform == nullptr ? new Transform{ Vector2{ 300.f,300.f }, 0.f, Vector2{ 30.f,30.f } } : transform)
@@ -14,6 +11,8 @@ TransformSystem::TransformSystem(MainGame* maingame, Entity id, Transform* trans
 	mainGame = maingame;
 	m_id = id;
 	Speed = 3;
+
+	m_rigidbody = mainGame->GetComponent<RigidbodySystem>(m_id)->GetData();
 }
 
 TransformSystem::~TransformSystem()
@@ -23,11 +22,9 @@ TransformSystem::~TransformSystem()
 
 void TransformSystem::Update()
 {
-	const Rigidbody& rigid = mainGame->GetComponent<RigidbodySystem>(m_id)->GetData();
-
 	// 위치 갱신 (속도 적용)
-	m_transform->position.x += rigid.velocity.x * Speed;
-	m_transform->position.y += rigid.velocity.y * Speed;
+	m_transform->position.x += m_rigidbody.velocity.x * Speed;
+	m_transform->position.y += m_rigidbody.velocity.y * Speed;
 	
 	// 등록 이벤트 실행
 	if (m_event)

@@ -1,4 +1,4 @@
-#include "../99_Default/pch.h"
+#include "../pch.h"
 #include "ComponentSystem.h"
 
 void ComponentSystem::AddEvent(function<void()> func)

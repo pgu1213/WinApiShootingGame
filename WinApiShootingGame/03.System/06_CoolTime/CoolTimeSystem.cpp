@@ -1,7 +1,6 @@
-#include "../../99_Default/pch.h"
-#include "../../00_MainGame/MainGame.h"
-#include "../../01_System/ComponentSystem.h"
-#include "../../02_Component/CoolTime.h"
+#include "../../pch.h"
+#include "../../03.System/ComponentSystem.h"
+#include "../../02.Component/CoolTime.h"
 #include "CoolTimeSystem.h"
 
 const CoolTime& CoolTimeSystem::GetData() const

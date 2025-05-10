@@ -1,6 +1,6 @@
-#include "../../99_Default/pch.h"
+#include "../../pch.h"
 #include "../ComponentSystem.h"
-#include "../../02_Component/State.h"
+#include "../../02.Component/State.h"
 #include "StateSystem.h"
 
 StateSystem::StateSystem(MainGame* game, Entity id, State* state)

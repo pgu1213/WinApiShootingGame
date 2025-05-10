@@ -1,10 +1,7 @@
-#include "../../99_Default/pch.h"
+#include "../../pch.h"
 #include "../ComponentSystem.h"
-#include "../../00_MainGame/MainGame.h"
-#include "../00_Transform/TransformSystem.h"
 #include "ColliderSystem.h"
-#include "../../02_Component/Transform.h"
-#include "../../02_Component/Collider.h"
+#include "../../02.Component/Collider.h"
 
 ColliderSystem::ColliderSystem(MainGame* game, Entity id, Collider* collider)
     : m_collider(collider) {

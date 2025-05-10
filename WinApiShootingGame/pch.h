@@ -12,6 +12,13 @@
 #include <string>
 #include <atomic>
 #include <vector>
+#include <unordered_map>
+#include <map>
+#include <functional>
+
+#include "04.Header/Entity.h"
+#include "04.Header/Extern.h"
+#include "04.Header/Vector2.h"
 
 #endif //PCH_H
 

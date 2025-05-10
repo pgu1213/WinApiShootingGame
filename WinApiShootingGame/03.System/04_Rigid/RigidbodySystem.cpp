@@ -1,10 +1,7 @@
-#include "../../00_MainGame/MainGame.h"	
+#include "../../pch.h"
 #include "../ComponentSystem.h"
-
-#include "../../02_Component/Rigidbody.h"
-#include "../../02_Component/InputData.h"
+#include "../../02.Component/Rigidbody.h"
 #include "RigidbodySystem.h"
-#include "../03_Input/InputSystem.h"
 
 RigidbodySystem::RigidbodySystem(MainGame* maingame, Entity id, Rigidbody* rigid) : m_rigidbody(rigid == nullptr ? new Rigidbody() : rigid)
 {
