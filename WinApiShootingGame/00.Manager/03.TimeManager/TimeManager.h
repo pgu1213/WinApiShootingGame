@@ -1,5 +1,7 @@
 #pragma once
-class TimeManager
+#include "../99.SingTonManager/SingTonManager.h"
+
+class TimeManager : public SingleTon<TimeManager>
 {
 private: // 생성자는 외부에서 호출하지 않도록 private으로 선언 (정적 클래스처럼 사용)
     TimeManager() = delete; // 생성자 사용 금지

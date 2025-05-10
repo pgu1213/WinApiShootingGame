@@ -1,6 +1,4 @@
-﻿  MainManager.cpp
-  GameManager.cpp
-  TimeManager.cpp
+﻿  Object.cpp
   SceneManager.cpp
   코드를 생성하고 있습니다...
-  WinApiShootingGame.vcxproj -> C:\Dev\WinApiShootingGame\x64\Debug\WinApiShootingGame.exe
+LINK : fatal error LNK1168: C:\Dev\WinApiShootingGame\x64\Debug\WinApiShootingGame.exe을(를) 쓰기용으로 열 수 없습니다.

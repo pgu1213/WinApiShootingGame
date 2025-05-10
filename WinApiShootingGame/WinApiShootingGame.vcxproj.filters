@@ -45,6 +45,9 @@
     <ClInclude Include="01.Object\00.Default\Object.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="00.Manager\99.SingTonManager\SingTonManager.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Client.cpp">

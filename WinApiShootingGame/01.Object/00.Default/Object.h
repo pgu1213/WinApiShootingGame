@@ -2,7 +2,7 @@
 class Object
 {
 protected:
-    Object(const std::string& Name = "BaseObject");
+    Object(const string& Name = "BaseObject");
 
 public:
     virtual void Init();
@@ -10,7 +10,7 @@ public:
     virtual void Release();
 
     unsigned int GetObjectID() const; // 오브젝트 ID 반환
-    const std::string& GetObjectName() const; // 오브젝트 이름 반환
+    const string& GetObjectName() const; // 오브젝트 이름 반환
     bool IsValid() const; // 객체가 유효한지 확인
 
 private:

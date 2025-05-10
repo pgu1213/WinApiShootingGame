@@ -135,6 +135,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="00.Manager\99.SingTonManager\SingTonManager.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="00.Manager\MainManager.h" />
     <ClInclude Include="00.Manager\01.GameManager\GameManager.h" />
