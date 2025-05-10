@@ -67,13 +67,13 @@ void GameManager::Update(float DeltaTime)
 		return; // 델타 시간이 유효하지 않으면 업데이트 하지 않음
 	}
 	
+	Vector2 screenSize = GetScreenSize();
+	Rectangle(hdc, 0, 0, screenSize.x, screenSize.y);
+
 	for (auto& objs : m_entityTable)
 	{
 		objs.second->Update(DeltaTime);
 	}
-
-	Vector2 screenSize = GetScreenSize();
-	Rectangle(hdc, 0, 0, screenSize.x, screenSize.y);
 	// TODO - 씬 업데이트
 	// GetList > 리스트 새로 업데이트만 시키고
 }
