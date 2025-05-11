@@ -26,6 +26,10 @@ void ColliderSystem::Update(float _deltaTime) {
     }
 }
 
+void ColliderSystem::Render(HDC hdc)
+{
+}
+
 void ColliderSystem::SetOnCollisionEvent(std::function<void(CObject*)> func) {
     m_onCollision = func;
 }

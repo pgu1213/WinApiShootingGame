@@ -57,4 +57,8 @@ void CoolTimeSystem::Update(float _deltaTime)
 	}
 }
 
+void CoolTimeSystem::Render(HDC hdc)
+{
+}
+
 

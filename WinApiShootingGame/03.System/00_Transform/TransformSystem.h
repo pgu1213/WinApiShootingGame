@@ -11,5 +11,6 @@ public:
     virtual ~TransformSystem();
     virtual void Init() override;
     virtual void Update(float _deltaTime) override;
+	virtual void Render(HDC hdc) override;
     const Transform& GetData() const override;
 };

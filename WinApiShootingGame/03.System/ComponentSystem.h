@@ -12,5 +12,6 @@ public:
     virtual ~ComponentSystem() = default;
     virtual void Init() abstract;
     virtual void Update(float _deltaTime) abstract;
+	virtual void Render(HDC hdc) abstract;
     virtual void AddEvent(function<void()> func);
 };

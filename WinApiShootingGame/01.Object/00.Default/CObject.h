@@ -11,6 +11,7 @@ public:
 public:
 	virtual void Init(Entity id, EntityType type, ComponentTable compTable);
 	virtual void Update(float DeltaTime);
+	virtual void Render(HDC hdc);
 	virtual void Release();
 
 	// unsigned int GetObjectID() const; // 오브젝트 ID 반환

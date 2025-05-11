@@ -42,3 +42,7 @@ void InputSystem::Update(float _deltaTime)
     }
 }
 
+void InputSystem::Render(HDC hdc)
+{
+}
+

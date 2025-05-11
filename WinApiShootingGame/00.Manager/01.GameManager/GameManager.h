@@ -35,6 +35,7 @@ public:
 public:
 	bool Init();
 	void Update(float DeltaTime);
+	void Render(HDC hdc);
 public:
 	Entity CreateEntity();
 	Vector2 GetScreenSize();

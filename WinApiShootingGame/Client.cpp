@@ -65,6 +65,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
         {
             // 게임 루프
             MainManager::GetInstance()->Update();
+			MainManager::GetInstance()->Render(GetDC(g_hWnd));
         }
     }
 }

@@ -37,5 +37,5 @@ void MainManager::Update()
 
 void MainManager::Render(HDC hdc)
 {
-
+	GameManager::GetInstance()->Render(hdc); // 게임 매니저 렌더링
 }

@@ -12,6 +12,7 @@ public:
     virtual ~InputSystem();
     virtual void Init() override;
     virtual void Update(float _deltaTime)override;
+	virtual void Render(HDC hdc) override;
     const InputData& GetData()const override;
     void ResetInput();
 };

@@ -13,6 +13,7 @@ public:
     virtual void Init() override;
     const Collider& GetData() const override;
     virtual void Update(float _deltaTime) override;
+	virtual void Render(HDC hdc) override;
 
     void SetOnCollisionEvent(function<void(CObject*)> func);
     void InvokeCollisionEvent(CObject* other)const; 

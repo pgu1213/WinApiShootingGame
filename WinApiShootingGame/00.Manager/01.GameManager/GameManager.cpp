@@ -76,16 +76,22 @@ void GameManager::Update(float DeltaTime)
 
 	if (!removeEntityQueue.empty())
 	{
-		for (Entity id : removeEntityQueue) {
+       		for (Entity id : removeEntityQueue) {
 			RemoveEntity(id);
 		}
 		removeEntityQueue.clear();
 	}
+}
 
+void GameManager::Render(HDC hdc)
+{
 	Vector2 screenSize = GetScreenSize();
 	Rectangle(hdc, 0, 0, screenSize.x, screenSize.y);
-	// TODO - 씬 업데이트
-	// GetList > 리스트 새로 업데이트만 시키고
+
+	for (auto& objs : m_entityTable)
+	{
+		objs.second->Render(hdc);
+	}
 }
 
 Entity GameManager::CreateEntity()

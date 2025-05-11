@@ -24,6 +24,14 @@ void CObject::Update(float DeltaTime)
 	}
 }
 
+void CObject::Render(HDC hdc)
+{
+	for (auto& comp : m_componentTable)
+	{
+		comp.second->Render(hdc);
+	}
+}
+
 void CObject::Release()
 {
 }
