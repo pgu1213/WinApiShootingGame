@@ -18,7 +18,7 @@ void CObject::Init(Entity id, EntityType type, ComponentTable compTable)
 
 void CObject::Update(float DeltaTime)
 {
-	for (auto comp : m_componentTable)
+	for (auto& comp : m_componentTable)
 	{
 		comp.second->Update(DeltaTime);		
 	}

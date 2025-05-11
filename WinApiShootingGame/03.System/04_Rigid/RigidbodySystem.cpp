@@ -3,7 +3,7 @@
 #include "../../02.Component/Rigidbody.h"
 #include "RigidbodySystem.h"
 
-RigidbodySystem::RigidbodySystem(CObject* owner, Rigidbody* rigid) : m_rigidbody(rigid == nullptr ? new Rigidbody() : rigid)
+RigidbodySystem::RigidbodySystem(CObject* owner,Rigidbody* rigid) : m_rigidbody(rigid == nullptr ? new Rigidbody() : rigid)
 {
 	m_owner = owner;
 }

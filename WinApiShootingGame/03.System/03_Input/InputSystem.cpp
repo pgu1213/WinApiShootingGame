@@ -5,7 +5,7 @@
 #include "InputSystem.h"
 #include "../../02.Component/InputData.h"
 
-InputSystem::InputSystem(CObject* owner, GameManager* gameMgr, InputManager* inputMgr) : m_inputManager(inputMgr), m_inputData(new InputData)
+InputSystem::InputSystem(CObject* owner, GameManager* gameMgr, InputManager* inputMgr) : m_inputManager(inputMgr), m_gameManager(gameMgr), m_inputData(new InputData)
 {
     m_owner = owner;
 }

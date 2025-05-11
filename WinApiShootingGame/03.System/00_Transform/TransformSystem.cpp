@@ -9,7 +9,7 @@ TransformSystem::TransformSystem(CObject* owner, Transform* transform) :
 	m_transform(transform == nullptr ? new Transform{ Vector2{ 300.f,300.f }, 0.f, Vector2{ 30.f,30.f } } : transform)
 {
 	m_owner = owner;
-	Speed = 30;
+
 }
 
 TransformSystem::~TransformSystem()
@@ -28,8 +28,8 @@ void TransformSystem::Update(float _deltaTime)
 
 
 	// 위치 갱신 (속도 적용)
-	m_transform->position.x += rigid.velocity.x * Speed * _deltaTime;
-	m_transform->position.y += rigid.velocity.y * Speed * _deltaTime;
+	m_transform->position.x += rigid.velocity.x * _deltaTime;
+	m_transform->position.y += rigid.velocity.y * _deltaTime;
 
 	// 등록 이벤트 실행
 	if (m_event)

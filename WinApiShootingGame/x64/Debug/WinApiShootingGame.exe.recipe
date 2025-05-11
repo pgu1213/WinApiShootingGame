@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Dev\WinApiShootingGame\x64\Debug\WinApiShootingGame.exe</FullPath>
+      <FullPath>D:\MyProject\WinApiShootingGame\x64\Debug\WinApiShootingGame.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

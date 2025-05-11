@@ -21,10 +21,10 @@ private:
 	ObjectTable m_gameObjectTable;
 	EntityTable m_entityTable;
 	vector<Entity> removeEntityQueue;
-	
+	Entity playerId;
 	HDC hdc;
 
-	int currentEntityID = 0;
+	Entity currentEntityID;
 private:
 	void GeneratePlayer();
 	void GenerateEnemy();
