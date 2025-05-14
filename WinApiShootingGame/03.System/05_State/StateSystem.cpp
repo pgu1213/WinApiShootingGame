@@ -21,10 +21,6 @@ void StateSystem::Update(float _deltaTime) {
         m_event();
 }
 
-void StateSystem::Render(HDC hdc)
-{
-}
-
 void StateSystem::TakeDamage(int dmg) {
     m_state->currentHP -= dmg;
 }

@@ -54,9 +54,6 @@
     <ClInclude Include="02.Component\CoolTime.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="02.Component\InputData.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="02.Component\Rigidbody.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
@@ -93,9 +90,6 @@
     <ClInclude Include="03.System\04_Rigid\RigidbodySystem.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="03.System\03_Input\InputSystem.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="03.System\02_Collider\ColliderSystem.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
@@ -118,6 +112,12 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="00.Manager\06.ResourceManager\ResourceManager.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="01.Object\01.Player\CPlayer.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="03.System\IRenderer.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
@@ -155,9 +155,6 @@
     <ClCompile Include="03.System\04_Rigid\RigidbodySystem.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="03.System\03_Input\InputSystem.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="03.System\02_Collider\ColliderSystem.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -177,6 +174,12 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="00.Manager\06.ResourceManager\ResourceManager.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="01.Object\01.Player\CPlayer.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="03.System\IRenderer.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

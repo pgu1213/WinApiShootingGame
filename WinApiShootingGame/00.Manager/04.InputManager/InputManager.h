@@ -1,6 +1,6 @@
 #pragma once
 
-class InputManager
+class InputManager 
 {
 public:
     void BindActionKey(int keyCode, const string& actionName);
@@ -11,8 +11,6 @@ public:
     bool GetKey(const string& keyName) const;
 
 private:
-    //unordered_map<string, function<void()>> m_actions;
-
     unordered_map<string, int> m_keyBindings;
     unordered_map<string, pair<int, int>> m_axisKeyBindings;
 };

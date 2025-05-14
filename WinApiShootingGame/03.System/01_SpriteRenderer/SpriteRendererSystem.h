@@ -1,8 +1,9 @@
 #pragma once
+#include "../../03.System/IRenderer.h"
 struct SpriteRenderer;
 struct Transform;
 
-class SpriteRendererSystem : public ComponentSystem, public IDataProvider<SpriteRenderer>
+class SpriteRendererSystem : public ComponentSystem, public IDataProvider<SpriteRenderer>, public IRenderer
 {
 private:
 	SpriteRenderer* m_render;

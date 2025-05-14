@@ -8,7 +8,6 @@ public:
     RigidbodySystem(CObject* owner, Rigidbody* rigid = nullptr);
     virtual ~RigidbodySystem();
     virtual void Init() override;
-    const Rigidbody& GetData() const override;
     void Update(float _deltaTime) override;
-	void Render(HDC hdc) override;
+    const Rigidbody& GetData() const override;
 };

@@ -5,6 +5,7 @@
 #include "../05.CollisionManager/CollisionManager.h"
 
 #include "../../01.Object/00.Default/CObject.h"
+#include "../../01.Object/01.Player/CPlayer.h"
 
 #include "../../03.System/ComponentSystem.h"
 #include "../../03.System/00_Transform/TransformSystem.h"
@@ -45,11 +46,6 @@ bool GameManager::Init()
 	// Object::Init();
 	currentEntityID = 0;
 	hdc = GetDC(g_hWnd);
-
-	inputManager = new InputManager();
-	inputManager->BindAxisKey(VK_LEFT, VK_RIGHT, "Horizontal");
-	inputManager->BindAxisKey(VK_UP, VK_DOWN, "Vertical");
-	inputManager->BindActionKey(VK_SPACE, "Shoot");
 
 	collisionManager = new CollisionManager(this);
 
@@ -102,52 +98,19 @@ Entity GameManager::CreateEntity()
 void GameManager::GeneratePlayer()
 {
 	playerId = CreateEntity();
-	AddEntityTable(playerId);
-	ComponentTable m_componentTable;
+	CObject* obj = new CPlayer();
+	AddEntityTable(playerId, obj);
 
-	CObject* obj = m_entityTable[playerId];	
-
-	Transform* transform = new Transform{ Vector2{ 300.f,300.f }, 0.f, Vector2{ 50.f,50.f } };
-	TransformSystem* transformSystem = new TransformSystem(obj, transform);
-	Rigidbody* rigid = new Rigidbody();
-	RigidbodySystem* rigidSystem = new RigidbodySystem(obj, rigid);
-
-	m_componentTable[typeid(InputSystem)] = new InputSystem(obj, this, inputManager);
-	m_componentTable[typeid(RigidbodySystem)] = rigidSystem;
-	m_componentTable[typeid(TransformSystem)] = transformSystem;
-	m_componentTable[typeid(SpriteRendererSystem)] = new SpriteRendererSystem(obj, hdc);
-
-	Vector2 screenSize = GetScreenSize();
-
-	transformSystem->AddEvent([=]() {
-		transform->position.x = clamp(
-			transform->position.x,
-			transform->scale.x / 2,
-			screenSize.x - transform->scale.x / 2
-		);
-		transform->position.y = clamp(
-			transform->position.y,
-			transform->scale.y / 2,
-			screenSize.y - transform->scale.y / 2
-		);
-		});
-
-	rigidSystem->AddEvent([=]() {
-		const InputData& input = GetComponent<InputSystem>(playerId)->GetData();
-
-		rigid->velocity.x = input.horizontal * 100.f;
-		rigid->velocity.y = input.vertical * 100.f;
-		});
-
-	obj->Init(playerId, EntityType::Player, m_componentTable);
+	obj->Init(playerId, EntityType::Player);
 }
 
 void GameManager::GenerateEnemy()
 {
 	Entity enemyId = CreateEntity();
-	ComponentTable m_componentTable;
+
 	CObject* obj = new CObject;
 	AddEntityTable(enemyId, obj);
+	ComponentTable m_componentTable;
 
 	Transform* transform = new Transform{ Vector2{ 100.f,100.f }, 0.f, Vector2{ 50.f,50.f } };
 	TransformSystem* transformSystem = new TransformSystem(obj, transform);
@@ -230,16 +193,17 @@ Vector2 GameManager::Normalize(Vector2 v)
 void GameManager::SpawnBullet(Entity shooterId)
 {
 	Entity bulletId = CreateEntity();
+	CObject* obj = new CObject();
+	AddEntityTable(bulletId, obj);
 	CObject* shooterObj = m_entityTable[shooterId];
+
 	EntityType bulletType = EntityType::None;
 	if (shooterObj->GetType() == EntityType::Player)
 		bulletType = EntityType::PlayerBullet;
 	else
 		bulletType = EntityType::EnemyBullet;
-	ComponentTable bulletTable;
-	AddEntityTable(bulletId);
 
-	CObject* gen_obj = m_entityTable[bulletId];
+	ComponentTable bulletTable;
 
 	const Transform& shooterTransform = m_entityTable[shooterId]->GetComponent<TransformSystem>()->GetData();
 
@@ -247,10 +211,10 @@ void GameManager::SpawnBullet(Entity shooterId)
 	Rigidbody* rigid = new Rigidbody{ Vector2{0.f, -100.f} };
 	Collider* collider = new Collider{ {0.f, 0.f}, transform->scale };
 
-	TransformSystem* transformSystem = new TransformSystem(gen_obj,  transform);
-	RigidbodySystem* rigidSystem = new RigidbodySystem(gen_obj, rigid);
-	SpriteRendererSystem* spriteSystem = new SpriteRendererSystem(gen_obj,  hdc);
-	ColliderSystem* colliderSystem = new ColliderSystem(gen_obj,  collider);
+	TransformSystem* transformSystem = new TransformSystem(obj,  transform);
+	RigidbodySystem* rigidSystem = new RigidbodySystem(obj, rigid);
+	SpriteRendererSystem* spriteSystem = new SpriteRendererSystem(obj,  hdc);
+	ColliderSystem* colliderSystem = new ColliderSystem(obj,  collider);
 
 	bulletTable[typeid(TransformSystem)] = transformSystem;
 	bulletTable[typeid(ColliderSystem)] = colliderSystem;
@@ -268,19 +232,21 @@ void GameManager::SpawnBullet(Entity shooterId)
 
 	colliderSystem->SetOnCollisionEvent([=](CObject* obj) {
 		EntityType type = obj->GetType();
-		EntityType bulletType = gen_obj->GetType();
+		EntityType bulletType = obj->GetType();
 		if ((type == EntityType::Enemy && bulletType == EntityType::PlayerBullet) || (type == EntityType::Player && bulletType == EntityType::EnemyBullet)) {
 			removeEntityQueue.emplace_back(bulletId);
 		}
 		});
 
 
-	gen_obj->Init(bulletId, bulletType, bulletTable);
+	obj->Init(bulletId, bulletType, bulletTable);
 }
 
 void GameManager::SpawnBullet(Entity shooterId, Vector2 pos, Vector2 velocity)
 {
 	Entity bulletId = CreateEntity();
+	CObject* obj = new CObject();
+	AddEntityTable(bulletId, obj);
 	CObject* shooterObj = m_entityTable[shooterId];
 	
 	EntityType bulletType = EntityType::None;
@@ -290,24 +256,20 @@ void GameManager::SpawnBullet(Entity shooterId, Vector2 pos, Vector2 velocity)
 		bulletType = EntityType::EnemyBullet;
 
 	ComponentTable bulletTable;
-	AddEntityTable(bulletId);
-
-	CObject* gen_obj = m_entityTable[bulletId];
 
 	Transform* transform = new Transform{ pos, 0.f, Vector2{20.f, 20.f} };
 	Rigidbody* rigid = new Rigidbody{ velocity };
 	Collider* collider = new Collider{ {0.f, 0.f}, transform->scale };
 
-	TransformSystem* transformSystem = new TransformSystem(gen_obj, transform);
-	RigidbodySystem* rigidSystem = new RigidbodySystem(gen_obj, rigid);
-	ColliderSystem* colliderSystem = new ColliderSystem(gen_obj, collider);
-	SpriteRendererSystem* spriteSystem = new SpriteRendererSystem(gen_obj, hdc);
+	TransformSystem* transformSystem = new TransformSystem(obj, transform);
+	RigidbodySystem* rigidSystem = new RigidbodySystem(obj, rigid);
+	ColliderSystem* colliderSystem = new ColliderSystem(obj, collider);
+	SpriteRendererSystem* spriteSystem = new SpriteRendererSystem(obj, hdc);
 
-	ComponentTable table;
-	table[typeid(TransformSystem)] = transformSystem;
-	table[typeid(RigidbodySystem)] = rigidSystem;
-	table[typeid(ColliderSystem)] = colliderSystem;
-	table[typeid(SpriteRendererSystem)] = spriteSystem;
+	bulletTable[typeid(TransformSystem)] = transformSystem;
+	bulletTable[typeid(RigidbodySystem)] = rigidSystem;
+	bulletTable[typeid(ColliderSystem)] = colliderSystem;
+	bulletTable[typeid(SpriteRendererSystem)] = spriteSystem;
 
 	Vector2 screenSize = GetScreenSize();
 
@@ -320,16 +282,16 @@ void GameManager::SpawnBullet(Entity shooterId, Vector2 pos, Vector2 velocity)
 
 	colliderSystem->SetOnCollisionEvent([=](CObject* obj) {
 		EntityType type = obj->GetType();
-		EntityType bulletType = gen_obj->GetType();
+		EntityType bulletType = obj->GetType();
 		if ((type == EntityType::Enemy && bulletType == EntityType::PlayerBullet) || (type == EntityType::Player && bulletType == EntityType::EnemyBullet)) {
 			removeEntityQueue.emplace_back(bulletId);
 		}
 		});
 
-	gen_obj->Init(bulletId, shooterObj->GetType(), bulletTable);
+	obj->Init(bulletId, shooterObj->GetType(), bulletTable);
 }
 
-const EntityTable* GameManager::GetEntityTable()const
+const EntityTable* GameManager::GetEntityTable() const
 {
 	return &m_entityTable;
 }

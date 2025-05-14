@@ -3,16 +3,100 @@
   "WorkspaceRootPath": "C:\\Cpp\\WinApiShootingGame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\00.Manager\\01.GameManager\\GameManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\00.Manager\\01.GameManager\\GameManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\01_SpriteRenderer\\SpriteRendererSystem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\03.System\\01_SpriteRenderer\\SpriteRendererSystem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\01_SpriteRenderer\\SpriteRendererSystem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\03.System\\01_SpriteRenderer\\SpriteRendererSystem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\IDataProvider.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\03.System\\IDataProvider.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\06_CoolTime\\CoolTimeSystem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\03.System\\06_CoolTime\\CoolTimeSystem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\06_CoolTime\\CoolTimeSystem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\03.System\\06_CoolTime\\CoolTimeSystem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\ComponentSystem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\03.System\\ComponentSystem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\05_State\\StateSystem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\03.System\\05_State\\StateSystem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\05_State\\StateSystem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\03.System\\05_State\\StateSystem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\04_Rigid\\RigidbodySystem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\03.System\\04_Rigid\\RigidbodySystem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\04_Rigid\\RigidbodySystem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\03.System\\04_Rigid\\RigidbodySystem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\02_Collider\\ColliderSystem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\03.System\\02_Collider\\ColliderSystem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\02_Collider\\ColliderSystem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\03.System\\02_Collider\\ColliderSystem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\IRenderer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\03.System\\IRenderer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\00_Transform\\TransformSystem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\03.System\\00_Transform\\TransformSystem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\00_Transform\\TransformSystem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\03.System\\00_Transform\\TransformSystem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\ComponentSystem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\03.System\\ComponentSystem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\01.Object\\01.Player\\CPlayer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\01.Object\\01.Player\\CPlayer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\00.Manager\\04.InputManager\\InputManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\00.Manager\\04.InputManager\\InputManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\00.Manager\\04.InputManager\\InputManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\00.Manager\\04.InputManager\\InputManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\00.Manager\\01.GameManager\\GameManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\00.Manager\\01.GameManager\\GameManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\01_SpriteRenderer\\SpriteRendererSystem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\03.System\\01_SpriteRenderer\\SpriteRendererSystem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\01.Object\\00.Default\\CObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\01.Object\\00.Default\\CObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\00.Manager\\01.GameManager\\GameManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\00.Manager\\01.GameManager\\GameManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\01.Object\\00.Default\\CObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\01.Object\\00.Default\\CObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\01.Object\\01.Player\\CPlayer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\01.Object\\01.Player\\CPlayer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\02.Component\\SpriteRenderer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -27,10 +111,6 @@
       "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\00.Manager\\03.TimeManager\\TimeManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\00.Manager\\04.InputManager\\InputManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\00.Manager\\04.InputManager\\InputManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\00.Manager\\05.CollisionManager\\CollisionManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\00.Manager\\05.CollisionManager\\CollisionManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -41,14 +121,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\00.Manager\\98.GCManager\\GCManager.h||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\00.Manager\\98.GCManager\\GCManager.h||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\ComponentSystem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\03.System\\ComponentSystem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\ComponentSystem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\03.System\\ComponentSystem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\00.Manager\\MainManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -63,60 +135,12 @@
       "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\Client.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\01.Object\\00.Default\\CObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\01.Object\\00.Default\\CObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WINAPISHOOTINGGAME\\00.MANAGER\\05.COLLISIONMANAGER\\COLLISIONMANAGER.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WINAPISHOOTINGGAME\\00.MANAGER\\05.COLLISIONMANAGER\\COLLISIONMANAGER.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\00.Manager\\04.InputManager\\InputManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\00.Manager\\04.InputManager\\InputManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\00.Manager\\02.SceneManager\\SceneManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\00.Manager\\02.SceneManager\\SceneManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\06_CoolTime\\CoolTimeSystem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\03.System\\06_CoolTime\\CoolTimeSystem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\06_CoolTime\\CoolTimeSystem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\03.System\\06_CoolTime\\CoolTimeSystem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\05_State\\StateSystem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\03.System\\05_State\\StateSystem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\05_State\\StateSystem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\03.System\\05_State\\StateSystem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\04_Rigid\\RigidbodySystem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\03.System\\04_Rigid\\RigidbodySystem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\03_Input\\InputSystem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\03.System\\03_Input\\InputSystem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\02_Collider\\ColliderSystem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\03.System\\02_Collider\\ColliderSystem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\02_Collider\\ColliderSystem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\03.System\\02_Collider\\ColliderSystem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\01_SpriteRenderer\\SpriteRendererSystem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\03.System\\01_SpriteRenderer\\SpriteRendererSystem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\00_Transform\\TransformSystem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\03.System\\00_Transform\\TransformSystem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\02.Component\\Rigidbody.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -151,16 +175,8 @@
       "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\02.Component\\State.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\02.Component\\InputData.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\02.Component\\InputData.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\04.Header\\Vector2.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\04.Header\\Vector2.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\IDataProvider.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|solutionrelative:WinApiShootingGame\\03.System\\IDataProvider.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5C2E902C-112F-4F1A-B459-9706EE68D592}|WinApiShootingGame\\WinApiShootingGame.vcxproj|C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\framework.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -173,34 +189,21 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 466,
-          "SelectedChildIndex": 1,
+          "DockedWidth": 512,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 19,
               "Title": "GameManager.cpp",
               "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\00.Manager\\01.GameManager\\GameManager.cpp",
               "RelativeDocumentMoniker": "WinApiShootingGame\\00.Manager\\01.GameManager\\GameManager.cpp",
               "ToolTip": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\00.Manager\\01.GameManager\\GameManager.cpp",
               "RelativeToolTip": "WinApiShootingGame\\00.Manager\\01.GameManager\\GameManager.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAF4AAAAAAAAAAAA0wLUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-05-10T08:01:13.264Z",
               "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GameManager.h",
-              "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\00.Manager\\01.GameManager\\GameManager.h",
-              "RelativeDocumentMoniker": "WinApiShootingGame\\00.Manager\\01.GameManager\\GameManager.h",
-              "ToolTip": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\00.Manager\\01.GameManager\\GameManager.h",
-              "RelativeToolTip": "WinApiShootingGame\\00.Manager\\01.GameManager\\GameManager.h",
-              "ViewState": "AQIAABsAAAAAAAAAAAAAAAgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-14T11:23:59.257Z",
               "EditorCaption": ""
             },
             {
@@ -209,19 +212,254 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "InputManager.h",
-              "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\00.Manager\\04.InputManager\\InputManager.h",
-              "RelativeDocumentMoniker": "WinApiShootingGame\\00.Manager\\04.InputManager\\InputManager.h",
-              "ToolTip": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\00.Manager\\04.InputManager\\InputManager.h",
-              "RelativeToolTip": "WinApiShootingGame\\00.Manager\\04.InputManager\\InputManager.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "SpriteRendererSystem.cpp",
+              "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\01_SpriteRenderer\\SpriteRendererSystem.cpp",
+              "RelativeDocumentMoniker": "WinApiShootingGame\\03.System\\01_SpriteRenderer\\SpriteRendererSystem.cpp",
+              "ToolTip": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\01_SpriteRenderer\\SpriteRendererSystem.cpp",
+              "RelativeToolTip": "WinApiShootingGame\\03.System\\01_SpriteRenderer\\SpriteRendererSystem.cpp",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAAAQAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-10T18:52:28.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SpriteRendererSystem.h",
+              "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\01_SpriteRenderer\\SpriteRendererSystem.h",
+              "RelativeDocumentMoniker": "WinApiShootingGame\\03.System\\01_SpriteRenderer\\SpriteRendererSystem.h",
+              "ToolTip": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\01_SpriteRenderer\\SpriteRendererSystem.h",
+              "RelativeToolTip": "WinApiShootingGame\\03.System\\01_SpriteRenderer\\SpriteRendererSystem.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAABrAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-10T20:53:20.765Z"
+              "WhenOpened": "2025-05-10T18:52:28.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IDataProvider.h",
+              "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\IDataProvider.h",
+              "RelativeDocumentMoniker": "WinApiShootingGame\\03.System\\IDataProvider.h",
+              "ToolTip": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\IDataProvider.h",
+              "RelativeToolTip": "WinApiShootingGame\\03.System\\IDataProvider.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-10T18:46:44.515Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CoolTimeSystem.cpp",
+              "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\06_CoolTime\\CoolTimeSystem.cpp",
+              "RelativeDocumentMoniker": "WinApiShootingGame\\03.System\\06_CoolTime\\CoolTimeSystem.cpp",
+              "ToolTip": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\06_CoolTime\\CoolTimeSystem.cpp",
+              "RelativeToolTip": "WinApiShootingGame\\03.System\\06_CoolTime\\CoolTimeSystem.cpp",
+              "ViewState": "AQIAACkAAAAAAAAAAAAAADkAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-10T18:49:00.779Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CoolTimeSystem.h",
+              "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\06_CoolTime\\CoolTimeSystem.h",
+              "RelativeDocumentMoniker": "WinApiShootingGame\\03.System\\06_CoolTime\\CoolTimeSystem.h",
+              "ToolTip": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\06_CoolTime\\CoolTimeSystem.h",
+              "RelativeToolTip": "WinApiShootingGame\\03.System\\06_CoolTime\\CoolTimeSystem.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-10T18:49:01.403Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ComponentSystem.cpp",
+              "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\ComponentSystem.cpp",
+              "RelativeDocumentMoniker": "WinApiShootingGame\\03.System\\ComponentSystem.cpp",
+              "ToolTip": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\ComponentSystem.cpp",
+              "RelativeToolTip": "WinApiShootingGame\\03.System\\ComponentSystem.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-10T18:46:19.25Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "StateSystem.cpp",
+              "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\05_State\\StateSystem.cpp",
+              "RelativeDocumentMoniker": "WinApiShootingGame\\03.System\\05_State\\StateSystem.cpp",
+              "ToolTip": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\05_State\\StateSystem.cpp",
+              "RelativeToolTip": "WinApiShootingGame\\03.System\\05_State\\StateSystem.cpp",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABUAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-10T18:48:06.619Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "StateSystem.h",
+              "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\05_State\\StateSystem.h",
+              "RelativeDocumentMoniker": "WinApiShootingGame\\03.System\\05_State\\StateSystem.h",
+              "ToolTip": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\05_State\\StateSystem.h",
+              "RelativeToolTip": "WinApiShootingGame\\03.System\\05_State\\StateSystem.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-10T18:48:07.21Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RigidbodySystem.cpp",
+              "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\04_Rigid\\RigidbodySystem.cpp",
+              "RelativeDocumentMoniker": "WinApiShootingGame\\03.System\\04_Rigid\\RigidbodySystem.cpp",
+              "ToolTip": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\04_Rigid\\RigidbodySystem.cpp",
+              "RelativeToolTip": "WinApiShootingGame\\03.System\\04_Rigid\\RigidbodySystem.cpp",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAAB0AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-14T12:04:26.817Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RigidbodySystem.h",
+              "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\04_Rigid\\RigidbodySystem.h",
+              "RelativeDocumentMoniker": "WinApiShootingGame\\03.System\\04_Rigid\\RigidbodySystem.h",
+              "ToolTip": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\04_Rigid\\RigidbodySystem.h",
+              "RelativeToolTip": "WinApiShootingGame\\03.System\\04_Rigid\\RigidbodySystem.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-10T18:51:04.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ColliderSystem.h",
+              "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\02_Collider\\ColliderSystem.h",
+              "RelativeDocumentMoniker": "WinApiShootingGame\\03.System\\02_Collider\\ColliderSystem.h",
+              "ToolTip": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\02_Collider\\ColliderSystem.h",
+              "RelativeToolTip": "WinApiShootingGame\\03.System\\02_Collider\\ColliderSystem.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-10T18:52:09.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ColliderSystem.cpp",
+              "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\02_Collider\\ColliderSystem.cpp",
+              "RelativeDocumentMoniker": "WinApiShootingGame\\03.System\\02_Collider\\ColliderSystem.cpp",
+              "ToolTip": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\02_Collider\\ColliderSystem.cpp",
+              "RelativeToolTip": "WinApiShootingGame\\03.System\\02_Collider\\ColliderSystem.cpp",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAABoAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-10T18:51:37.538Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IRenderer.h",
+              "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\IRenderer.h",
+              "RelativeDocumentMoniker": "WinApiShootingGame\\03.System\\IRenderer.h",
+              "ToolTip": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\IRenderer.h",
+              "RelativeToolTip": "WinApiShootingGame\\03.System\\IRenderer.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-14T12:38:02.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "TransformSystem.cpp",
+              "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\00_Transform\\TransformSystem.cpp",
+              "RelativeDocumentMoniker": "WinApiShootingGame\\03.System\\00_Transform\\TransformSystem.cpp",
+              "ToolTip": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\00_Transform\\TransformSystem.cpp",
+              "RelativeToolTip": "WinApiShootingGame\\03.System\\00_Transform\\TransformSystem.cpp",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAACQAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-14T12:41:54.123Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "TransformSystem.h",
+              "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\00_Transform\\TransformSystem.h",
+              "RelativeDocumentMoniker": "WinApiShootingGame\\03.System\\00_Transform\\TransformSystem.h",
+              "ToolTip": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\00_Transform\\TransformSystem.h",
+              "RelativeToolTip": "WinApiShootingGame\\03.System\\00_Transform\\TransformSystem.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-10T18:54:50.099Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ComponentSystem.h",
+              "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\ComponentSystem.h",
+              "RelativeDocumentMoniker": "WinApiShootingGame\\03.System\\ComponentSystem.h",
+              "ToolTip": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\ComponentSystem.h",
+              "RelativeToolTip": "WinApiShootingGame\\03.System\\ComponentSystem.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-10T18:46:18.647Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "CObject.cpp",
+              "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\01.Object\\00.Default\\CObject.cpp",
+              "RelativeDocumentMoniker": "WinApiShootingGame\\01.Object\\00.Default\\CObject.cpp",
+              "ToolTip": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\01.Object\\00.Default\\CObject.cpp",
+              "RelativeToolTip": "WinApiShootingGame\\01.Object\\00.Default\\CObject.cpp",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-14T11:33:38.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "GameManager.h",
+              "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\00.Manager\\01.GameManager\\GameManager.h",
+              "RelativeDocumentMoniker": "WinApiShootingGame\\00.Manager\\01.GameManager\\GameManager.h",
+              "ToolTip": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\00.Manager\\01.GameManager\\GameManager.h",
+              "RelativeToolTip": "WinApiShootingGame\\00.Manager\\01.GameManager\\GameManager.h",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAAAsAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-14T11:23:59.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "CObject.h",
+              "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\01.Object\\00.Default\\CObject.h",
+              "RelativeDocumentMoniker": "WinApiShootingGame\\01.Object\\00.Default\\CObject.h",
+              "ToolTip": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\01.Object\\00.Default\\CObject.h",
+              "RelativeToolTip": "WinApiShootingGame\\01.Object\\00.Default\\CObject.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-10T11:17:29.232Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
               "Title": "CollisionManager.cpp",
               "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\00.Manager\\05.CollisionManager\\CollisionManager.cpp",
               "RelativeDocumentMoniker": "WinApiShootingGame\\00.Manager\\05.CollisionManager\\CollisionManager.cpp",
@@ -233,7 +471,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 33,
               "Title": "CollisionManager.h",
               "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\00.Manager\\05.CollisionManager\\CollisionManager.h",
               "RelativeDocumentMoniker": "WinApiShootingGame\\00.Manager\\05.CollisionManager\\CollisionManager.h",
@@ -245,20 +483,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SpriteRendererSystem.cpp",
-              "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\01_SpriteRenderer\\SpriteRendererSystem.cpp",
-              "RelativeDocumentMoniker": "WinApiShootingGame\\03.System\\01_SpriteRenderer\\SpriteRendererSystem.cpp",
-              "ToolTip": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\01_SpriteRenderer\\SpriteRendererSystem.cpp",
-              "RelativeToolTip": "WinApiShootingGame\\03.System\\01_SpriteRenderer\\SpriteRendererSystem.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-10T18:52:28.091Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 35,
               "Title": "Rigidbody.h",
               "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\02.Component\\Rigidbody.h",
               "RelativeDocumentMoniker": "WinApiShootingGame\\02.Component\\Rigidbody.h",
@@ -270,43 +495,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "CoolTimeSystem.cpp",
-              "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\06_CoolTime\\CoolTimeSystem.cpp",
-              "RelativeDocumentMoniker": "WinApiShootingGame\\03.System\\06_CoolTime\\CoolTimeSystem.cpp",
-              "ToolTip": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\06_CoolTime\\CoolTimeSystem.cpp",
-              "RelativeToolTip": "WinApiShootingGame\\03.System\\06_CoolTime\\CoolTimeSystem.cpp",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAADsAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-10T18:49:00.779Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "CoolTimeSystem.h",
-              "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\06_CoolTime\\CoolTimeSystem.h",
-              "RelativeDocumentMoniker": "WinApiShootingGame\\03.System\\06_CoolTime\\CoolTimeSystem.h",
-              "ToolTip": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\06_CoolTime\\CoolTimeSystem.h",
-              "RelativeToolTip": "WinApiShootingGame\\03.System\\06_CoolTime\\CoolTimeSystem.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-10T18:49:01.403Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "InputManager.cpp",
-              "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\00.Manager\\04.InputManager\\InputManager.cpp",
-              "RelativeDocumentMoniker": "WinApiShootingGame\\00.Manager\\04.InputManager\\InputManager.cpp",
-              "ToolTip": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\00.Manager\\04.InputManager\\InputManager.cpp",
-              "RelativeToolTip": "WinApiShootingGame\\00.Manager\\04.InputManager\\InputManager.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-10T20:53:19.982Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 28,
               "Title": "GCManager.cpp",
               "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\00.Manager\\98.GCManager\\GCManager.cpp",
               "RelativeDocumentMoniker": "WinApiShootingGame\\00.Manager\\98.GCManager\\GCManager.cpp",
@@ -318,7 +507,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 29,
               "Title": "GCManager.h",
               "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\00.Manager\\98.GCManager\\GCManager.h",
               "RelativeDocumentMoniker": "WinApiShootingGame\\00.Manager\\98.GCManager\\GCManager.h",
@@ -330,19 +519,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "TransformSystem.h",
-              "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\00_Transform\\TransformSystem.h",
-              "RelativeDocumentMoniker": "WinApiShootingGame\\03.System\\00_Transform\\TransformSystem.h",
-              "ToolTip": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\00_Transform\\TransformSystem.h",
-              "RelativeToolTip": "WinApiShootingGame\\03.System\\00_Transform\\TransformSystem.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-10T18:54:50.099Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 31,
               "Title": "Client.cpp",
               "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\Client.cpp",
               "RelativeDocumentMoniker": "WinApiShootingGame\\Client.cpp",
@@ -354,79 +531,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ComponentSystem.h",
-              "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\ComponentSystem.h",
-              "RelativeDocumentMoniker": "WinApiShootingGame\\03.System\\ComponentSystem.h",
-              "ToolTip": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\ComponentSystem.h",
-              "RelativeToolTip": "WinApiShootingGame\\03.System\\ComponentSystem.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-10T18:46:18.647Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "ColliderSystem.cpp",
-              "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\02_Collider\\ColliderSystem.cpp",
-              "RelativeDocumentMoniker": "WinApiShootingGame\\03.System\\02_Collider\\ColliderSystem.cpp",
-              "ToolTip": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\02_Collider\\ColliderSystem.cpp",
-              "RelativeToolTip": "WinApiShootingGame\\03.System\\02_Collider\\ColliderSystem.cpp",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAAB4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-10T18:51:37.538Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "InputSystem.h",
-              "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\03_Input\\InputSystem.h",
-              "RelativeDocumentMoniker": "WinApiShootingGame\\03.System\\03_Input\\InputSystem.h",
-              "ToolTip": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\03_Input\\InputSystem.h",
-              "RelativeToolTip": "WinApiShootingGame\\03.System\\03_Input\\InputSystem.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-10T19:00:24.003Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ComponentSystem.cpp",
-              "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\ComponentSystem.cpp",
-              "RelativeDocumentMoniker": "WinApiShootingGame\\03.System\\ComponentSystem.cpp",
-              "ToolTip": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\ComponentSystem.cpp",
-              "RelativeToolTip": "WinApiShootingGame\\03.System\\ComponentSystem.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-10T18:46:19.25Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "CObject.h",
-              "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\01.Object\\00.Default\\CObject.h",
-              "RelativeDocumentMoniker": "WinApiShootingGame\\01.Object\\00.Default\\CObject.h",
-              "ToolTip": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\01.Object\\00.Default\\CObject.h",
-              "RelativeToolTip": "WinApiShootingGame\\01.Object\\00.Default\\CObject.h",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-10T11:17:29.232Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "RigidbodySystem.h",
-              "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\04_Rigid\\RigidbodySystem.h",
-              "RelativeDocumentMoniker": "WinApiShootingGame\\03.System\\04_Rigid\\RigidbodySystem.h",
-              "ToolTip": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\04_Rigid\\RigidbodySystem.h",
-              "RelativeToolTip": "WinApiShootingGame\\03.System\\04_Rigid\\RigidbodySystem.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-10T18:51:04.179Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 30,
               "Title": "MainManager.cpp",
               "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\00.Manager\\MainManager.cpp",
               "RelativeDocumentMoniker": "WinApiShootingGame\\00.Manager\\MainManager.cpp",
@@ -438,7 +543,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 34,
               "Title": "SceneManager.cpp",
               "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\00.Manager\\02.SceneManager\\SceneManager.cpp",
               "RelativeDocumentMoniker": "WinApiShootingGame\\00.Manager\\02.SceneManager\\SceneManager.cpp",
@@ -450,19 +555,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "ColliderSystem.h",
-              "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\02_Collider\\ColliderSystem.h",
-              "RelativeDocumentMoniker": "WinApiShootingGame\\03.System\\02_Collider\\ColliderSystem.h",
-              "ToolTip": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\02_Collider\\ColliderSystem.h",
-              "RelativeToolTip": "WinApiShootingGame\\03.System\\02_Collider\\ColliderSystem.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-10T18:52:09.291Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 37,
               "Title": "SceneManager.h",
               "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\00.Manager\\02.SceneManager\\SceneManager.h",
               "RelativeDocumentMoniker": "WinApiShootingGame\\00.Manager\\02.SceneManager\\SceneManager.h",
@@ -474,7 +567,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 39,
               "Title": "MainManager.h",
               "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\00.Manager\\MainManager.h",
               "RelativeDocumentMoniker": "WinApiShootingGame\\00.Manager\\MainManager.h",
@@ -486,7 +579,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 32,
               "Title": "Client.h",
               "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\Client.h",
               "RelativeDocumentMoniker": "WinApiShootingGame\\Client.h",
@@ -498,7 +591,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 38,
               "Title": "Extern.h",
               "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\04.Header\\Extern.h",
               "RelativeDocumentMoniker": "WinApiShootingGame\\04.Header\\Extern.h",
@@ -510,43 +603,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "SpriteRendererSystem.h",
-              "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\01_SpriteRenderer\\SpriteRendererSystem.h",
-              "RelativeDocumentMoniker": "WinApiShootingGame\\03.System\\01_SpriteRenderer\\SpriteRendererSystem.h",
-              "ToolTip": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\01_SpriteRenderer\\SpriteRendererSystem.h",
-              "RelativeToolTip": "WinApiShootingGame\\03.System\\01_SpriteRenderer\\SpriteRendererSystem.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-10T18:52:28.835Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "StateSystem.h",
-              "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\05_State\\StateSystem.h",
-              "RelativeDocumentMoniker": "WinApiShootingGame\\03.System\\05_State\\StateSystem.h",
-              "ToolTip": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\05_State\\StateSystem.h",
-              "RelativeToolTip": "WinApiShootingGame\\03.System\\05_State\\StateSystem.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-10T18:48:07.21Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "StateSystem.cpp",
-              "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\05_State\\StateSystem.cpp",
-              "RelativeDocumentMoniker": "WinApiShootingGame\\03.System\\05_State\\StateSystem.cpp",
-              "ToolTip": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\05_State\\StateSystem.cpp",
-              "RelativeToolTip": "WinApiShootingGame\\03.System\\05_State\\StateSystem.cpp",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-10T18:48:06.619Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 40,
               "Title": "Collider.h",
               "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\02.Component\\Collider.h",
               "RelativeDocumentMoniker": "WinApiShootingGame\\02.Component\\Collider.h",
@@ -558,7 +615,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 41,
               "Title": "CoolTime.h",
               "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\02.Component\\CoolTime.h",
               "RelativeDocumentMoniker": "WinApiShootingGame\\02.Component\\CoolTime.h",
@@ -570,7 +627,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 36,
               "Title": "Transform.h",
               "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\02.Component\\Transform.h",
               "RelativeDocumentMoniker": "WinApiShootingGame\\02.Component\\Transform.h",
@@ -582,7 +639,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 42,
               "Title": "State.h",
               "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\02.Component\\State.h",
               "RelativeDocumentMoniker": "WinApiShootingGame\\02.Component\\State.h",
@@ -594,7 +651,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 24,
               "Title": "SpriteRenderer.h",
               "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\02.Component\\SpriteRenderer.h",
               "RelativeDocumentMoniker": "WinApiShootingGame\\02.Component\\SpriteRenderer.h",
@@ -606,19 +663,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "InputData.h",
-              "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\02.Component\\InputData.h",
-              "RelativeDocumentMoniker": "WinApiShootingGame\\02.Component\\InputData.h",
-              "ToolTip": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\02.Component\\InputData.h",
-              "RelativeToolTip": "WinApiShootingGame\\02.Component\\InputData.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-10T18:58:07.539Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 43,
               "Title": "Vector2.h",
               "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\04.Header\\Vector2.h",
               "RelativeDocumentMoniker": "WinApiShootingGame\\04.Header\\Vector2.h",
@@ -630,19 +675,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "IDataProvider.h",
-              "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\IDataProvider.h",
-              "RelativeDocumentMoniker": "WinApiShootingGame\\03.System\\IDataProvider.h",
-              "ToolTip": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\03.System\\IDataProvider.h",
-              "RelativeToolTip": "WinApiShootingGame\\03.System\\IDataProvider.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-10T18:46:44.515Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 44,
               "Title": "framework.h",
               "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\framework.h",
               "RelativeDocumentMoniker": "WinApiShootingGame\\framework.h",
@@ -654,7 +687,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 26,
               "Title": "TimeManager.cpp",
               "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\00.Manager\\03.TimeManager\\TimeManager.cpp",
               "RelativeDocumentMoniker": "WinApiShootingGame\\00.Manager\\03.TimeManager\\TimeManager.cpp",
@@ -666,7 +699,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 25,
               "Title": "TimeManager.h",
               "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\00.Manager\\03.TimeManager\\TimeManager.h",
               "RelativeDocumentMoniker": "WinApiShootingGame\\00.Manager\\03.TimeManager\\TimeManager.h",
@@ -679,8 +712,8 @@
           ]
         },
         {
-          "DockedWidth": 36,
-          "SelectedChildIndex": -1,
+          "DockedWidth": 420,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -689,6 +722,57 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "InputManager.h",
+              "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\00.Manager\\04.InputManager\\InputManager.h",
+              "RelativeDocumentMoniker": "WinApiShootingGame\\00.Manager\\04.InputManager\\InputManager.h",
+              "ToolTip": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\00.Manager\\04.InputManager\\InputManager.h",
+              "RelativeToolTip": "WinApiShootingGame\\00.Manager\\04.InputManager\\InputManager.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-10T20:53:20.765Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "InputManager.cpp",
+              "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\00.Manager\\04.InputManager\\InputManager.cpp",
+              "RelativeDocumentMoniker": "WinApiShootingGame\\00.Manager\\04.InputManager\\InputManager.cpp",
+              "ToolTip": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\00.Manager\\04.InputManager\\InputManager.cpp",
+              "RelativeToolTip": "WinApiShootingGame\\00.Manager\\04.InputManager\\InputManager.cpp",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAAB4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-10T20:53:19.982Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CPlayer.cpp",
+              "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\01.Object\\01.Player\\CPlayer.cpp",
+              "RelativeDocumentMoniker": "WinApiShootingGame\\01.Object\\01.Player\\CPlayer.cpp",
+              "ToolTip": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\01.Object\\01.Player\\CPlayer.cpp",
+              "RelativeToolTip": "WinApiShootingGame\\01.Object\\01.Player\\CPlayer.cpp",
+              "ViewState": "AQIAACUAAAAAAAAAAAAAABQAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-14T11:33:43.335Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "CPlayer.h",
+              "DocumentMoniker": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\01.Object\\01.Player\\CPlayer.h",
+              "RelativeDocumentMoniker": "WinApiShootingGame\\01.Object\\01.Player\\CPlayer.h",
+              "ToolTip": "C:\\Cpp\\WinApiShootingGame\\WinApiShootingGame\\01.Object\\01.Player\\CPlayer.h",
+              "RelativeToolTip": "WinApiShootingGame\\01.Object\\01.Player\\CPlayer.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-14T11:33:54.024Z"
             }
           ]
         }

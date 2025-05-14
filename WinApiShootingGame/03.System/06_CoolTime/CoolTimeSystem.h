@@ -14,7 +14,6 @@ public:
 	void StartCooldown();
 	bool CheckActive();
 	void Update(float _deltaTime) override;
-	void Render(HDC hdc) override;
 	const CoolTime& GetData() const override;
 
 };

@@ -10,8 +10,7 @@ protected:
 public:
     ComponentSystem() = default;
     virtual ~ComponentSystem() = default;
-    virtual void Init() abstract;
-    virtual void Update(float _deltaTime) abstract;
-	virtual void Render(HDC hdc) abstract;
+    virtual void Init() = 0;
+    virtual void Update(float _deltaTime) = 0;
     virtual void AddEvent(function<void()> func);
 };

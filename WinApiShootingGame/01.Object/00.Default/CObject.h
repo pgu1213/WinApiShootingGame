@@ -10,7 +10,7 @@ public:
 	virtual ~CObject();
 
 public:
-	virtual void Init(Entity id, EntityType type, ComponentTable compTable);
+	virtual void Init(Entity id, EntityType type);
 	virtual void Update(float DeltaTime);
 	virtual void Render(HDC hdc);
 	virtual void Release();

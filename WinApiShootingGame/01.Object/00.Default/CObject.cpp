@@ -14,11 +14,10 @@ CObject::~CObject()
 
 }
 
-void CObject::Init(Entity id, EntityType type, ComponentTable compTable)
+void CObject::Init(Entity id, EntityType type)
 {
 	m_id = id;
 	m_type = type;
-	m_componentTable = compTable;
 }
 
 void CObject::Update(float DeltaTime)

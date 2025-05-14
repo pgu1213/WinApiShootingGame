@@ -36,10 +36,6 @@ void TransformSystem::Update(float _deltaTime)
 		m_event();
 }
 
-void TransformSystem::Render(HDC hdc)
-{
-}
-
 const Transform& TransformSystem::GetData() const
 {
 	return *m_transform;

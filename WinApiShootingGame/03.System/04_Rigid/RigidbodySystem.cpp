@@ -28,7 +28,3 @@ void RigidbodySystem::Update(float _deltaTime)
 		m_event();
 	}
 }
-
-void RigidbodySystem::Render(HDC hdc)
-{
-}
