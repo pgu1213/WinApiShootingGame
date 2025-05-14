@@ -36,6 +36,8 @@ void CPlayer::Init(Entity id, EntityType type)
 
 	Rigidbody* rigid = new Rigidbody();
 	RigidbodySystem* rigidSystem = new RigidbodySystem(this, rigid);
+
+	SpriteRendererSystem* spriteSystem = new SpriteRendererSystem(this, GetDC(g_hWnd));
 	
 	Collider* col = new Collider{ Vector2{0,0} , Vector2{40.f, 40.f} };
 	ColliderSystem* colSystem = new ColliderSystem(this, col);
@@ -43,9 +45,12 @@ void CPlayer::Init(Entity id, EntityType type)
 	m_componentTable[typeid(ColliderSystem)] = colSystem;
 	m_componentTable[typeid(RigidbodySystem)] = rigidSystem;
 	m_componentTable[typeid(TransformSystem)] = transformSystem;
-	m_componentTable[typeid(SpriteRendererSystem)] = new SpriteRendererSystem(this, GetDC(g_hWnd));
+	m_componentTable[typeid(SpriteRendererSystem)] = spriteSystem;
 
 	render = dynamic_cast<IRenderer*>(m_componentTable[typeid(SpriteRendererSystem)]);
+
+	SpriteRenderer& playerSpriteData = spriteSystem->GetModifyData();
+	playerSpriteData.filePath = L"05.Resource/01.Sprite/Fly.png";
 
 	Vector2 screenSize = GameManager::GetScreenSize();
 

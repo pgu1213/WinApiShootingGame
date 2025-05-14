@@ -10,8 +10,10 @@ public:
 	virtual ~ResourceManager();
 public:
 	bool Init();
-	void LoadImage(const string& key, const wstring& filePath);
-	void UnloadImage(const string& key);
-	Image* GetImage(const string& key);
-
+	void Release();
+	Bitmap* LoadSprite(const wstring& filePath);
+	Bitmap* GetSprite(const wstring& filePath);
+private:
+	static ULONG_PTR GdiplusToken;
+	static map<wstring, Gdiplus::Bitmap*> ImageMap;
 };

@@ -138,6 +138,7 @@
   <ItemGroup>
     <ClInclude Include="00.Manager\04.InputManager\InputManager.h" />
     <ClInclude Include="00.Manager\05.CollisionManager\CollisionManager.h" />
+    <ClInclude Include="00.Manager\06.ResourceManager\ResourceManager.h" />
     <ClInclude Include="00.Manager\98.GCManager\GCManager.h" />
     <ClInclude Include="00.Manager\99.SingTonManager\SingTonManager.h" />
     <ClInclude Include="01.Object\02.Player\CPlayer.h" />
@@ -169,7 +170,6 @@
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="00.Manager\02.SceneManager\SceneManager.h" />
-    <ClInclude Include="00.Manager\06.ResourceManager\ResourceManager.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Client.h" />
     <ClInclude Include="00.Manager\03.TimeManager\TimeManager.h" />
@@ -177,6 +177,7 @@
   <ItemGroup>
     <ClCompile Include="00.Manager\04.InputManager\InputManager.cpp" />
     <ClCompile Include="00.Manager\05.CollisionManager\CollisionManager.cpp" />
+    <ClCompile Include="00.Manager\06.ResourceManager\ResourceManager.cpp" />
     <ClCompile Include="00.Manager\98.GCManager\GCManager.cpp" />
     <ClCompile Include="00.Manager\MainManager.cpp" />
     <ClCompile Include="00.Manager\01.GameManager\GameManager.cpp" />
@@ -200,12 +201,12 @@
     <ClCompile Include="Client.cpp" />
     <ClCompile Include="00.Manager\03.TimeManager\TimeManager.cpp" />
     <ClCompile Include="00.Manager\02.SceneManager\SceneManager.cpp" />
-    <ClCompile Include="00.Manager\06.ResourceManager\ResourceManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="WinApiShootingGame.rc" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="05.Resource\01.Sprite\Fly.png" />
     <Image Include="small.ico" />
     <Image Include="WinApiShootingGame.ico" />
   </ItemGroup>

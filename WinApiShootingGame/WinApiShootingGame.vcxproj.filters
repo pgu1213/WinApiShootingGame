@@ -57,9 +57,6 @@
     <ClInclude Include="02.Component\Rigidbody.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="02.Component\SpriteRenderer.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="02.Component\State.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
@@ -96,9 +93,6 @@
     <ClInclude Include="03.System\00_Transform\TransformSystem.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="03.System\01_SpriteRenderer\SpriteRendererSystem.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="00.Manager\05.CollisionManager\CollisionManager.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
@@ -111,9 +105,6 @@
     <ClInclude Include="00.Manager\98.GCManager\GCManager.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="00.Manager\06.ResourceManager\ResourceManager.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="01.Object\02.Player\CPlayer.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
@@ -124,6 +115,15 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="01.Object\03_Bullet\CBullet.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="00.Manager\06.ResourceManager\ResourceManager.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="03.System\01_SpriteRenderer\SpriteRendererSystem.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="02.Component\SpriteRenderer.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
@@ -167,9 +167,6 @@
     <ClCompile Include="03.System\00_Transform\TransformSystem.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="03.System\01_SpriteRenderer\SpriteRendererSystem.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="00.Manager\05.CollisionManager\CollisionManager.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -179,9 +176,6 @@
     <ClCompile Include="00.Manager\98.GCManager\GCManager.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="00.Manager\06.ResourceManager\ResourceManager.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="01.Object\02.Player\CPlayer.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -189,6 +183,12 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="01.Object\03_Bullet\CBullet.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="00.Manager\06.ResourceManager\ResourceManager.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="03.System\01_SpriteRenderer\SpriteRendererSystem.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
@@ -202,6 +202,9 @@
       <Filter>리소스 파일</Filter>
     </Image>
     <Image Include="WinApiShootingGame.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="05.Resource\01.Sprite\Fly.png">
       <Filter>리소스 파일</Filter>
     </Image>
   </ItemGroup>

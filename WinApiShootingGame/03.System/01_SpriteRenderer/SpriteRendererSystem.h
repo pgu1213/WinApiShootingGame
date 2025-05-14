@@ -1,11 +1,10 @@
 #pragma once
-
 #include "../../03.System/IRenderer.h"
 
 struct SpriteRenderer;
 struct Transform;
 
-class SpriteRendererSystem : public ComponentSystem, public IDataProvider<SpriteRenderer>, public IRenderer
+class SpriteRendererSystem : public ComponentSystem, public IDataProvider<SpriteRenderer>, public IRenderer 
 {
 private:
 	SpriteRenderer* m_render;
@@ -17,5 +16,6 @@ public:
 	virtual void Update(float _deltaTime) override;
 	virtual void Render(HDC hdc) override;
 	const SpriteRenderer& GetData()const;
+	SpriteRenderer& GetModifyData();
 };
 
