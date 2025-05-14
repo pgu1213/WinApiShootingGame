@@ -114,6 +114,12 @@
     <ClInclude Include="00.Manager\04.InputManager\InputManager.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="00.Manager\98.GCManager\GCManager.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="00.Manager\06.ResourceManager\ResourceManager.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Client.cpp">
@@ -165,6 +171,12 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="00.Manager\04.InputManager\InputManager.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="00.Manager\98.GCManager\GCManager.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="00.Manager\06.ResourceManager\ResourceManager.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

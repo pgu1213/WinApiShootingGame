@@ -19,7 +19,7 @@ public:
 	const EntityType& GetType() const;
 	const string& GetObjectName() const; // 오브젝트 이름 반환
 	bool IsValid() const; // 객체가 유효한지 확인
-
+	bool m_bIsGCMark; // GC 마킹 여부
 private:
 	Entity m_id;
 	EntityType m_type;
