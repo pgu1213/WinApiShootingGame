@@ -9,6 +9,7 @@
 
 // 여기에 미리 컴파일하려는 헤더 추가
 #include "framework.h"
+#include <ole2.h>
 #include <string>
 #include <atomic>
 #include <vector>
@@ -17,9 +18,9 @@
 #include <functional>
 #include <algorithm>
 #include <typeindex>
-//#include <gdiplus.h>
+#include <gdiplus.h>
 
-//#pragma comment(lib, "Gdiplus.lib")
+#pragma comment(lib, "Gdiplus.lib")
 
 #include "04.Header/Entity.h"
 #include "04.Header/Enum.h"
@@ -29,4 +30,4 @@
 #endif //PCH_H
 
 using namespace std;
-//using namespace Gdiplus;
+using namespace Gdiplus;

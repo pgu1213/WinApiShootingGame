@@ -1,1 +1,98 @@
-﻿
+﻿  pch.cpp
+  InputManager.cpp
+  CollisionManager.cpp
+C:\Dev\WinApiShootingGame\WinApiShootingGame\03.System\02_Collider\ColliderSystem.h(3,8): warning C4099: 'Collider': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  (소스 파일 '00.Manager/05.CollisionManager/CollisionManager.cpp'을(를) 컴파일하는 중)
+      C:\Dev\WinApiShootingGame\WinApiShootingGame\00.Manager\05.CollisionManager\CollisionManager.h(4,7):
+      'Collider' 선언을 참조하십시오.
+  
+C:\Dev\WinApiShootingGame\WinApiShootingGame\03.System\00_Transform\TransformSystem.h(2,8): warning C4099: 'Transform': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  (소스 파일 '00.Manager/05.CollisionManager/CollisionManager.cpp'을(를) 컴파일하는 중)
+      C:\Dev\WinApiShootingGame\WinApiShootingGame\00.Manager\05.CollisionManager\CollisionManager.h(3,7):
+      'Transform' 선언을 참조하십시오.
+  
+C:\Dev\WinApiShootingGame\WinApiShootingGame\02.Component\Collider.h(4,8): warning C4099: 'Collider': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  (소스 파일 '00.Manager/05.CollisionManager/CollisionManager.cpp'을(를) 컴파일하는 중)
+      C:\Dev\WinApiShootingGame\WinApiShootingGame\02.Component\Collider.h(4,8):
+      'Collider' 선언을 참조하십시오.
+  
+C:\Dev\WinApiShootingGame\WinApiShootingGame\02.Component\Transform.h(4,8): warning C4099: 'Transform': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  (소스 파일 '00.Manager/05.CollisionManager/CollisionManager.cpp'을(를) 컴파일하는 중)
+      C:\Dev\WinApiShootingGame\WinApiShootingGame\02.Component\Transform.h(4,8):
+      'Transform' 선언을 참조하십시오.
+  
+  GCManager.cpp
+  MainManager.cpp
+  GameManager.cpp
+C:\Dev\WinApiShootingGame\WinApiShootingGame\03.System\00_Transform\TransformSystem.h(2,8): warning C4099: 'Transform': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  (소스 파일 '00.Manager/01.GameManager/GameManager.cpp'을(를) 컴파일하는 중)
+      C:\Dev\WinApiShootingGame\WinApiShootingGame\00.Manager\05.CollisionManager\CollisionManager.h(3,7):
+      'Transform' 선언을 참조하십시오.
+  
+C:\Dev\WinApiShootingGame\WinApiShootingGame\03.System\01_SpriteRenderer\SpriteRendererSystem.h(3,8): warning C4099: 'Transform': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  (소스 파일 '00.Manager/01.GameManager/GameManager.cpp'을(를) 컴파일하는 중)
+      C:\Dev\WinApiShootingGame\WinApiShootingGame\03.System\00_Transform\TransformSystem.h(2,8):
+      'Transform' 선언을 참조하십시오.
+  
+C:\Dev\WinApiShootingGame\WinApiShootingGame\03.System\02_Collider\ColliderSystem.h(3,8): warning C4099: 'Collider': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  (소스 파일 '00.Manager/01.GameManager/GameManager.cpp'을(를) 컴파일하는 중)
+      C:\Dev\WinApiShootingGame\WinApiShootingGame\00.Manager\05.CollisionManager\CollisionManager.h(4,7):
+      'Collider' 선언을 참조하십시오.
+  
+C:\Dev\WinApiShootingGame\WinApiShootingGame\02.Component\Transform.h(4,8): warning C4099: 'Transform': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  (소스 파일 '00.Manager/01.GameManager/GameManager.cpp'을(를) 컴파일하는 중)
+      C:\Dev\WinApiShootingGame\WinApiShootingGame\02.Component\Transform.h(4,8):
+      'Transform' 선언을 참조하십시오.
+  
+C:\Dev\WinApiShootingGame\WinApiShootingGame\02.Component\Collider.h(4,8): warning C4099: 'Collider': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  (소스 파일 '00.Manager/01.GameManager/GameManager.cpp'을(를) 컴파일하는 중)
+      C:\Dev\WinApiShootingGame\WinApiShootingGame\02.Component\Collider.h(4,8):
+      'Collider' 선언을 참조하십시오.
+  
+C:\Dev\WinApiShootingGame\WinApiShootingGame\00.Manager\01.GameManager\GameManager.cpp(89,47): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Dev\WinApiShootingGame\WinApiShootingGame\00.Manager\01.GameManager\GameManager.cpp(89,33): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Dev\WinApiShootingGame\WinApiShootingGame\00.Manager\01.GameManager\GameManager.cpp(105,2): error C2660: 'GameManager::AddEntityTable': 함수는 1개의 인수를 사용하지 않습니다.
+      C:\Dev\WinApiShootingGame\WinApiShootingGame\00.Manager\01.GameManager\GameManager.h(47,7):
+      'GameManager::AddEntityTable' 선언을 참조하십시오.
+      C:\Dev\WinApiShootingGame\WinApiShootingGame\00.Manager\01.GameManager\GameManager.cpp(105,2):
+      인수 목록 '(Entity)'을(를) 일치시키는 동안
+  
+C:\Dev\WinApiShootingGame\WinApiShootingGame\00.Manager\01.GameManager\GameManager.cpp(136,28): error C2065: 'GetComponent': 선언되지 않은 식별자입니다.
+C:\Dev\WinApiShootingGame\WinApiShootingGame\00.Manager\01.GameManager\GameManager.cpp(136,41): error C2275: 'InputSystem': 형식 대신 식이 필요합니다.
+C:\Dev\WinApiShootingGame\WinApiShootingGame\00.Manager\01.GameManager\GameManager.cpp(136,26): error C2530: 'input': 참조를 초기화해야 합니다.
+C:\Dev\WinApiShootingGame\WinApiShootingGame\00.Manager\01.GameManager\GameManager.cpp(240,2): error C2660: 'GameManager::AddEntityTable': 함수는 1개의 인수를 사용하지 않습니다.
+      C:\Dev\WinApiShootingGame\WinApiShootingGame\00.Manager\01.GameManager\GameManager.h(47,7):
+      'GameManager::AddEntityTable' 선언을 참조하십시오.
+      C:\Dev\WinApiShootingGame\WinApiShootingGame\00.Manager\01.GameManager\GameManager.cpp(240,2):
+      인수 목록 '(Entity)'을(를) 일치시키는 동안
+  
+C:\Dev\WinApiShootingGame\WinApiShootingGame\00.Manager\01.GameManager\GameManager.cpp(293,2): error C2660: 'GameManager::AddEntityTable': 함수는 1개의 인수를 사용하지 않습니다.
+      C:\Dev\WinApiShootingGame\WinApiShootingGame\00.Manager\01.GameManager\GameManager.h(47,7):
+      'GameManager::AddEntityTable' 선언을 참조하십시오.
+      C:\Dev\WinApiShootingGame\WinApiShootingGame\00.Manager\01.GameManager\GameManager.cpp(293,2):
+      인수 목록 '(Entity)'을(를) 일치시키는 동안
+  
+  CObject.cpp
+  TransformSystem.cpp
+  SpriteRendererSystem.cpp
+C:\Dev\WinApiShootingGame\WinApiShootingGame\03.System\01_SpriteRenderer\SpriteRendererSystem.cpp(32,47): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Dev\WinApiShootingGame\WinApiShootingGame\03.System\01_SpriteRenderer\SpriteRendererSystem.cpp(33,46): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Dev\WinApiShootingGame\WinApiShootingGame\03.System\01_SpriteRenderer\SpriteRendererSystem.cpp(34,48): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Dev\WinApiShootingGame\WinApiShootingGame\03.System\01_SpriteRenderer\SpriteRendererSystem.cpp(35,49): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  ColliderSystem.cpp
+  InputSystem.cpp
+C:\Dev\WinApiShootingGame\WinApiShootingGame\03.System\03_Input\InputSystem.cpp(37,54): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Dev\WinApiShootingGame\WinApiShootingGame\03.System\03_Input\InputSystem.cpp(38,52): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  RigidbodySystem.cpp
+  StateSystem.cpp
+  CoolTimeSystem.cpp
+C:\Dev\WinApiShootingGame\WinApiShootingGame\03.System\06_CoolTime\CoolTimeSystem.cpp(14,35): warning C4244: '=': 'ULONGLONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Dev\WinApiShootingGame\WinApiShootingGame\03.System\06_CoolTime\CoolTimeSystem.cpp(29,35): warning C4244: '=': 'ULONGLONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Dev\WinApiShootingGame\WinApiShootingGame\03.System\06_CoolTime\CoolTimeSystem.cpp(44,12): warning C4244: '초기화 중': 'ULONGLONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  ComponentSystem.cpp
+  Client.cpp
+  TimeManager.cpp
+  SceneManager.cpp
+  ResourceManager.cpp
+  코드를 생성하고 있습니다...
+C:\Dev\WinApiShootingGame\WinApiShootingGame\Client.cpp(71): warning C4715: 'wWinMain': 모든 제어 경로에서 값을 반환하지는 않습니다.
