@@ -2,6 +2,6 @@
 
 class IRenderer {
 public:
-    virtual void Render(HDC hdc) = 0; 
-    virtual ~IRenderer() = default;
+	virtual void Render(HDC hdc) = 0;
+	virtual ~IRenderer() = default;
 };

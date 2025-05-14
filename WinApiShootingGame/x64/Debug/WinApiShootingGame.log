@@ -1,7 +1,6 @@
-﻿  IRenderer.cpp
-  CActor.cpp
-/03.System/IRenderer.cpp(1,1): error C1083: 소스 파일을 열 수 없습니다. '03.System\IRenderer.cpp': No such file or directory
-  (소스 파일 '/03.System/IRenderer.cpp'을(를) 컴파일하는 중)
-  
-  ResourceManager.cpp
-  코드를 생성하고 있습니다...
+﻿  SpriteRendererSystem.cpp
+C:\Cpp\WinApiShootingGame\WinApiShootingGame\03.System\01_SpriteRenderer\SpriteRendererSystem.cpp(32,47): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Cpp\WinApiShootingGame\WinApiShootingGame\03.System\01_SpriteRenderer\SpriteRendererSystem.cpp(33,46): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Cpp\WinApiShootingGame\WinApiShootingGame\03.System\01_SpriteRenderer\SpriteRendererSystem.cpp(34,48): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Cpp\WinApiShootingGame\WinApiShootingGame\03.System\01_SpriteRenderer\SpriteRendererSystem.cpp(35,49): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  WinApiShootingGame.vcxproj -> C:\Cpp\WinApiShootingGame\x64\Debug\WinApiShootingGame.exe

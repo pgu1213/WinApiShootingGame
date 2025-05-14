@@ -117,10 +117,10 @@
     <ClInclude Include="01.Object\02.Player\CPlayer.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="03.System\IRenderer.h">
+    <ClInclude Include="01.Object\01.Actor\CActor.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="01.Object\01.Actor\CActor.h">
+    <ClInclude Include="03.System\IRenderer.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
