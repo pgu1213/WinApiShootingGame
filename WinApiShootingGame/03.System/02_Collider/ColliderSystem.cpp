@@ -3,7 +3,7 @@
 #include "ColliderSystem.h"
 #include "../../02.Component/Collider.h"
 
-ColliderSystem::ColliderSystem(CObject* owner, Collider* collider)
+ColliderSystem::ColliderSystem(CActor* owner, Collider* collider)
     : m_collider(collider) {
     m_owner = owner;
 }
@@ -26,10 +26,10 @@ void ColliderSystem::Update(float _deltaTime) {
     }
 }
 
-void ColliderSystem::SetOnCollisionEvent(std::function<void(CObject*)> func) {
+void ColliderSystem::SetOnCollisionEvent(std::function<void(CActor*)> func) {
     m_onCollision = func;
 }
 
-void ColliderSystem::InvokeCollisionEvent(CObject* other)const {
+void ColliderSystem::InvokeCollisionEvent(CActor* other)const {
     if (m_onCollision) m_onCollision(other);
 }

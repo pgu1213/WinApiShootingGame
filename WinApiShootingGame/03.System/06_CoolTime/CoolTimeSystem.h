@@ -8,7 +8,7 @@ private:
 	CoolTime* m_coolTime;
 	bool isActive;			// 쿨타임인지 체크
 public:
-	CoolTimeSystem(CObject* owner, CoolTime* coolTime);
+	CoolTimeSystem(CActor* owner, CoolTime* coolTime);
 	virtual ~CoolTimeSystem();
 	virtual void Init() override;
 	void StartCooldown();

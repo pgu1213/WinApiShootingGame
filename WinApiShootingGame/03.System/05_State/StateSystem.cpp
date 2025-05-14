@@ -3,7 +3,7 @@
 #include "../../02.Component/State.h"
 #include "StateSystem.h"
 
-StateSystem::StateSystem(CObject* owner, State* state)
+StateSystem::StateSystem(CActor* owner, State* state)
     : m_state(state) {
     m_owner = owner;
 }

@@ -114,10 +114,13 @@
     <ClInclude Include="00.Manager\06.ResourceManager\ResourceManager.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="01.Object\01.Player\CPlayer.h">
+    <ClInclude Include="01.Object\02.Player\CPlayer.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="03.System\IRenderer.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="01.Object\01.Actor\CActor.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
@@ -176,10 +179,13 @@
     <ClCompile Include="00.Manager\06.ResourceManager\ResourceManager.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="01.Object\01.Player\CPlayer.cpp">
+    <ClCompile Include="01.Object\02.Player\CPlayer.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="03.System\IRenderer.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="01.Object\01.Actor\CActor.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

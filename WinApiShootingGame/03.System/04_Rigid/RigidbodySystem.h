@@ -5,7 +5,7 @@ class RigidbodySystem : public ComponentSystem , public IDataProvider<Rigidbody>
 private:
     Rigidbody* m_rigidbody;
 public:
-    RigidbodySystem(CObject* owner, Rigidbody* rigid = nullptr);
+    RigidbodySystem(CActor* owner, Rigidbody* rigid = nullptr);
     virtual ~RigidbodySystem();
     virtual void Init() override;
     void Update(float _deltaTime) override;

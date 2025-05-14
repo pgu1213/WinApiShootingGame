@@ -5,7 +5,7 @@
 #include "../../02.Component/Transform.h"
 #include "../../02.Component/Rigidbody.h"
 
-TransformSystem::TransformSystem(CObject* owner, Transform* transform) :
+TransformSystem::TransformSystem(CActor* owner, Transform* transform) :
 	m_transform(transform == nullptr ? new Transform{ Vector2{ 300.f,300.f }, 0.f, Vector2{ 30.f,30.f } } : transform)
 {
 	m_owner = owner;

@@ -1,5 +1,7 @@
 #pragma once
+
 #include "../../03.System/IRenderer.h"
+
 struct SpriteRenderer;
 struct Transform;
 
@@ -9,7 +11,7 @@ private:
 	SpriteRenderer* m_render;
 	HDC hdc;
 public:
-	SpriteRendererSystem(CObject* owner, HDC hdc);
+	SpriteRendererSystem(CActor* owner, HDC hdc);
 	virtual ~SpriteRendererSystem();
 	virtual void Init()override;
 	virtual void Update(float _deltaTime) override;

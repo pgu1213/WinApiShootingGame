@@ -1,19 +1,15 @@
 #pragma once
-
-class ComponentSystem;
-using ComponentTable = map<type_index, ComponentSystem*>;
-
 class CObject
 {
 public:
 	CObject();
-	virtual ~CObject();
+	virtual ~CObject() = default;
 
 public:
-	virtual void Init(Entity id, EntityType type);
-	virtual void Update(float DeltaTime);
-	virtual void Render(HDC hdc);
-	virtual void Release();
+	virtual void Init(Entity id, EntityType type) = 0;
+	virtual void Update(float DeltaTime) = 0;
+	virtual void Render(HDC hdc) = 0;
+	virtual void Release() = 0;
 
 	const Entity& GetId() const;
 	const EntityType& GetType() const;
@@ -23,17 +19,6 @@ public:
 protected:
 	Entity m_id;
 	EntityType m_type;
-	ComponentTable m_componentTable;
 
 	bool m_bIsValid; // 객체가 유효한 상태인지?
-public:
-	template <typename T>
-	const T* GetComponent() const
-	{
-		auto comp = m_componentTable.find(typeid(T));
-		if (comp != m_componentTable.end()) {
-			return dynamic_cast<T*>(comp->second);
-		}
-		return nullptr;
-	}
 };

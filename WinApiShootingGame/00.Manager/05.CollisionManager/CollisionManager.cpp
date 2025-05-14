@@ -24,7 +24,7 @@ bool CollisionManager::CheckCollision(const Transform& transform_a, const Collid
 
 void CollisionManager::ProcessCollisions()
 {
-    vector<CObject*> entities;
+    vector<CActor*> entities;
 
     for (auto& [id, obj] : *gameManager->GetEntityTable()) {
         if (obj->GetComponent<ColliderSystem>() && obj->GetComponent<TransformSystem>()) {
@@ -34,8 +34,8 @@ void CollisionManager::ProcessCollisions()
 
     for (size_t i = 0; i < entities.size(); ++i) {
         for (size_t j = i + 1; j < entities.size(); ++j) {
-            CObject* a = entities[i];
-            CObject* b = entities[j];
+            CActor* a = entities[i];
+            CActor* b = entities[j];
 
             auto* aCol = a->GetComponent<ColliderSystem>();
             auto* bCol = b->GetComponent<ColliderSystem>();

@@ -8,7 +8,7 @@ const CoolTime& CoolTimeSystem::GetData() const
 	return *m_coolTime;
 }
 
-CoolTimeSystem::CoolTimeSystem(CObject* owner, CoolTime* coolTime) :m_coolTime(coolTime), isActive(false)
+CoolTimeSystem::CoolTimeSystem(CActor* owner, CoolTime* coolTime) :m_coolTime(coolTime), isActive(false)
 {
 	m_owner = owner;
 	m_lastUpdateTime = GetTickCount64();

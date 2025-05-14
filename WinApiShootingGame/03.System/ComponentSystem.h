@@ -1,11 +1,11 @@
 #pragma once
-#include "../01.Object/00.Default/CObject.h"
+#include "../01.Object/01.Actor/CActor.h"
 #include "IDataProvider.h"
-class CObject;
+class CActor;
 
 class ComponentSystem {
 protected:
-    CObject* m_owner;
+    CActor* m_owner;
     function<void()> m_event;
 public:
     ComponentSystem() = default;

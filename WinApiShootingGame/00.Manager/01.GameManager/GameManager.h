@@ -2,9 +2,9 @@
 #include "../99.SingTonManager/SingTonManager.h"
 
 class CollisionManager;
-class CObject;
+class CActor;
 
-using EntityTable = unordered_map<Entity, CObject*>;
+using EntityTable = unordered_map<Entity, CActor*>;
 
 class GameManager : public SingleTon<GameManager>
 {
@@ -42,6 +42,6 @@ public:
 	static Vector2 GetScreenSize();
 	const EntityTable* GetEntityTable()const;
 	
-	void AddEntityTable(Entity id, CObject* obj);
+	void AddEntityTable(Entity id, CActor* obj);
 };
 
