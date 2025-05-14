@@ -4,7 +4,12 @@
 #include "../../03.System/ComponentSystem.h"
 #include "../../00.Manager/03.TimeManager/TimeManager.h"
 
-CObject::CObject(const string& Name) : /*m_ObjectID(m_NextObjectID++), */ m_ObjectName(Name), m_bIsValid(true)
+CObject::CObject() : m_bIsValid(true)
+{
+
+}
+
+CObject::~CObject()
 {
 
 }
@@ -36,11 +41,6 @@ void CObject::Release()
 {
 }
 
-//unsigned int CObject::GetObjectID() const
-//{
-//	return m_ObjectID;
-//}
-
 const Entity& CObject::GetId() const
 {
 	return m_id;
@@ -51,10 +51,6 @@ const EntityType& CObject::GetType() const
 	return m_type;
 }
 
-const string& CObject::GetObjectName() const
-{
-	return m_ObjectName;
-}
 
 bool CObject::IsValid() const
 {

@@ -54,7 +54,7 @@ bool GameManager::Init()
 	collisionManager = new CollisionManager(this);
 
 	GeneratePlayer();
-	GenerateEnemy();
+	//GenerateEnemy();
 
 	return true;
 }
@@ -140,16 +140,14 @@ void GameManager::GeneratePlayer()
 		});
 
 	obj->Init(playerId, EntityType::Player, m_componentTable);
-	m_gameObjectTable[playerId] = m_componentTable;
 }
 
 void GameManager::GenerateEnemy()
 {
 	Entity enemyId = CreateEntity();
 	ComponentTable m_componentTable;
-	AddEntityTable(enemyId);
-
-	CObject* obj = m_entityTable[enemyId];
+	CObject* obj = new CObject;
+	AddEntityTable(enemyId, obj);
 
 	Transform* transform = new Transform{ Vector2{ 100.f,100.f }, 0.f, Vector2{ 50.f,50.f } };
 	TransformSystem* transformSystem = new TransformSystem(obj, transform);
@@ -186,7 +184,7 @@ void GameManager::GenerateEnemy()
 
 	coolTimeSystem->AddEvent([=]() {
 		Vector2 enemyPos = transform->position;
-		Vector2 playerPos = GetComponent<TransformSystem>(playerId)->GetData().position;
+		Vector2 playerPos = m_entityTable[enemyId]->GetComponent<TransformSystem>()->GetData().position;
 		Vector2 vec = { playerPos.x - enemyPos.x , playerPos.y - enemyPos.y };
 		Vector2 dir = Normalize(vec);
 		Vector2 vel = Vector2{ dir.x * 80.f, dir.y * 80.f };
@@ -199,7 +197,6 @@ void GameManager::GenerateEnemy()
 	coolTimeSystem->StartCooldown();
 
 	obj->Init(enemyId, EntityType::Enemy, m_componentTable);
-	m_gameObjectTable[enemyId] = m_componentTable;
 }
 
 Vector2 GameManager::GetScreenSize()
@@ -223,14 +220,6 @@ void GameManager::RemoveEntity(Entity id)
 	if (objIter != m_entityTable.end()) {
 		m_entityTable.erase(objIter);
 	}
-
-	auto it = m_gameObjectTable.find(id);
-	if (it != m_gameObjectTable.end()) {
-		for (auto& [_, component] : it->second) {
-			delete component;
-		}
-		m_gameObjectTable.erase(it);
-	}
 }
 
 Vector2 GameManager::Normalize(Vector2 v)
@@ -252,7 +241,8 @@ void GameManager::SpawnBullet(Entity shooterId)
 
 	CObject* gen_obj = m_entityTable[bulletId];
 
-	const Transform& shooterTransform = GetComponent<TransformSystem>(shooterId)->GetData();
+	const Transform& shooterTransform = m_entityTable[shooterId]->GetComponent<TransformSystem>()->GetData();
+
 	Transform* transform = new Transform{ shooterTransform.position, 0.f, Vector2{30.f, 30.f} };
 	Rigidbody* rigid = new Rigidbody{ Vector2{0.f, -100.f} };
 	Collider* collider = new Collider{ {0.f, 0.f}, transform->scale };
@@ -286,7 +276,6 @@ void GameManager::SpawnBullet(Entity shooterId)
 
 
 	gen_obj->Init(bulletId, bulletType, bulletTable);
-	m_gameObjectTable[bulletId] = bulletTable;
 }
 
 void GameManager::SpawnBullet(Entity shooterId, Vector2 pos, Vector2 velocity)
@@ -338,12 +327,6 @@ void GameManager::SpawnBullet(Entity shooterId, Vector2 pos, Vector2 velocity)
 		});
 
 	gen_obj->Init(bulletId, shooterObj->GetType(), bulletTable);
-	m_gameObjectTable[bulletId] = table;
-}
-
-const ObjectTable* GameManager::GetObjectTable()const
-{
-	return &m_gameObjectTable;
 }
 
 const EntityTable* GameManager::GetEntityTable()const
@@ -351,7 +334,7 @@ const EntityTable* GameManager::GetEntityTable()const
 	return &m_entityTable;
 }
 
-void GameManager::AddEntityTable(Entity id)
+void GameManager::AddEntityTable(Entity id, CObject* obj)
 {
-	m_entityTable[id] = new CObject("Obj");
+	m_entityTable[id] = obj;
 }

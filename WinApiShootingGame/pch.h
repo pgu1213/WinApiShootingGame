@@ -17,9 +17,9 @@
 #include <functional>
 #include <algorithm>
 #include <typeindex>
-#include <gdiplus.h>
+//#include <gdiplus.h>
 
-#pragma comment(lib, "Gdiplus.lib")
+//#pragma comment(lib, "Gdiplus.lib")
 
 #include "04.Header/Entity.h"
 #include "04.Header/Enum.h"
@@ -29,4 +29,4 @@
 #endif //PCH_H
 
 using namespace std;
-using namespace Gdiplus;
+//using namespace Gdiplus;
