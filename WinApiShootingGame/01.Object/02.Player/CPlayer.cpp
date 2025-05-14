@@ -20,6 +20,7 @@ CPlayer::CPlayer() : inputManager(nullptr)
 
 CPlayer::~CPlayer()
 {
+	Release();
 }
 
 void CPlayer::Init(Entity id, EntityType type)
@@ -38,7 +39,6 @@ void CPlayer::Init(Entity id, EntityType type)
 	
 	Collider* col = new Collider{ Vector2{0,0} , Vector2{40.f, 40.f} };
 	ColliderSystem* colSystem = new ColliderSystem(this, col);
-	// 코딩이요
 
 	m_componentTable[typeid(ColliderSystem)] = colSystem;
 	m_componentTable[typeid(RigidbodySystem)] = rigidSystem;
@@ -86,4 +86,5 @@ void CPlayer::Render(HDC hdc)
 void CPlayer::Release()
 {
 	CActor::Release();
+	delete inputManager;
 }

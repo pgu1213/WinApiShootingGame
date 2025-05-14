@@ -15,6 +15,11 @@ GameManager::GameManager()
 
 GameManager::~GameManager()
 {
+	delete collisionManager;
+	for (auto& entity : m_entityTable)
+	{
+		delete entity.second;
+	}
 }
 
 // ¾À °ü·Ã ¼³Á¤
@@ -165,8 +170,10 @@ Vector2 GameManager::GetScreenSize()
 
 void GameManager::RemoveEntity(Entity id)
 {	
-	auto objIter= m_entityTable.find(id);
+	auto objIter = m_entityTable.find(id);
 	if (objIter != m_entityTable.end()) {
+		//delete objIter->second;
+
 		m_entityTable.erase(objIter);
 	}
 }

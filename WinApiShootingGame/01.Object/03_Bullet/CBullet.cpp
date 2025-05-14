@@ -19,6 +19,7 @@ CBullet::CBullet(CActor& _posTarget) : posTarget(_posTarget)
 
 CBullet::~CBullet()
 {
+	Release();
 }
 
 void CBullet::Init(Entity id, EntityType type)

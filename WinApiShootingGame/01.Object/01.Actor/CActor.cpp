@@ -37,4 +37,5 @@ void CActor::Release()
 	{
 		delete comp.second;
 	}
+	delete render;
 }
