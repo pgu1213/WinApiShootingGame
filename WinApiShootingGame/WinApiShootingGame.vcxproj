@@ -161,6 +161,7 @@
     <ClInclude Include="04.Header\Extern.h" />
     <ClInclude Include="04.Header\Vector2.h" />
     <ClInclude Include="01.Object\01.Actor\CActor.h" />
+    <ClInclude Include="01.Object\03_Bullet\CBullet.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="00.Manager\MainManager.h" />
     <ClInclude Include="00.Manager\01.GameManager\GameManager.h" />
@@ -189,6 +190,7 @@
     <ClCompile Include="03.System\06_CoolTime\CoolTimeSystem.cpp" />
     <ClCompile Include="03.System\ComponentSystem.cpp" />
     <ClCompile Include="01.Object\01.Actor\CActor.cpp" />
+    <ClCompile Include="01.Object\03_Bullet\CBullet.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

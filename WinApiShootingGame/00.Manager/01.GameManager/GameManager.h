@@ -10,18 +10,23 @@ class GameManager : public SingleTon<GameManager>
 {
 	friend class SingleTon<GameManager>;
 private:
+	EntityTable m_entityTable;
+	vector<Entity> removeEntityVec;
+
 	CollisionManager* collisionManager;
 
-	EntityTable m_entityTable;
-	vector<Entity> removeEntityQueue;
-
 	Entity playerId;
+	Entity currentEntityID;
 	HDC hdc;
 
-	Entity currentEntityID;
 private:
+	Entity CreateEntity();
 	void GeneratePlayer();
-	void GenerateEnemy();
+	void GenerateEnemy();	
+
+	void AddEntityTable(Entity id, CActor* obj);
+	void RemoveEntity(Entity id);
+
 private:
 	explicit GameManager();
 public:
@@ -31,17 +36,12 @@ public:
 	void Update(float DeltaTime);
 	void Render(HDC hdc);
 public:
-	Entity CreateEntity();
-	void RemoveEntity(Entity id);
-
-	Vector2 Normalize(Vector2 v);
+	Vector2 Normalize(Vector2 v);	
+	static Vector2 GetScreenSize();
+	const EntityTable* GetEntityTable();
+	void AddRemoveVector(Entity id);
 
 	void SpawnBullet(Entity shooterId);
 	void SpawnBullet(Entity shooterId, Vector2 pos, Vector2 velocity);
-	
-	static Vector2 GetScreenSize();
-	const EntityTable* GetEntityTable()const;
-	
-	void AddEntityTable(Entity id, CActor* obj);
 };
 

@@ -32,9 +32,15 @@ void CPlayer::Init(Entity id, EntityType type)
 
 	Transform* transform = new Transform{ Vector2{ 300.f,300.f }, 0.f, Vector2{ 50.f,50.f } };
 	TransformSystem* transformSystem = new TransformSystem(this, transform);
+
 	Rigidbody* rigid = new Rigidbody();
 	RigidbodySystem* rigidSystem = new RigidbodySystem(this, rigid);
+	
+	Collider* col = new Collider{ Vector2{0,0} , Vector2{40.f, 40.f} };
+	ColliderSystem* colSystem = new ColliderSystem(this, col);
+	// 코딩이요
 
+	m_componentTable[typeid(ColliderSystem)] = colSystem;
 	m_componentTable[typeid(RigidbodySystem)] = rigidSystem;
 	m_componentTable[typeid(TransformSystem)] = transformSystem;
 	m_componentTable[typeid(SpriteRendererSystem)] = new SpriteRendererSystem(this, GetDC(g_hWnd));
@@ -67,7 +73,7 @@ void CPlayer::Update(float DeltaTime)
 {
 	CActor::Update(DeltaTime);
 	if (inputManager->GetKey("Shoot")) {
-		// m_gameManager->SpawnBullet(m_id);
+ 		GameManager::GetInstance()->SpawnBullet(m_id);
 	}
 }
 

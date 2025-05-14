@@ -33,4 +33,8 @@ void CActor::Render(HDC hdc)
 
 void CActor::Release()
 {
+	for (auto& comp : m_componentTable)
+	{
+		delete comp.second;
+	}
 }

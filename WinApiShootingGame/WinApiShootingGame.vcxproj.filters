@@ -123,6 +123,9 @@
     <ClInclude Include="03.System\IRenderer.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="01.Object\03_Bullet\CBullet.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Client.cpp">
@@ -182,10 +185,10 @@
     <ClCompile Include="01.Object\02.Player\CPlayer.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="03.System\IRenderer.cpp">
+    <ClCompile Include="01.Object\01.Actor\CActor.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="01.Object\01.Actor\CActor.cpp">
+    <ClCompile Include="01.Object\03_Bullet\CBullet.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

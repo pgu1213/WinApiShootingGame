@@ -13,6 +13,7 @@ C:\Cpp\WinApiShootingGame\WinApiShootingGame\03.System\05_State\StateSystem.cpp;
 C:\Cpp\WinApiShootingGame\WinApiShootingGame\03.System\06_CoolTime\CoolTimeSystem.cpp;C:\Cpp\WinApiShootingGame\WinApiShootingGame\x64\Debug\CoolTimeSystem.obj
 C:\Cpp\WinApiShootingGame\WinApiShootingGame\03.System\ComponentSystem.cpp;C:\Cpp\WinApiShootingGame\WinApiShootingGame\x64\Debug\ComponentSystem.obj
 C:\Cpp\WinApiShootingGame\WinApiShootingGame\01.Object\01.Actor\CActor.cpp;C:\Cpp\WinApiShootingGame\WinApiShootingGame\x64\Debug\CActor.obj
+C:\Cpp\WinApiShootingGame\WinApiShootingGame\01.Object\03_Bullet\CBullet.cpp;C:\Cpp\WinApiShootingGame\WinApiShootingGame\x64\Debug\CBullet.obj
 C:\Cpp\WinApiShootingGame\WinApiShootingGame\pch.cpp;C:\Cpp\WinApiShootingGame\WinApiShootingGame\x64\Debug\pch.obj
 C:\Cpp\WinApiShootingGame\WinApiShootingGame\Client.cpp;C:\Cpp\WinApiShootingGame\WinApiShootingGame\x64\Debug\Client.obj
 C:\Cpp\WinApiShootingGame\WinApiShootingGame\00.Manager\03.TimeManager\TimeManager.cpp;C:\Cpp\WinApiShootingGame\WinApiShootingGame\x64\Debug\TimeManager.obj

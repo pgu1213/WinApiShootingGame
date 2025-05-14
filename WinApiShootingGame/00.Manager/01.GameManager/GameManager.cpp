@@ -1,12 +1,12 @@
 #include "../../pch.h"
 #include "GameManager.h"
 #include "../03.TimeManager/TimeManager.h"
-#include "../04.InputManager/InputManager.h"
 #include "../05.CollisionManager/CollisionManager.h"
 
 #include "../../01.Object/00.Default/CObject.h"
 #include "../../01.Object/01.Actor/CActor.h"
 #include "../../01.Object/02.Player/CPlayer.h"
+#include "../../01.Object/03_Bullet/CBullet.h"
 
 
 GameManager::GameManager()
@@ -56,12 +56,12 @@ void GameManager::Update(float DeltaTime)
 
 	collisionManager->ProcessCollisions();
 
-	if (!removeEntityQueue.empty())
+	if (!removeEntityVec.empty())
 	{
-       		for (Entity id : removeEntityQueue) {
+       		for (Entity id : removeEntityVec) {
 			RemoveEntity(id);
 		}
-		removeEntityQueue.clear();
+		removeEntityVec.clear();
 	}
 }
 
@@ -176,57 +176,22 @@ Vector2 GameManager::Normalize(Vector2 v)
 	return Vector2();
 }
 
-//void GameManager::SpawnBullet(Entity shooterId)
-//{
-//	Entity bulletId = CreateEntity();
-//	CObject* obj = new CActor();
-//	AddEntityTable(bulletId, obj);
-//	CObject* shooterObj = m_entityTable[shooterId];
-//
-//	EntityType bulletType = EntityType::None;
-//	if (shooterObj->GetType() == EntityType::Player)
-//		bulletType = EntityType::PlayerBullet;
-//	else
-//		bulletType = EntityType::EnemyBullet;
-//
-//	ComponentTable bulletTable;
-//
-//	const Transform& shooterTransform = m_entityTable[shooterId]->GetComponent<TransformSystem>()->GetData();
-//
-//	Transform* transform = new Transform{ shooterTransform.position, 0.f, Vector2{30.f, 30.f} };
-//	Rigidbody* rigid = new Rigidbody{ Vector2{0.f, -100.f} };
-//	Collider* collider = new Collider{ {0.f, 0.f}, transform->scale };
-//
-//	TransformSystem* transformSystem = new TransformSystem(obj,  transform);
-//	RigidbodySystem* rigidSystem = new RigidbodySystem(obj, rigid);
-//	SpriteRendererSystem* spriteSystem = new SpriteRendererSystem(obj,  hdc);
-//	ColliderSystem* colliderSystem = new ColliderSystem(obj,  collider);
-//
-//	bulletTable[typeid(TransformSystem)] = transformSystem;
-//	bulletTable[typeid(ColliderSystem)] = colliderSystem;
-//	bulletTable[typeid(RigidbodySystem)] = rigidSystem;
-//	bulletTable[typeid(SpriteRendererSystem)] = spriteSystem;
-//
-//	Vector2 screenSize = GetScreenSize();
-//
-//	transformSystem->AddEvent([=]() {
-//		const Transform& transform = transformSystem->GetData();
-//		if (transform.position.y < 0 || transform.position.y > screenSize.y) {
-//			removeEntityQueue.emplace_back(bulletId);
-//		}
-//		});
-//
-//	colliderSystem->SetOnCollisionEvent([=](CObject* obj) {
-//		EntityType type = obj->GetType();
-//		EntityType bulletType = obj->GetType();
-//		if ((type == EntityType::Enemy && bulletType == EntityType::PlayerBullet) || (type == EntityType::Player && bulletType == EntityType::EnemyBullet)) {
-//			removeEntityQueue.emplace_back(bulletId);
-//		}
-//		});
-//
-//
-//	obj->Init(bulletId, bulletType);
-//}
+void GameManager::SpawnBullet(Entity shooterId)
+{
+	Entity bulletId = CreateEntity();
+	CActor* shooterObj = m_entityTable[shooterId];
+	CActor* obj = new CBullet(*shooterObj);
+	AddEntityTable(bulletId, obj);
+
+
+	EntityType bulletType = EntityType::None;
+	if (shooterObj->GetType() == EntityType::Player)
+		bulletType = EntityType::PlayerBullet;
+	else
+		bulletType = EntityType::EnemyBullet;
+
+	obj->Init(bulletId,  bulletType);
+}
 
 //void GameManager::SpawnBullet(Entity shooterId, Vector2 pos, Vector2 velocity)
 //{
@@ -277,9 +242,14 @@ Vector2 GameManager::Normalize(Vector2 v)
 //	obj->Init(bulletId, shooterObj->GetType());
 //}
 
-const EntityTable* GameManager::GetEntityTable() const
+const EntityTable* GameManager::GetEntityTable()
 {
 	return &m_entityTable;
+}
+
+void GameManager::AddRemoveVector(Entity id)
+{
+	removeEntityVec.emplace_back(id);
 }
 
 void GameManager::AddEntityTable(Entity id, CActor* obj)
