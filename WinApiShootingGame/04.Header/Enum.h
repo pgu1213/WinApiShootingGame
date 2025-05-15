@@ -5,5 +5,6 @@ enum class EntityType {
 	PlayerBullet,
 	EnemyBullet,
 	UI,
+	Scene,
 	None,
 };
