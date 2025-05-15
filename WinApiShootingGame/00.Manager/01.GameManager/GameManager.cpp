@@ -53,7 +53,7 @@ void GameManager::Update(float DeltaTime)
 	{
 		return; // 델타 시간이 유효하지 않으면 업데이트 하지 않음
 	}
-	
+
 	for (auto& objs : m_entityTable)
 	{
 		objs.second->Update(DeltaTime);
@@ -63,7 +63,7 @@ void GameManager::Update(float DeltaTime)
 
 	if (!removeEntityVec.empty())
 	{
-       		for (Entity id : removeEntityVec) {
+		for (Entity id : removeEntityVec) {
 			RemoveEntity(id);
 		}
 		removeEntityVec.clear();
@@ -169,12 +169,11 @@ Vector2 GameManager::GetScreenSize()
 }
 
 void GameManager::RemoveEntity(Entity id)
-{	
+{
 	auto objIter = m_entityTable.find(id);
 	if (objIter != m_entityTable.end()) {
-		//delete objIter->second;
-
-		m_entityTable.erase(objIter);
+		delete objIter->second;
+		m_entityTable.erase(objIter);  		
 	}
 }
 
@@ -197,7 +196,7 @@ void GameManager::SpawnBullet(Entity shooterId)
 	else
 		bulletType = EntityType::EnemyBullet;
 
-	obj->Init(bulletId,  bulletType);
+	obj->Init(bulletId, bulletType);
 }
 
 //void GameManager::SpawnBullet(Entity shooterId, Vector2 pos, Vector2 velocity)

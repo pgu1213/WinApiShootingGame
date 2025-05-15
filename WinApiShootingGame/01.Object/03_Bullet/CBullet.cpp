@@ -77,5 +77,4 @@ void CBullet::Render(HDC hdc)
 
 void CBullet::Release()
 {
-	CActor::Release();
 }
