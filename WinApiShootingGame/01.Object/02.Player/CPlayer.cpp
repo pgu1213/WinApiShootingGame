@@ -90,6 +90,5 @@ void CPlayer::Render(HDC hdc)
 
 void CPlayer::Release()
 {
-	CActor::Release();
 	delete inputManager;
 }
