@@ -126,6 +126,9 @@
     <ClInclude Include="02.Component\SpriteRenderer.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="01.Object\04_Enemy\CEnemy.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Client.cpp">
@@ -191,6 +194,9 @@
     <ClCompile Include="03.System\01_SpriteRenderer\SpriteRendererSystem.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="01.Object\04_Enemy\CEnemy.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="WinApiShootingGame.rc">
@@ -205,6 +211,9 @@
       <Filter>리소스 파일</Filter>
     </Image>
     <Image Include="05.Resource\01.Sprite\Fly.png">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="05.Resource\01.Sprite\Bullet.png">
       <Filter>리소스 파일</Filter>
     </Image>
   </ItemGroup>

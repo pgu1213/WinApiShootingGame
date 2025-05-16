@@ -24,7 +24,7 @@ CBullet::~CBullet()
 
 void CBullet::Init(Entity id, EntityType type)
 {
-	CActor::Init(id, type);
+ 	CActor::Init(id, type);
 	GameManager* mgr = GameManager::GetInstance();
 
 	const Transform& shooterTransform = posTarget.GetComponent<TransformSystem>()->GetData();
@@ -45,6 +45,10 @@ void CBullet::Init(Entity id, EntityType type)
 
 	render = dynamic_cast<IRenderer*>(m_componentTable[typeid(SpriteRendererSystem)]);
 
+
+	SpriteRenderer& playerSpriteData = spriteSystem->GetModifyData();
+	playerSpriteData.filePath = L"05.Resource/01.Sprite/Bullet.png";
+
 	Vector2 screenSize = GameManager::GetScreenSize();
 
 	transformSystem->AddEvent([=]() {
@@ -52,15 +56,15 @@ void CBullet::Init(Entity id, EntityType type)
 		if (transform.position.y < 0 || transform.position.y > screenSize.y) {
 			mgr->AddRemoveVector(id);
 		}
-		});
+	});
 
 	colliderSystem->SetOnCollisionEvent([=](CObject* obj) {
 		EntityType type = obj->GetType();
-		EntityType bulletType = obj->GetType();
+		EntityType bulletType = m_type;
 		if ((type == EntityType::Enemy && bulletType == EntityType::PlayerBullet) || (type == EntityType::Player && bulletType == EntityType::EnemyBullet)) {
 			mgr->AddRemoveVector(id);
 		}
-		});
+	});
 
 }
 

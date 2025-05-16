@@ -1,6 +1,8 @@
 #pragma
 #include "../99.SingTonManager/SingTonManager.h"
 
+class CObject;
+
 class SceneManager : public SingleTon<SceneManager>
 {
 friend class SingleTon<SceneManager>;
