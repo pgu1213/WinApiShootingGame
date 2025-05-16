@@ -24,7 +24,7 @@ CBullet::~CBullet()
 
 void CBullet::Init(Entity id, EntityType type)
 {
- 	CActor::Init(id, type);
+	CActor::Init(id, type);
 	GameManager* mgr = GameManager::GetInstance();
 
 	const Transform& shooterTransform = posTarget.GetComponent<TransformSystem>()->GetData();
@@ -56,7 +56,7 @@ void CBullet::Init(Entity id, EntityType type)
 		if (transform.position.y < 0 || transform.position.y > screenSize.y) {
 			mgr->AddRemoveVector(id);
 		}
-	});
+		});
 
 	colliderSystem->SetOnCollisionEvent([=](CObject* obj) {
 		EntityType type = obj->GetType();
@@ -64,7 +64,7 @@ void CBullet::Init(Entity id, EntityType type)
 		if ((type == EntityType::Enemy && bulletType == EntityType::PlayerBullet) || (type == EntityType::Player && bulletType == EntityType::EnemyBullet)) {
 			mgr->AddRemoveVector(id);
 		}
-	});
+		});
 
 }
 
@@ -81,4 +81,20 @@ void CBullet::Render(HDC hdc)
 
 void CBullet::Release()
 {
+}
+
+void CBullet::SetBulletDestination(Vector2 pos, Vector2 vel, Entity targetId)
+{
+	Transform* transform = new Transform{ pos, 0.f, Vector2{20.f, 20.f} };
+	Rigidbody* rigid = new Rigidbody{ vel };
+	
+	GetComponent<TransformSystem>()->GetData() = *transform;
+	GetComponent<RigidbodySystem>()->GetData() = *rigid;
+
+}
+
+Vector2 CBullet::Normalize(Vector2 v)
+{
+	float len = sqrt(v.x * v.x + v.y * v.y);
+	return (len != 0) ? Vector2{ v.x / len, v.y / len } : Vector2{ 0.f, 0.f };
 }

@@ -29,6 +29,6 @@ bool StateSystem::IsDead() const {
     return m_state->currentHP <= 0;
 }
 
-const State& StateSystem::GetData() const {
+ State& StateSystem::GetData() const {
     return *m_state;
 }

@@ -41,7 +41,7 @@ public:
 	const EntityTable* GetEntityTable();
 	void AddRemoveVector(Entity id);
 
-	void SpawnBullet(Entity shooterId);
-	void SpawnBullet(Entity shooterId, Vector2 pos, Vector2 velocity);
+	CActor* SpawnBullet(Entity shooterId);
+	CActor* SpawnBullet(Entity shooterId, Vector2 pos, Vector2 velocity, Entity targetId = NULL);
 };
 

@@ -36,7 +36,15 @@ void TransformSystem::Update(float _deltaTime)
 		m_event();
 }
 
-const Transform& TransformSystem::GetData() const
+Transform& TransformSystem::GetData() const
 {
 	return *m_transform;
+}
+
+
+void TransformSystem::operator=(Transform& trans)
+{
+	delete m_transform;
+	m_transform = nullptr;
+	m_transform = &trans;
 }

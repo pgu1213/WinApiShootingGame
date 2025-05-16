@@ -10,5 +10,6 @@ public:
     virtual ~TransformSystem();
     virtual void Init() override;
     virtual void Update(float _deltaTime) override;
-    const Transform& GetData() const override;
+    Transform& GetData() const override;
+    void operator=(Transform& trans);
 };

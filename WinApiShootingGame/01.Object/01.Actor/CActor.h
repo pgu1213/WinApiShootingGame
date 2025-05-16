@@ -15,7 +15,7 @@ protected:
 	IRenderer* render;
 public:
 	template <typename T>
-	const T* GetComponent() const
+	T* GetComponent() const
 	{
 		auto comp = m_componentTable.find(typeid(T));
 		if (comp != m_componentTable.end()) {

@@ -16,7 +16,7 @@ void ColliderSystem::Init()
 {
 }
 
-const Collider& ColliderSystem::GetData() const {
+ Collider& ColliderSystem::GetData() const {
     return *m_collider;
 }
 

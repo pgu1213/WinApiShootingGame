@@ -55,7 +55,7 @@ void SpriteRendererSystem::Render(HDC hdc)
 	Gdiplus::Status drawStatus = graphics.DrawImage(bitmap, spriteLeft, spriteTop, spriteWidth, spriteHeight);
 }
 
-const SpriteRenderer& SpriteRendererSystem::GetData() const
+ SpriteRenderer& SpriteRendererSystem::GetData() const
 {
 	return *m_render;
 }

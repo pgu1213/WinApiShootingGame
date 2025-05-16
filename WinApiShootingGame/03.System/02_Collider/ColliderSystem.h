@@ -11,7 +11,7 @@ public:
     ColliderSystem(CActor* owenr, Collider* collider);
     virtual ~ColliderSystem();
     virtual void Init() override;
-    const Collider& GetData() const override;
+     Collider& GetData() const override;
     virtual void Update(float _deltaTime) override;
 
     void SetOnCollisionEvent(function<void(CActor*)> func);

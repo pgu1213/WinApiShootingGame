@@ -14,7 +14,7 @@
 #include "../../02.Component/Collider.h"
 #include "../../02.Component/Rigidbody.h"
 
-CPlayer::CPlayer() : inputManager(nullptr)
+CPlayer::CPlayer() : m_inputManager(nullptr)
 {
 }
 
@@ -26,10 +26,10 @@ CPlayer::~CPlayer()
 void CPlayer::Init(Entity id, EntityType type)
 {
 	CActor::Init(id, type);
-	inputManager = new InputManager();
-	inputManager->BindAxisKey(VK_LEFT, VK_RIGHT, "Horizontal");
-	inputManager->BindAxisKey(VK_UP, VK_DOWN, "Vertical");
-	inputManager->BindActionKey(VK_SPACE, "Shoot");
+	m_inputManager = new InputManager();
+	m_inputManager->BindAxisKey(VK_LEFT, VK_RIGHT, "Horizontal");
+	m_inputManager->BindAxisKey(VK_UP, VK_DOWN, "Vertical");
+	m_inputManager->BindActionKey(VK_SPACE, "Shoot");
 
 	Transform* transform = new Transform{ Vector2{ 300.f,300.f }, 0.f, Vector2{ 50.f,50.f } };
 	TransformSystem* transformSystem = new TransformSystem(this, transform);
@@ -69,15 +69,15 @@ void CPlayer::Init(Entity id, EntityType type)
 
 	rigidSystem->AddEvent([=]() {
 
-		rigid->velocity.x = inputManager->GetAxis("Horizontal") * 100.f;
-		rigid->velocity.y = inputManager->GetAxis("Vertical") * 100.f;
+		rigid->velocity.x = m_inputManager->GetAxis("Horizontal") * 100.f;
+		rigid->velocity.y = m_inputManager->GetAxis("Vertical") * 100.f;
 	});
 }
 
 void CPlayer::Update(float DeltaTime)
 {
 	CActor::Update(DeltaTime);
-	if (inputManager->GetKey("Shoot")) {
+	if (m_inputManager->GetKey("Shoot")) {
  		GameManager::GetInstance()->SpawnBullet(m_id);
 	}
 }
@@ -90,5 +90,5 @@ void CPlayer::Render(HDC hdc)
 
 void CPlayer::Release()
 {
-	delete inputManager;
+	delete m_inputManager;
 }

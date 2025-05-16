@@ -3,7 +3,7 @@
 #include "../../02.Component/CoolTime.h"
 #include "CoolTimeSystem.h"
 
-const CoolTime& CoolTimeSystem::GetData() const
+ CoolTime& CoolTimeSystem::GetData() const
 {
 	return *m_coolTime;
 }

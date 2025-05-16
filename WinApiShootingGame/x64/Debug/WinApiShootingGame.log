@@ -1,3 +1,3 @@
-﻿  CBullet.cpp
-C:\Cpp\WinApiShootingGame\WinApiShootingGame\01.Object\03_Bullet\CBullet.cpp(7,10): warning C4067: 전처리기 지시문 다음에 예기치 않은 토큰이 있습니다. 줄 바꿈 문자가 필요합니다.
+﻿  CEnemy.cpp
+C:\Cpp\WinApiShootingGame\WinApiShootingGame\01.Object\04_Enemy\CEnemy.cpp(7,10): warning C4067: 전처리기 지시문 다음에 예기치 않은 토큰이 있습니다. 줄 바꿈 문자가 필요합니다.
   WinApiShootingGame.vcxproj -> C:\Cpp\WinApiShootingGame\x64\Debug\WinApiShootingGame.exe

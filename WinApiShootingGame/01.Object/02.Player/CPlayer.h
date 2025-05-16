@@ -2,11 +2,13 @@
 #include "../01.Actor/CActor.h"
 
 class InputManager;
+struct Transform;
 
 class CPlayer : public CActor
 {
 private:
-	InputManager* inputManager;
+	InputManager* m_inputManager;
+	Transform* m_transform;
 public:
 	CPlayer();
 	virtual ~CPlayer();

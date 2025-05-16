@@ -15,7 +15,7 @@ public:
 	virtual void Init()override;
 	virtual void Update(float _deltaTime) override;
 	virtual void Render(HDC hdc) override;
-	const SpriteRenderer& GetData()const;
+	 SpriteRenderer& GetData()const;
 	SpriteRenderer& GetModifyData();
 };
 

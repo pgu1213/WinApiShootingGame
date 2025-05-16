@@ -1,7 +1,7 @@
 #pragma once
 struct Rigidbody;
 
-class RigidbodySystem : public ComponentSystem , public IDataProvider<Rigidbody>{
+class RigidbodySystem : public ComponentSystem, public IDataProvider<Rigidbody> {
 private:
     Rigidbody* m_rigidbody;
 public:
@@ -9,5 +9,6 @@ public:
     virtual ~RigidbodySystem();
     virtual void Init() override;
     void Update(float _deltaTime) override;
-    const Rigidbody& GetData() const override;
+    Rigidbody& GetData() const override;
+    void operator=(Rigidbody& rigid);
 };

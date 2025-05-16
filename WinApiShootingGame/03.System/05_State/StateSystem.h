@@ -13,5 +13,5 @@ public:
     void Update(float _deltaTime) override;
     void TakeDamage(int dmg);
     bool IsDead() const;
-    const State& GetData() const override;
+    State& GetData() const override;
 };
