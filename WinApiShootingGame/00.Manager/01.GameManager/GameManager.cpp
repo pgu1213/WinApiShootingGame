@@ -179,6 +179,7 @@ CActor* GameManager::SpawnBullet(Entity shooterId, float _damage, float _speed, 
 		bulletType = EntityType::EnemyBullet;
 
 	obj->Init(bulletId, bulletType);
+
 	static_cast<CBullet*>(obj)->SetBulletDirection(bulletDirection);
 
 	return obj;

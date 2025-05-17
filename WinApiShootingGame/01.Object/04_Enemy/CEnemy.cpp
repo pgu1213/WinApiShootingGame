@@ -25,7 +25,7 @@
 #include "../../01.Object/99_EnemyMove/Static/EnemyMove_StaticMove.h"
 
 
-CEnemy::CEnemy() : target(nullptr), currentHP(5), maxHP(5), m_bulletSpeed(200.f), damage(1), isMoveAble(true), speed(200.f)
+CEnemy::CEnemy() : target(nullptr), moveLogic(nullptr), currentHP(5), maxHP(5), m_bulletSpeed(200.f), damage(1), speed(200.f),isMoveAble(true), isEnteringScreen(false)
 {
 
 }
@@ -63,7 +63,7 @@ void CEnemy::Init(Entity id, EntityType type)
 	Rigidbody* rigid = new Rigidbody{ Vector2{speed ,speed } };
 	RigidbodySystem* rigidSystem = new RigidbodySystem(this, rigid);
 
-	Collider* collider = new Collider{ {0.f, 0.f}, transform->scale };
+	Collider* collider = new Collider{ ColliderType::Circle, {0.f, 0.f}, {0.f,0.f}, transform->scale.x / 2.f, transform->scale.y / 2.f};
 	ColliderSystem* colliderSystem = new ColliderSystem(this, collider);
 
 	SpriteRendererSystem* spriteSystem = new SpriteRendererSystem(this, GetDC(g_hWnd));
@@ -229,6 +229,12 @@ void CEnemy::Release()
 {
 	delete moveLogic;
 	moveLogic = nullptr;
+
+	for (auto& iter : bulletType)
+	{
+		delete iter;
+	}
+	bulletType.clear();
 }
 
 CActor* CEnemy::GetTarget()

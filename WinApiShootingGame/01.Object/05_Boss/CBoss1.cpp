@@ -59,7 +59,8 @@ void CBoss1::Init(Entity id, EntityType type)
 	Rigidbody* rigid = new Rigidbody{ speed, speed };
 	RigidbodySystem* rigidSystem = new RigidbodySystem(this, rigid);
 
-	Collider* collider = new Collider{ {0.f, 0.f}, transform->scale };
+	Collider* collider = new Collider{ ColliderType::Circle, {0.f, 0.f}, {0.f,0.f}, transform->scale.x /2.f -  40.f, transform->scale.y/2.f };
+
 	ColliderSystem* colliderSystem = new ColliderSystem(this, collider);
 
 	SpriteRendererSystem* spriteSystem = new SpriteRendererSystem(this, GetDC(g_hWnd));

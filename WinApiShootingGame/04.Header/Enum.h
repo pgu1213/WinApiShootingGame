@@ -16,3 +16,11 @@ enum class BulletType
 	Circle,
 	None
 };
+
+enum class ColliderType {
+	Box,
+	Circle,
+	Polygon,
+	None,
+};
+

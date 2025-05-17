@@ -11,12 +11,15 @@ private:
 	InputManager* m_inputManager;
 	IBulletType* bulletType;
 	Vector2 m_direction;
-	float bulletSpeed;
+	
 
+	float bulletSpeed;
 	int currentHP;
 	int maxHP;
 	float speed;
 	int damage;
+
+	bool attackAble;
 public:
 	CPlayer();
 	virtual ~CPlayer();

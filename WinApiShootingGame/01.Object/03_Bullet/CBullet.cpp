@@ -29,8 +29,8 @@ void CBullet::Init(Entity id, EntityType type)
 	const Transform& shooterTransform = m_shooter.GetComponent<TransformSystem>()->GetData();
 
 	Transform* transform = new Transform{ shooterTransform.position, 0.f, Vector2{30.f, 30.f} };
-	Rigidbody* rigid = new Rigidbody{ Vector2{m_speed, m_speed}};
-	Collider* collider = new Collider{ {0.f, 0.f}, transform->scale };
+	Rigidbody* rigid = new Rigidbody{ Vector2{m_speed, m_speed} };
+	Collider* collider = new Collider{ ColliderType::Circle, {0.f, 0.f}, {0.f,0.f}, 30.f / 2.f, 30.f /2.f};
 
 	TransformSystem* transformSystem = new TransformSystem(this, transform);
 	RigidbodySystem* rigidSystem = new RigidbodySystem(this, rigid);
@@ -46,8 +46,11 @@ void CBullet::Init(Entity id, EntityType type)
 
 	render = dynamic_cast<IRenderer*>(m_componentTable[typeid(SpriteRendererSystem)]);
 
-	SpriteRenderer& playerSpriteData = spriteSystem->GetModifyData();
-	playerSpriteData.filePath = L"05.Resource/01.Sprite/Bullet.png";
+	SpriteRenderer& bulletSpriteData = spriteSystem->GetModifyData();
+	if (type == EntityType::PlayerBullet)
+		bulletSpriteData.filePath = L"05.Resource/01.Sprite/PlayerBullet.png";
+	else
+		bulletSpriteData.filePath = L"05.Resource/01.Sprite/EnemyBullet.png";
 
 	transformSystem->AddEvent([=]() {
 		const Transform& transform = transformSystem->GetData();
