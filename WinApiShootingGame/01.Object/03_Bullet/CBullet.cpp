@@ -5,7 +5,7 @@
 #include "../../03.System/ComponentSystem.h"
 #include "../../03.System/00_Transform/TransformSystem.h"
 #include "../../03.System/01_SpriteRenderer/SpriteRendererSystem.h""
-#include "../../03.System/04_Rigid/RigidbodySystem.h"
+#include "../../03.System/03_Rigid/RigidbodySystem.h"
 #include "../../03.System/02_Collider/ColliderSystem.h"
 
 #include "../../02.Component/Transform.h"
@@ -13,7 +13,7 @@
 #include "../../02.Component/Collider.h"
 #include "../../02.Component/Rigidbody.h"
 
-CBullet::CBullet(CActor& _posTarget) : posTarget(_posTarget)
+CBullet::CBullet(CActor& _shooter, float _damage) : m_shooter(_shooter), m_damage(_damage)
 {
 }
 
@@ -24,10 +24,9 @@ CBullet::~CBullet()
 
 void CBullet::Init(Entity id, EntityType type)
 {
-	CActor::Init(id, type);
 	GameManager* mgr = GameManager::GetInstance();
 
-	const Transform& shooterTransform = posTarget.GetComponent<TransformSystem>()->GetData();
+	const Transform& shooterTransform = m_shooter.GetComponent<TransformSystem>()->GetData();
 
 	Transform* transform = new Transform{ shooterTransform.position, 0.f, Vector2{30.f, 30.f} };
 	Rigidbody* rigid = new Rigidbody{ Vector2{0.f, -100.f} };
@@ -43,25 +42,22 @@ void CBullet::Init(Entity id, EntityType type)
 	m_componentTable[typeid(RigidbodySystem)] = rigidSystem;
 	m_componentTable[typeid(SpriteRendererSystem)] = spriteSystem;
 
-	render = dynamic_cast<IRenderer*>(m_componentTable[typeid(SpriteRendererSystem)]);
+	CActor::Init(id, type);
 
+	render = dynamic_cast<IRenderer*>(m_componentTable[typeid(SpriteRendererSystem)]);
 
 	SpriteRenderer& playerSpriteData = spriteSystem->GetModifyData();
 	playerSpriteData.filePath = L"05.Resource/01.Sprite/Bullet.png";
 
-	Vector2 screenSize = GameManager::GetScreenSize();
-
 	transformSystem->AddEvent([=]() {
 		const Transform& transform = transformSystem->GetData();
-		if (transform.position.y < 0 || transform.position.y > screenSize.y) {
+		if (transform.position.y < 0 || transform.position.y > GameManager::GetScreenSize().y) {
 			mgr->AddRemoveVector(id);
 		}
 		});
 
 	colliderSystem->SetOnCollisionEvent([=](CObject* obj) {
-		EntityType type = obj->GetType();
-		EntityType bulletType = m_type;
-		if ((type == EntityType::Enemy && bulletType == EntityType::PlayerBullet) || (type == EntityType::Player && bulletType == EntityType::EnemyBullet)) {
+		if ((obj->GetType() == EntityType::Enemy && m_type == EntityType::PlayerBullet) || (obj->GetType() == EntityType::Player && m_type == EntityType::EnemyBullet)) {
 			mgr->AddRemoveVector(id);
 		}
 		});
@@ -75,26 +71,30 @@ void CBullet::Update(float DeltaTime)
 
 void CBullet::Render(HDC hdc)
 {
-	CActor::Render(hdc);
 	render->Render(hdc);
 }
+
 
 void CBullet::Release()
 {
 }
 
-void CBullet::SetBulletDestination(Vector2 pos, Vector2 vel, Entity targetId)
+void CBullet::SetBulletDestination(CActor* target)
 {
-	Transform* transform = new Transform{ pos, 0.f, Vector2{20.f, 20.f} };
+	Vector2 shooterPos = m_shooter.GetComponent<TransformSystem>()->GetData().position;
+
+	Vector2 targetPos = target->GetComponent<TransformSystem>()->GetData().position;
+
+	Vector2 vec = { targetPos.x - shooterPos.x , targetPos.y - shooterPos.y };
+	Vector2 dir = Normalize(vec);
+	Vector2 vel = Vector2{ dir.x * 80.f, dir.y * 80.f };
+
 	Rigidbody* rigid = new Rigidbody{ vel };
-	
-	GetComponent<TransformSystem>()->GetData() = *transform;
+
 	GetComponent<RigidbodySystem>()->GetData() = *rigid;
 
 }
-
-Vector2 CBullet::Normalize(Vector2 v)
+float CBullet::GetDamage()
 {
-	float len = sqrt(v.x * v.x + v.y * v.y);
-	return (len != 0) ? Vector2{ v.x / len, v.y / len } : Vector2{ 0.f, 0.f };
+	return m_damage;
 }

@@ -9,7 +9,6 @@
 #include "../../01.Object/03_Bullet/CBullet.h"
 #include "../../01.Object/04_Enemy/CEnemy.h"
 
-
 GameManager::GameManager()
 {
 }
@@ -26,6 +25,7 @@ GameManager::~GameManager()
 // 纠 包访 汲沥
 bool GameManager::Init()
 {
+	srand(static_cast<unsigned int>(time(NULL)));
 	/*
 	CurrentScene = new Scene(); 纠 按眉 积己
 	if (!CurrentScene)
@@ -42,8 +42,11 @@ bool GameManager::Init()
 	collisionManager = new CollisionManager(this);
 
 	GeneratePlayer();
-	GenerateEnemy();
 
+	GenerateEnemy();
+	GenerateEnemy();
+	GenerateEnemy();
+	GenerateEnemy();
 	return true;
 }
 
@@ -130,16 +133,11 @@ void GameManager::RemoveEntity(Entity id)
 	}
 }
 
-Vector2 GameManager::Normalize(Vector2 v)
-{
-	return Vector2();
-}
-
-CActor* GameManager::SpawnBullet(Entity shooterId)
+CActor* GameManager::SpawnBullet(Entity shooterId, float _damage)
 {
 	Entity bulletId = CreateEntity();
 	CActor* shooterObj = m_entityTable[shooterId];
-	CActor* obj = new CBullet(*shooterObj);
+	CActor* obj = new CBullet(*shooterObj, _damage);
 	AddEntityTable(bulletId, obj);
 
 
@@ -155,11 +153,11 @@ CActor* GameManager::SpawnBullet(Entity shooterId)
 
 }
 
-CActor* GameManager::SpawnBullet(Entity shooterId, Vector2 pos, Vector2 velocity, Entity targetId)
+CActor* GameManager::SpawnBullet(Entity shooterId, float _damage, Entity targetId)
 {
-	CActor* obj = SpawnBullet(shooterId);
-
-	static_cast<CBullet*>(obj)->SetBulletDestination(pos, velocity, targetId);
+	CActor* obj = SpawnBullet(shooterId, _damage);
+	CActor* target = m_entityTable[targetId];
+	static_cast<CBullet*>(obj)->SetBulletDestination(target);
 
 	return obj;
 }

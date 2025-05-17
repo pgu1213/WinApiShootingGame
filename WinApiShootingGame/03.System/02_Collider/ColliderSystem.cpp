@@ -26,7 +26,7 @@ void ColliderSystem::Update(float _deltaTime) {
     }
 }
 
-void ColliderSystem::SetOnCollisionEvent(std::function<void(CActor*)> func) {
+void ColliderSystem::SetOnCollisionEvent(function<void(CActor*)> func) {
     m_onCollision = func;
 }
 

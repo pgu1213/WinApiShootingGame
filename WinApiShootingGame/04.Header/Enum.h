@@ -8,3 +8,10 @@ enum class EntityType {
 	Scene,
 	None,
 };
+
+enum class EnemyMoveType
+{
+	RandomCircle,
+	FixedPath,
+	Static,
+};

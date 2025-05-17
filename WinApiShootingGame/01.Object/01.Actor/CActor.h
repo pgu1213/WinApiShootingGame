@@ -27,9 +27,11 @@ public:
 // CObject을(를) 통해 상속됨
 public:
 	virtual void Init(Entity id, EntityType type) override;
-	virtual void Update(float DeltaTime) override;	
-	virtual void Render(HDC hdc)override;
+	virtual void Update(float DeltaTime) override;		
 	virtual void Release() override;
+public:
+	virtual void Render(HDC hdc) = 0;
+
 
 };
 

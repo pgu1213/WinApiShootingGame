@@ -4,16 +4,18 @@
 class CBullet : public CActor
 {
 private:
-	CActor& posTarget;
+	CActor& m_shooter;
+	float m_damage;
 public:
-	CBullet(CActor& _posTarget);
+	CBullet(CActor& _posTarget, float _damage);
 	virtual ~CBullet();
-	void Init(Entity id, EntityType type) override;	
+	void Init(Entity id, EntityType type) override;
 	void Update(float DeltaTime) override;
-	void Render(HDC hdc) override;
 	void Release() override;
 public:
-	void SetBulletDestination(Vector2 dir, Vector2 vel, Entity targetId = NULL);
-	Vector2 Normalize(Vector2 v);
+	void SetBulletDestination(CActor* target);
+	float GetDamage();
+public:
+	void Render(HDC hdc) override;
 };
 

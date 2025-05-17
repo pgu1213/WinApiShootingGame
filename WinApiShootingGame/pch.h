@@ -26,6 +26,7 @@
 #include "04.Header/Enum.h"
 #include "04.Header/Extern.h"
 #include "04.Header/Vector2.h"
+#include "04.Header/CMath.h"
 
 #endif //PCH_H
 

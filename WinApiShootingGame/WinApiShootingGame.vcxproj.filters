@@ -57,9 +57,6 @@
     <ClInclude Include="02.Component\Rigidbody.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="02.Component\State.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="02.Component\Transform.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
@@ -78,13 +75,10 @@
     <ClInclude Include="03.System\IDataProvider.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="03.System\05_State\StateSystem.h">
+    <ClInclude Include="03.System\04_CoolTime\CoolTimeSystem.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="03.System\06_CoolTime\CoolTimeSystem.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="03.System\04_Rigid\RigidbodySystem.h">
+    <ClInclude Include="03.System\03_Rigid\RigidbodySystem.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="03.System\02_Collider\ColliderSystem.h">
@@ -129,6 +123,21 @@
     <ClInclude Include="01.Object\04_Enemy\CEnemy.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="04.Header\CMath.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="01.Object\IEnemyMove.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="01.Object\99_EnemyMove\RandomMove\EnemyMove_RandomMove.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="01.Object\99_EnemyMove\FixedPath\EnemyMove_FixedPathMove.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="01.Object\99_EnemyMove\Static\EnemyMove_StaticMove.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Client.cpp">
@@ -155,13 +164,10 @@
     <ClCompile Include="03.System\ComponentSystem.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="03.System\05_State\StateSystem.cpp">
+    <ClCompile Include="03.System\04_CoolTime\CoolTimeSystem.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="03.System\06_CoolTime\CoolTimeSystem.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="03.System\04_Rigid\RigidbodySystem.cpp">
+    <ClCompile Include="03.System\03_Rigid\RigidbodySystem.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="03.System\02_Collider\ColliderSystem.cpp">
@@ -195,6 +201,15 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="01.Object\04_Enemy\CEnemy.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="01.Object\99_EnemyMove\RandomMove\EnemyMove_RandomMove.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="01.Object\99_EnemyMove\FixedPath\EnemyMove_FixedPathMove.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="01.Object\99_EnemyMove\Static\EnemyMove_StaticMove.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

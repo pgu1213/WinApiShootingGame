@@ -35,13 +35,12 @@ public:
 	bool Init();
 	void Update(float DeltaTime);
 	void Render(HDC hdc);
-public:
-	Vector2 Normalize(Vector2 v);	
+public:	
 	static Vector2 GetScreenSize();
 	const EntityTable* GetEntityTable();
 	void AddRemoveVector(Entity id);
 
-	CActor* SpawnBullet(Entity shooterId);
-	CActor* SpawnBullet(Entity shooterId, Vector2 pos, Vector2 velocity, Entity targetId = NULL);
+	CActor* SpawnBullet(Entity shooterId, float _damage);
+	CActor* SpawnBullet(Entity shooterId, float _damage, Entity targetId);
 };
 

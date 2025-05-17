@@ -17,6 +17,11 @@ void CActor::Init(Entity id, EntityType type)
 {
 	m_id = id;
 	m_type = type;
+
+	for (auto iter = m_componentTable.begin(); iter != m_componentTable.end(); iter++)
+	{
+		iter->second->Init();
+	}
 }
 
 void CActor::Update(float DeltaTime)
@@ -25,10 +30,6 @@ void CActor::Update(float DeltaTime)
 	{
 		comp.second->Update(DeltaTime);
 	}
-}
-
-void CActor::Render(HDC hdc)
-{
 }
 
 void CActor::Release()

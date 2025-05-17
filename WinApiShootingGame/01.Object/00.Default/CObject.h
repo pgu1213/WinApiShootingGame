@@ -8,7 +8,6 @@ public:
 public:
 	virtual void Init(Entity id, EntityType type) = 0;
 	virtual void Update(float DeltaTime) = 0;
-	virtual void Render(HDC hdc) = 0;
 	virtual void Release() = 0;
 
 	const Entity& GetId() const;
