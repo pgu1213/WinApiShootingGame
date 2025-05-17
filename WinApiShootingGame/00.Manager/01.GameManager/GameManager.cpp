@@ -1,5 +1,6 @@
 #include "../../pch.h"
 #include "GameManager.h"
+#include "../02.SceneManager/SceneManager.h"
 #include "../03.TimeManager/TimeManager.h"
 #include "../05.CollisionManager/CollisionManager.h"
 
@@ -17,39 +18,20 @@ GameManager::GameManager()
 GameManager::~GameManager()
 {
 	delete collisionManager;
-	for (auto& entity : m_entityTable)
-	{
-		delete entity.second;
-	}
+	SceneManager::GetInstance()->Release();
 }
 
 // 씬 관련 설정
 bool GameManager::Init()
 {
 	srand(static_cast<unsigned int>(time(NULL)));
-	/*
-	CurrentScene = new Scene(); 씬 객체 생성
-	if (!CurrentScene)
-	{
-		return false;
-	}
-	CurrentScene->Init();
-	*/
 
-	// Object::Init();
 	currentEntityID = 0;
 	hdc = GetDC(g_hWnd);
 
-	collisionManager = new CollisionManager(this);
+	SceneManager::GetInstance()->Init();
 
-	GeneratePlayer();
-
-	GenerateBoss1();
-	
-	//GenerateEnemy();
-	//GenerateEnemy();
-	//GenerateEnemy();
-	//GenerateEnemy();
+	collisionManager = new CollisionManager(SceneManager::GetInstance());
 
 	return true;
 }
@@ -59,85 +41,51 @@ void GameManager::Update(float DeltaTime)
 {
 	if (DeltaTime < 0.0f)
 	{
-		return; // 델타 시간이 유효하지 않으면 업데이트 하지 않음
+		return; // 델타 시간이 이상하게 나오면 업데이트 하지 않음
 	}
 
-	for (auto& objs : m_entityTable)
-	{
-		objs.second->Update(DeltaTime);
-	}
+	SceneManager::GetInstance()->Update(DeltaTime);
 
 	collisionManager->ProcessCollisions();
-
-	if (!removeEntityVec.empty())
-	{
-		for (Entity id : removeEntityVec) {
-			RemoveEntity(id);
-		}
-		removeEntityVec.clear();
-	}
 }
 
 void GameManager::Render(HDC hdc)
 {
 	Vector2 screenSize = GetScreenSize();
 
+	// 메모리 DC 생성
+	HDC memHDC = CreateCompatibleDC(hdc);
 
-	HDC memDC = CreateCompatibleDC(hdc);
-	if (!memDC) return;
-
-	HBITMAP memBitmap = CreateCompatibleBitmap(hdc, (int)screenSize.x, (int)screenSize.y);
-	HGDIOBJ oldBitmap = SelectObject(memDC, memBitmap);
-
-
-	HBRUSH hbr = (HBRUSH)(COLOR_WINDOW + 1);
-	RECT rect = { 0, 0, (LONG)screenSize.x, (LONG)screenSize.y };
-	FillRect(memDC, &rect, hbr);
-
-	for (auto& objs : m_entityTable)
+	// 백 버퍼 비트맵 생성
+	HBITMAP memBitmap = CreateCompatibleBitmap(hdc, screenSize.x, screenSize.y);
+	if (memBitmap == NULL)
 	{
-		objs.second->Render(memDC);
+		DeleteDC(memHDC);
+		return;
 	}
 
-	BitBlt(hdc, 0, 0, (int)screenSize.x, (int)screenSize.y, memDC, 0, 0, SRCCOPY);
+	// 기존 비트맵을 메모리 DC에 선택
+	HBITMAP oldBitmap = (HBITMAP)SelectObject(memHDC, memBitmap);
 
-	SelectObject(memDC, oldBitmap);
-	DeleteObject(memBitmap);
-	DeleteDC(memDC);
+	// 메모리 DC에 그리기
+	RECT clientRect = { 0, 0, screenSize.x, screenSize.y };
+	HBRUSH hbrBackground = (HBRUSH)GetStockObject(BLACK_BRUSH);
+	FillRect(memHDC, &clientRect, hbrBackground);
+
+	SceneManager::GetInstance()->Render(memHDC);
+
+	// 메모리 DC의 내용을 실제 윈도우에 복사
+	BitBlt(hdc, 0, 0, screenSize.x, screenSize.y, memHDC, 0, 0, SRCCOPY);
+
+	SelectObject(memHDC, oldBitmap); // 메모리 DC에 원래 비트맵 되돌리기
+	DeleteObject(memBitmap); // 비트맵 해제
+	DeleteDC(memHDC); // 메모리 DC 해제
 }
 
+// 엔티티의 생성은 유일해야 함.
 Entity GameManager::CreateEntity()
 {
 	return ++currentEntityID == NULL ? 0 : currentEntityID;
-}
-
-void GameManager::GeneratePlayer()
-{
-	playerId = CreateEntity();
-	CActor* obj = new CPlayer();
-	AddEntityTable(playerId, obj);
-
-	obj->Init(playerId, EntityType::Player);
-}
-
-void GameManager::GenerateEnemy()
-{
-	Entity enemyId = CreateEntity();
-	CActor* obj = new CEnemy;
-	AddEntityTable(enemyId, obj);
-
-	static_cast<CEnemy*>(obj)->SetTarget(playerId);
-	obj->Init(enemyId, EntityType::Enemy);
-}
-
-void GameManager::GenerateBoss1()
-{
-	Entity bossId = CreateEntity();
-	CActor* obj = new CBoss1();
-	AddEntityTable(bossId, obj);
-
-	static_cast<CEnemy*>(obj)->SetTarget(playerId);
-	obj->Init(bossId, EntityType::Enemy);
 }
 
 Vector2 GameManager::GetScreenSize()
@@ -153,50 +101,4 @@ Vector2 GameManager::GetScreenSize()
 		height = static_cast<float>(winRect.bottom - winRect.top);
 	}
 	return Vector2{ width, height };
-}
-
-void GameManager::RemoveEntity(Entity id)
-{
-	auto objIter = m_entityTable.find(id);
-	if (objIter != m_entityTable.end()) {
-		delete objIter->second;
-		m_entityTable.erase(objIter);
-	}
-}
-
-CActor* GameManager::SpawnBullet(Entity shooterId, float _damage, float _speed, Vector2 bulletDirection)
-{
-	Entity bulletId = CreateEntity();
-	CActor* shooterObj = m_entityTable[shooterId];
-	CActor* obj = new CBullet(*shooterObj, _damage, _speed);
-	AddEntityTable(bulletId, obj);
-
-
-	EntityType bulletType = EntityType::None;
-	if (shooterObj->GetType() == EntityType::Player)
-		bulletType = EntityType::PlayerBullet;
-	else
-		bulletType = EntityType::EnemyBullet;
-
-	obj->Init(bulletId, bulletType);
-
-	static_cast<CBullet*>(obj)->SetBulletDirection(bulletDirection);
-
-	return obj;
-}
-
-
-const EntityTable* GameManager::GetEntityTable()
-{
-	return &m_entityTable;
-}
-
-void GameManager::AddRemoveVector(Entity id)
-{
-	removeEntityVec.emplace_back(id);
-}
-
-void GameManager::AddEntityTable(Entity id, CActor* obj)
-{
-	m_entityTable[id] = obj;
 }

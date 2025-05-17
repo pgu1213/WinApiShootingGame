@@ -1,7 +1,8 @@
 #include <cmath>
 #include "CircleBullet.h"
-#include "../../../00.Manager/01.GameManager/GameManager.h"
+#include "../../../00.Manager/02.SceneManager/SceneManager.h"
 #include "../../../01.Object/01.Actor/CActor.h"
+#include "../../../01.Object/05.Scene/CScene.h"
 
 CircleBullet::CircleBullet(int _bulletCount) : m_bulletCount(_bulletCount)
 {
@@ -19,6 +20,6 @@ void CircleBullet::Fire(CActor* shooter, float _damage, float _speed, Vector2 _d
 
         Vector2 dir = { c, s };
       
-        GameManager::GetInstance()->SpawnBullet(shooter->GetId(), _damage, _speed, dir);
+        SceneManager::GetInstance()->GetCurrentScene()->SpawnBullet(shooter->GetId(), _damage, _speed, dir);
     }
 }

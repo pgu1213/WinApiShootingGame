@@ -153,6 +153,15 @@
     <ClInclude Include="01.Object\98_BulletType\02.CircleBullet\CircleBullet.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="01.Object\05.Scene\01.Stage\Stage1.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="01.Object\05.Scene\01.Stage\Stage2.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="01.Object\05.Scene\CScene.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Client.cpp">
@@ -237,6 +246,15 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="01.Object\98_BulletType\02.CircleBullet\CircleBullet.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="01.Object\05.Scene\01.Stage\Stage1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="01.Object\05.Scene\01.Stage\Stage2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="01.Object\05.Scene\CScene.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

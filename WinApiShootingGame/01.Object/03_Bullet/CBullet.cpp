@@ -1,6 +1,8 @@
 #include "../../pch.h"
 #include "CBullet.h"
 #include "../../00.Manager/01.GameManager/GameManager.h"
+#include "../../00.Manager/02.SceneManager/SceneManager.h"
+#include "../../01.Object/05.Scene/CScene.h"
 
 #include "../../03.System/ComponentSystem.h"
 #include "../../03.System/00_Transform/TransformSystem.h"
@@ -55,13 +57,13 @@ void CBullet::Init(Entity id, EntityType type)
 	transformSystem->AddEvent([=]() {
 		const Transform& transform = transformSystem->GetData();
 		if (transform.position.y < 0 || transform.position.y > GameManager::GetScreenSize().y) {
-			mgr->AddRemoveVector(id);
+			SceneManager::GetInstance()->GetCurrentScene()->AddRemoveVector(id);
 		}
 		});
 
 	colliderSystem->SetOnCollisionEvent([=](CObject* obj) {
 		if ((obj->GetType() == EntityType::Enemy && m_type == EntityType::PlayerBullet) || (obj->GetType() == EntityType::Player && m_type == EntityType::EnemyBullet)) {
-			mgr->AddRemoveVector(id);
+			SceneManager::GetInstance()->GetCurrentScene()->AddRemoveVector(id);
 		}
 		});
 

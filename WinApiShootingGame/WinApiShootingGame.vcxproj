@@ -142,6 +142,9 @@
     <ClInclude Include="00.Manager\98.GCManager\GCManager.h" />
     <ClInclude Include="00.Manager\99.SingTonManager\SingTonManager.h" />
     <ClInclude Include="01.Object\02.Player\CPlayer.h" />
+    <ClInclude Include="01.Object\05.Scene\01.Stage\Stage1.h" />
+    <ClInclude Include="01.Object\05.Scene\01.Stage\Stage2.h" />
+    <ClInclude Include="01.Object\05.Scene\CScene.h" />
     <ClInclude Include="01.Object\99_EnemyMove\FixedPath\EnemyMove_FixedPathMove.h" />
     <ClInclude Include="01.Object\99_EnemyMove\Static\EnemyMove_StaticMove.h" />
     <ClInclude Include="01.Object\IBulletType.h" />
@@ -192,6 +195,9 @@
     <ClCompile Include="00.Manager\01.GameManager\GameManager.cpp" />
     <ClCompile Include="01.Object\00.Default\CObject.cpp" />
     <ClCompile Include="01.Object\02.Player\CPlayer.cpp" />
+    <ClCompile Include="01.Object\05.Scene\01.Stage\Stage1.cpp" />
+    <ClCompile Include="01.Object\05.Scene\01.Stage\Stage2.cpp" />
+    <ClCompile Include="01.Object\05.Scene\CScene.cpp" />
     <ClCompile Include="01.Object\99_EnemyMove\FixedPath\EnemyMove_FixedPathMove.cpp" />
     <ClCompile Include="01.Object\99_EnemyMove\Static\EnemyMove_StaticMove.cpp" />
     <ClCompile Include="03.System\00_Transform\TransformSystem.cpp" />
