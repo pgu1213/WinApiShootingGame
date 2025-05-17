@@ -9,9 +9,10 @@ enum class EntityType {
 	None,
 };
 
-enum class EnemyMoveType
+enum class BulletType
 {
-	RandomCircle,
-	FixedPath,
-	Static,
+	Single,
+	NWay,
+	Circle,
+	None
 };

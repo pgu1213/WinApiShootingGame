@@ -8,6 +8,7 @@
 #include "../../01.Object/02.Player/CPlayer.h"
 #include "../../01.Object/03_Bullet/CBullet.h"
 #include "../../01.Object/04_Enemy/CEnemy.h"
+#include "../../01.Object/05_Boss/CBoss1.h"
 
 GameManager::GameManager()
 {
@@ -43,10 +44,13 @@ bool GameManager::Init()
 
 	GeneratePlayer();
 
-	GenerateEnemy();
-	GenerateEnemy();
-	GenerateEnemy();
-	GenerateEnemy();
+	GenerateBoss1();
+	
+	//GenerateEnemy();
+	//GenerateEnemy();
+	//GenerateEnemy();
+	//GenerateEnemy();
+
 	return true;
 }
 
@@ -77,12 +81,29 @@ void GameManager::Update(float DeltaTime)
 void GameManager::Render(HDC hdc)
 {
 	Vector2 screenSize = GetScreenSize();
-	Rectangle(hdc, 0, 0, screenSize.x, screenSize.y);
+
+
+	HDC memDC = CreateCompatibleDC(hdc);
+	if (!memDC) return;
+
+	HBITMAP memBitmap = CreateCompatibleBitmap(hdc, (int)screenSize.x, (int)screenSize.y);
+	HGDIOBJ oldBitmap = SelectObject(memDC, memBitmap);
+
+
+	HBRUSH hbr = (HBRUSH)(COLOR_WINDOW + 1);
+	RECT rect = { 0, 0, (LONG)screenSize.x, (LONG)screenSize.y };
+	FillRect(memDC, &rect, hbr);
 
 	for (auto& objs : m_entityTable)
 	{
-		objs.second->Render(hdc);
+		objs.second->Render(memDC);
 	}
+
+	BitBlt(hdc, 0, 0, (int)screenSize.x, (int)screenSize.y, memDC, 0, 0, SRCCOPY);
+
+	SelectObject(memDC, oldBitmap);
+	DeleteObject(memBitmap);
+	DeleteDC(memDC);
 }
 
 Entity GameManager::CreateEntity()
@@ -104,9 +125,19 @@ void GameManager::GenerateEnemy()
 	Entity enemyId = CreateEntity();
 	CActor* obj = new CEnemy;
 	AddEntityTable(enemyId, obj);
-	
+
 	static_cast<CEnemy*>(obj)->SetTarget(playerId);
 	obj->Init(enemyId, EntityType::Enemy);
+}
+
+void GameManager::GenerateBoss1()
+{
+	Entity bossId = CreateEntity();
+	CActor* obj = new CBoss1();
+	AddEntityTable(bossId, obj);
+
+	static_cast<CEnemy*>(obj)->SetTarget(playerId);
+	obj->Init(bossId, EntityType::Enemy);
 }
 
 Vector2 GameManager::GetScreenSize()
@@ -129,15 +160,15 @@ void GameManager::RemoveEntity(Entity id)
 	auto objIter = m_entityTable.find(id);
 	if (objIter != m_entityTable.end()) {
 		delete objIter->second;
-		m_entityTable.erase(objIter);  		
+		m_entityTable.erase(objIter);
 	}
 }
 
-CActor* GameManager::SpawnBullet(Entity shooterId, float _damage)
+CActor* GameManager::SpawnBullet(Entity shooterId, float _damage, float _speed, Vector2 bulletDirection)
 {
 	Entity bulletId = CreateEntity();
 	CActor* shooterObj = m_entityTable[shooterId];
-	CActor* obj = new CBullet(*shooterObj, _damage);
+	CActor* obj = new CBullet(*shooterObj, _damage, _speed);
 	AddEntityTable(bulletId, obj);
 
 
@@ -148,22 +179,14 @@ CActor* GameManager::SpawnBullet(Entity shooterId, float _damage)
 		bulletType = EntityType::EnemyBullet;
 
 	obj->Init(bulletId, bulletType);
-	
-	return obj;
-
-}
-
-CActor* GameManager::SpawnBullet(Entity shooterId, float _damage, Entity targetId)
-{
-	CActor* obj = SpawnBullet(shooterId, _damage);
-	CActor* target = m_entityTable[targetId];
-	static_cast<CBullet*>(obj)->SetBulletDestination(target);
+	static_cast<CBullet*>(obj)->SetBulletDirection(bulletDirection);
 
 	return obj;
 }
+
 
 const EntityTable* GameManager::GetEntityTable()
-{	
+{
 	return &m_entityTable;
 }
 

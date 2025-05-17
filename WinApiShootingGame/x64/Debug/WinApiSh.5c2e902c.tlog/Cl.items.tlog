@@ -17,8 +17,12 @@ C:\Users\seif4\Documents\GitHub\WinApiShootingGame\WinApiShootingGame\03.System\
 C:\Users\seif4\Documents\GitHub\WinApiShootingGame\WinApiShootingGame\01.Object\01.Actor\CActor.cpp;C:\Users\seif4\Documents\GitHub\WinApiShootingGame\WinApiShootingGame\x64\Debug\CActor.obj
 C:\Users\seif4\Documents\GitHub\WinApiShootingGame\WinApiShootingGame\01.Object\03_Bullet\CBullet.cpp;C:\Users\seif4\Documents\GitHub\WinApiShootingGame\WinApiShootingGame\x64\Debug\CBullet.obj
 C:\Users\seif4\Documents\GitHub\WinApiShootingGame\WinApiShootingGame\01.Object\04_Enemy\CEnemy.cpp;C:\Users\seif4\Documents\GitHub\WinApiShootingGame\WinApiShootingGame\x64\Debug\CEnemy.obj
+C:\Users\seif4\Documents\GitHub\WinApiShootingGame\WinApiShootingGame\01.Object\05_Boss\CBoss1.cpp;C:\Users\seif4\Documents\GitHub\WinApiShootingGame\WinApiShootingGame\x64\Debug\CBoss1.obj
+C:\Users\seif4\Documents\GitHub\WinApiShootingGame\WinApiShootingGame\01.Object\98_BulletType\01.NWayBullet\NWayBullet.cpp;C:\Users\seif4\Documents\GitHub\WinApiShootingGame\WinApiShootingGame\x64\Debug\NWayBullet.obj
+C:\Users\seif4\Documents\GitHub\WinApiShootingGame\WinApiShootingGame\01.Object\98_BulletType\02.CircleBullet\CircleBullet.cpp;C:\Users\seif4\Documents\GitHub\WinApiShootingGame\WinApiShootingGame\x64\Debug\CircleBullet.obj
 C:\Users\seif4\Documents\GitHub\WinApiShootingGame\WinApiShootingGame\pch.cpp;C:\Users\seif4\Documents\GitHub\WinApiShootingGame\WinApiShootingGame\x64\Debug\pch.obj
 C:\Users\seif4\Documents\GitHub\WinApiShootingGame\WinApiShootingGame\Client.cpp;C:\Users\seif4\Documents\GitHub\WinApiShootingGame\WinApiShootingGame\x64\Debug\Client.obj
 C:\Users\seif4\Documents\GitHub\WinApiShootingGame\WinApiShootingGame\00.Manager\03.TimeManager\TimeManager.cpp;C:\Users\seif4\Documents\GitHub\WinApiShootingGame\WinApiShootingGame\x64\Debug\TimeManager.obj
 C:\Users\seif4\Documents\GitHub\WinApiShootingGame\WinApiShootingGame\00.Manager\02.SceneManager\SceneManager.cpp;C:\Users\seif4\Documents\GitHub\WinApiShootingGame\WinApiShootingGame\x64\Debug\SceneManager.obj
 C:\Users\seif4\Documents\GitHub\WinApiShootingGame\WinApiShootingGame\01.Object\99_EnemyMove\RandomMove\EnemyMove_RandomMove.cpp;C:\Users\seif4\Documents\GitHub\WinApiShootingGame\WinApiShootingGame\x64\Debug\EnemyMove_RandomMove.obj
+C:\Users\seif4\Documents\GitHub\WinApiShootingGame\WinApiShootingGame\01.Object\98_BulletType\00.SingleBullet\SingleBullet.cpp;C:\Users\seif4\Documents\GitHub\WinApiShootingGame\WinApiShootingGame\x64\Debug\SingleBullet.obj

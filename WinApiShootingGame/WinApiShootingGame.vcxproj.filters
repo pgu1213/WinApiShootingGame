@@ -138,6 +138,21 @@
     <ClInclude Include="01.Object\99_EnemyMove\Static\EnemyMove_StaticMove.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="01.Object\05_Boss\CBoss1.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="01.Object\IBulletType.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="01.Object\98_BulletType\00.SingleBullet\SingleBullet.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="01.Object\98_BulletType\01.NWayBullet\NWayBullet.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="01.Object\98_BulletType\02.CircleBullet\CircleBullet.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Client.cpp">
@@ -210,6 +225,18 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="01.Object\99_EnemyMove\Static\EnemyMove_StaticMove.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="01.Object\05_Boss\CBoss1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="01.Object\98_BulletType\00.SingleBullet\SingleBullet.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="01.Object\98_BulletType\01.NWayBullet\NWayBullet.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="01.Object\98_BulletType\02.CircleBullet\CircleBullet.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

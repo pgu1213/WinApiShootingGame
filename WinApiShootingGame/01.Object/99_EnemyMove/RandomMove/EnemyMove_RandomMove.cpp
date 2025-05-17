@@ -1,55 +1,74 @@
-#include "../../../pch.h"
+Ôªø#include "../../../pch.h"
 #include "EnemyMove_RandomMove.h"
 #include "../../../00.Manager/01.GameManager/GameManager.h"
 
+EnemyMove_RandomMove::EnemyMove_RandomMove(float _radius, float _minX , float _maxX , float _minY , float _maxY) : radius(_radius), minX(_minX), maxX(_maxX),
+minY(_minY), maxY(_maxY)
+{
+}
+
 Vector2 EnemyMove_RandomMove::GetNextPosition(const Vector2& nowPos, const Vector2& nowScale)
 {
-	float moveScreenSizeX = GameManager::GetInstance()->GetScreenSize().x - nowScale.x / 2.f;
+	Vector2 screenSize = GameManager::GetInstance()->GetScreenSize();
 
-	float moveScreenSizeY = (GameManager::GetInstance()->GetScreenSize().y - nowScale.y / 2.f) / 2.f;
+	float moveMinX = nowScale.x / 2.f + minX;
+	float moveMaxX = screenSize.x - nowScale.x / 2.f - maxX;
+	float moveMinY = nowScale.y / 2.f + minY;
+	float moveMaxY = (screenSize.y - nowScale.y / 2.f) / 2.f - maxY;
+
+	// ÎèôÏ†Å Î∞òÍ≤Ω Í≥ÑÏÇ∞
+	float screenCenterX = screenSize.x / 2.f;
+	float distFromCenter = fabs(nowPos.x - screenCenterX);
 	
-	float radius = 100.f;
+	float minRadius = radius / 2.f;
+	float maxRadius = radius * 2.f;
 
-	float left = nowPos.x - radius;
-	float right = nowPos.x + radius;
-	float top = nowPos.y - radius;
-	float bottom = nowPos.y + radius;
+	float dynamicRadius = minRadius + (distFromCenter / screenCenterX) * (maxRadius - minRadius);
+	dynamicRadius = clamp(dynamicRadius, minRadius, maxRadius);
 
-	vector<pair<float, float>> angleRanges;
+	float minAngle = 0.f;
+	float maxAngle = 360.f;
 
-	if (left < 0) angleRanges.push_back({ -90.f, 90.f });
-	else if (right > moveScreenSizeX) angleRanges.push_back({ 90.f, 270.f });
-
-	if (top < 0) angleRanges.push_back({ 0.f, 180.f });
-	else if (bottom > moveScreenSizeY) angleRanges.push_back({ 180.f, 360.f });
-
-	if (angleRanges.empty()) {
-		angleRanges.push_back({ 0.f, 360.f });
+	if (nowPos.x - dynamicRadius < moveMinX) {
+		minAngle = -90.f;
+		maxAngle = 90.f;
+	}
+	else if (nowPos.x + dynamicRadius > moveMaxX) {
+		minAngle = 90.f;
+		maxAngle = 270.f;
 	}
 
-	float minAngle = angleRanges[0].first;
-	float maxAngle = angleRanges[0].second;
-
-	for (size_t i = 1; i < angleRanges.size(); ++i) {
-		minAngle = max(minAngle, angleRanges[i].first);
-		maxAngle = min(maxAngle, angleRanges[i].second);
+	if (nowPos.y - dynamicRadius < moveMinY) {
+		minAngle = max(minAngle, 0.f);
+		maxAngle = min(maxAngle, 180.f);
+	}
+	else if (nowPos.y + dynamicRadius > moveMaxY) {
+		minAngle = max(minAngle, 180.f);
+		maxAngle = min(maxAngle, 360.f);
+	}
+	
+	if (maxAngle - minAngle < 0.01f) {
+		minAngle = 0.f;
+		maxAngle = 360.f;
 	}
 
-	if (minAngle >= maxAngle) {
-		return nowPos;
+	// ÎûúÎç§ Í∞ÅÎèÑ Í≥ÑÏÇ∞ Î∞è ÏúÑÏπò ÏÇ∞Ï∂ú
+	float randFloat = static_cast<float>(rand()) / RAND_MAX;
+	
+	float angleDegree = minAngle + randFloat * (maxAngle - minAngle);
+
+	float rad = angleDegree * 3.14f / 180.f;
+
+	Vector2 pos = { nowPos.x + dynamicRadius * cosf(rad), nowPos.y + dynamicRadius * sinf(rad) };
+
+	if (pos.x < moveMinX || pos.x > moveMaxX || pos.y < moveMinY || pos.y > moveMaxY) {		
+		pos.x = clamp(pos.x, moveMinX, moveMaxX);
+		pos.y = clamp(pos.y, moveMinY, moveMaxY);
 	}
 
-	// ∑£¥˝ ∞¢µµ ∞ËªÍ
-	float angleDegree = minAngle + (static_cast<float>(rand()) / RAND_MAX) * (maxAngle - minAngle);
-
-	float rad = angleDegree * 3.14159265f / 180.0f;
-
-	Vector2 pos = { nowPos.x + radius * cosf(rad), nowPos.y + radius * sinf(rad) };
-
-	float screenX = moveScreenSizeX;
-	float screenY = moveScreenSizeY;
-
-	if (pos.x < 0 || pos.x > screenX || pos.y < 0 || pos.y > screenY)
-		return nowPos;
 	return pos;
 }
+
+
+
+

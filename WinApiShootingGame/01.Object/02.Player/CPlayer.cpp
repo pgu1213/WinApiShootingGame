@@ -15,9 +15,10 @@
 #include "../../02.Component/Collider.h"
 #include "../../02.Component/Rigidbody.h"
 
-#include "../03_Bullet/CBullet.h"
+#include "../IBulletType.h"
+#include "../../01.Object/98_BulletType/00.SingleBullet/SingleBullet.h"
 
-CPlayer::CPlayer() : m_inputManager(nullptr), m_transform(nullptr), currentHP(3), maxHP(3), speed(300.f), damage(1)
+CPlayer::CPlayer() : m_inputManager(nullptr), currentHP(3), maxHP(3), speed(300.f), damage(1), m_direction(Vector2{ 0.f, 1.f }), bulletSpeed(-200.f)
 {
 }
 
@@ -32,6 +33,8 @@ void CPlayer::Init(Entity id, EntityType type)
 	m_inputManager->BindAxisKey(VK_LEFT, VK_RIGHT, "Horizontal");
 	m_inputManager->BindAxisKey(VK_UP, VK_DOWN, "Vertical");
 	m_inputManager->BindActionKey(VK_SPACE, "Shoot");
+
+	bulletType = new SingleBullet();
 
 	Transform* transform = new Transform{ Vector2{ 300.f,300.f }, 0.f, Vector2{ 50.f,50.f } };
 	TransformSystem* transformSystem = new TransformSystem(this, transform);
@@ -69,16 +72,16 @@ void CPlayer::Init(Entity id, EntityType type)
 		);
 	});
 
-	colliderSystem->SetOnCollisionEvent([=](CActor* obj) {
-		if (obj->GetType() == EntityType::EnemyBullet) {
-			currentHP -= static_cast<CBullet*>(obj)->GetDamage();
-			if (currentHP <= 0) {
-				m_bIsValid = false;
-				GameManager::GetInstance()->AddRemoveVector(id);
-			}
-			GameManager::GetInstance()->AddRemoveVector(obj->GetId());
-		}
-		});
+	//colliderSystem->SetOnCollisionEvent([=](CActor* obj) {
+	//	if (obj->GetType() == EntityType::EnemyBullet) {
+	//		currentHP -= static_cast<CBullet*>(obj)->GetDamage();
+	//		if (currentHP <= 0) {
+	//			m_bIsValid = false;
+	//			GameManager::GetInstance()->AddRemoveVector(id);
+	//		}
+	//		GameManager::GetInstance()->AddRemoveVector(obj->GetId());
+	//	}
+	//	});
 
 	rigidSystem->AddEvent([=]() {
 
@@ -100,7 +103,9 @@ void CPlayer::Update(float DeltaTime)
 {
 	CActor::Update(DeltaTime);
 	if (m_inputManager->GetKey("Shoot")) {
- 		GameManager::GetInstance()->SpawnBullet(m_id, damage);
+		if (bulletType) {
+			bulletType->Fire(this, damage, bulletSpeed, m_direction);
+		}
 	}
 }
 
@@ -112,4 +117,12 @@ void CPlayer::Render(HDC hdc)
 void CPlayer::Release()
 {
 	delete m_inputManager;
+	delete bulletType;
 }
+
+void CPlayer::SetBulletPattern(IBulletType* pattern)
+{
+	if (bulletType) delete bulletType;
+	bulletType = pattern;
+}
+

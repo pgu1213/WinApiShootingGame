@@ -16,71 +16,51 @@
 #include "../../02.Component/CoolTime.h"
 
 #include "../03_Bullet/CBullet.h"
+#include "../IBulletType.h"
+#include "../98_BulletType/00.SingleBullet/SingleBullet.h"
+
 #include "../../01.Object/IEnemyMove.h"
 #include "../../01.Object/99_EnemyMove/RandomMove/EnemyMove_RandomMove.h"
 #include "../../01.Object/99_EnemyMove/FixedPath/EnemyMove_FixedPathMove.h"
 #include "../../01.Object/99_EnemyMove/Static/EnemyMove_StaticMove.h"
 
 
-CEnemy::CEnemy() : target(nullptr), currentHP(5), maxHP(5), speed(100.f), damage(1), isMoveAble(true)
+CEnemy::CEnemy() : target(nullptr), currentHP(5), maxHP(5), m_bulletSpeed(200.f), damage(1), isMoveAble(true), speed(200.f)
 {
 
 }
 
 CEnemy::~CEnemy()
 {
+	Release();
 }
 
 void CEnemy::Init(Entity id, EntityType type)
 {
-	Vector2 point = SpawnOutScreen();
-	Vector2 screenSize = GameManager::GetInstance()->GetScreenSize();
-
-	// 진입 목표 위치 계산
-	if (point.y < 0)  // 위
-	{
-		float targetX = clamp(static_cast<float>(point.x), 0.f, screenSize.x);
-		float targetY = 100.f + static_cast<float>(rand() % 101);
-		enterTargetPos = Vector2{ targetX, clamp(targetY, 0.f, screenSize.y) };
-	}
-	else if (point.x < 0)  // 왼쪽
-	{
-		float targetX = 100.f + static_cast<float>(rand() % 101);
-		float targetY = clamp(static_cast<float>(point.y), 0.f, screenSize.y);
-		enterTargetPos = Vector2{ clamp(targetX, 0.f, screenSize.x), targetY };
-	}
-	else if (point.x > screenSize.x)  // 오른쪽
-	{
-		float targetX = screenSize.x - (100.f + static_cast<float>(rand() % 101));
-		float targetY = clamp(static_cast<float>(point.y), 0.f, screenSize.y);
-		enterTargetPos = Vector2{ clamp(targetX, 0.f, screenSize.x), targetY };
-	}
-	else
-	{
-		enterTargetPos = Vector2{ screenSize.x * 0.5f, screenSize.y * 0.5f };
-	}
+	moveLogic = new EnemyMove_RandomMove(200.f);
 	
-	moveDestination = enterTargetPos;
-	isEnteringScreen = true;
+	//switch (rand() % 3)
+	//{
+	//case 0:
+	//	moveLogic = new EnemyMove_RandomMove(100.f);
+	//	break;
+	//case 1:
+	//	moveLogic = new EnemyMove_FixedPathMove();
+	//	break;
+	//case 2:
+	//default:
+	//	moveLogic = new EnemyMove_StaticMove();
+	//	break;
+	//}
 
-	switch (rand() % 2)
-	{
-	case 0:
-		moveLogic = new EnemyMove_RandomMove();
-		break;
-	case 1:
-		moveLogic = new EnemyMove_FixedPathMove();
-		break;
-	case 2:
-	default:
-		moveLogic = new EnemyMove_StaticMove();
-		break;
-	}
+	bulletType.resize((int)BulletType::None);
 
-	Transform* transform = new Transform{ Vector2{ (float)point.x, (float)point.y }, 0.f, Vector2{ 50.f,50.f } };
+	bulletType[(int)BulletType::Single] = new SingleBullet();
+
+	Transform* transform = new Transform{ Vector2{ 0.f,0.f }, 0.f, Vector2{ 50.f,50.f } };
 	TransformSystem* transformSystem = new TransformSystem(this, transform);
 
-	Rigidbody* rigid = new Rigidbody{ speed, speed };
+	Rigidbody* rigid = new Rigidbody{ Vector2{speed ,speed } };
 	RigidbodySystem* rigidSystem = new RigidbodySystem(this, rigid);
 
 	Collider* collider = new Collider{ {0.f, 0.f}, transform->scale };
@@ -98,40 +78,61 @@ void CEnemy::Init(Entity id, EntityType type)
 
 	CActor::Init(id, type);
 
+	Vector2 screenSize = GameManager::GetInstance()->GetScreenSize();
+
+	Vector2 spawnPoint = SpawnOutScreen(transform->scale);
+
+	transform->position = spawnPoint;
+
+	if (spawnPoint.y < 0)  // 위에서 스폰
+	{
+		float targetX = spawnPoint.x;
+		float targetY = 100.f + static_cast<float>(rand() % 101);
+		moveDestination = Vector2{ targetX, targetY };
+	}
+	else if (spawnPoint.x < 0)  // 왼쪽에서 스폰
+	{
+		float targetX = 100.f + static_cast<float>(rand() % 101);
+		float targetY = spawnPoint.y;
+		moveDestination = Vector2{ targetX, targetY };
+	}
+	else if (spawnPoint.x > screenSize.x)  // 오른쪽에서 스폰
+	{
+		float targetX = screenSize.x - (100.f + static_cast<float>(rand() % 101));
+		float targetY = spawnPoint.y;
+		moveDestination = Vector2{ targetX, targetY };
+	}
+	else
+	{
+		moveDestination = Vector2{ screenSize.x * 0.5f, screenSize.y * 0.5f };
+	}
+
+	isEnteringScreen = true;
+
 	render = dynamic_cast<IRenderer*>(m_componentTable[typeid(SpriteRendererSystem)]);
 
 	SpriteRenderer& playerSpriteData = spriteSystem->GetModifyData();
 	playerSpriteData.filePath = L"05.Resource/01.Sprite/EnemyTest.png";
 
-	transformSystem->AddEvent([=]() {
-		if (!isEnteringScreen)
-		{
-			transform->position.x = clamp(
-				transform->position.x,
-				transform->scale.x / 2,
-				GameManager::GetScreenSize().x - transform->scale.x / 2
-			);
-			transform->position.y = clamp(
-				transform->position.y,
-				transform->scale.y / 2,
-				GameManager::GetScreenSize().y - transform->scale.y / 2
-			);
-		}
-		});
-
 	rigidSystem->AddEvent([=]() {
 		Vector2 currentPos = transform->position;
-		Vector2 currentScale = transform->scale;		
+		Vector2 currentScale = transform->scale;
 
 		float distToTarget = GetDistance(currentPos, moveDestination);
-		if (distToTarget < 5.f)
+		if (distToTarget < 5.f && isMoveAble)
 		{
 			if (isEnteringScreen) isEnteringScreen = false;
 			if (moveLogic)
 				moveDestination = moveLogic->GetNextPosition(currentPos, currentScale);
+			isMoveAble = false;
 		}
-
-		rigid->velocity = GetMoveTward(currentPos, moveDestination);
+		
+		if (!isMoveAble && distToTarget > 0.f)
+		{
+			rigid->velocity = Vector2{ 0.0f, 0.0f };
+		}
+		else
+			rigid->velocity = GetMoveTward(currentPos, moveDestination);
 	});
 
 	// 충돌 이벤트 등록: 총알에 맞으면 HP 감소
@@ -147,10 +148,15 @@ void CEnemy::Init(Entity id, EntityType type)
 		});
 
 	coolTimeSystem->AddTimer("shoot", 3.f, [=]() {
-		if (target != nullptr)
-			GameManager::GetInstance()->SpawnBullet(id, damage, target->GetId());
+		if (target != nullptr && bulletType.size()!=0) {
+			Vector2 shooterPos = transform->position;
+			Vector2 targetPos = target->GetComponent<TransformSystem>()->GetData().position;
+			Vector2 vec = { targetPos.x - shooterPos.x , targetPos.y - shooterPos.y };
+			Vector2 dir = Normalize(vec);
+			bulletType[(int)BulletType::Single]->Fire(this, damage, m_bulletSpeed, dir);
+		}
 		coolTimeSystem->StartCooldown("shoot");
-		});
+	});
 
 	coolTimeSystem->AddTimer("move", 3.f, [=]() {
 		isMoveAble = true;
@@ -171,33 +177,38 @@ void CEnemy::Render(HDC hdc)
 	render->Render(hdc);
 }
 
-Vector2 CEnemy::SpawnOutScreen()
+Vector2 CEnemy::SpawnOutScreen(Vector2 _scale)
 {
 	Vector2 screenSize = GameManager::GetInstance()->GetScreenSize();
-	Vector2 vec;
+	Vector2 pos;
+	float marginX = _scale.x / 2.f + 50.f;
+	float marginY = _scale.y / 2.f + 50.f;
 
 	int side = rand() % 3; // 0: 위, 1: 왼쪽, 2: 오른쪽
 
 	switch (side)
 	{
 	case 0: // 위쪽
-		vec.x = rand() % static_cast<int>(screenSize.x);
-		vec.y = -50;
+		pos.x = static_cast<float>(rand() % static_cast<int>(screenSize.x));
+		pos.y = -marginY;
 		break;
+
 	case 1: // 왼쪽
-		vec.x = -50;
-		vec.y = rand() % static_cast<int>(screenSize.y / 2.f);
+		pos.x = -marginX;
+		pos.y = static_cast<float>(rand() % static_cast<int>(screenSize.y / 2.f));
 		break;
+
 	case 2: // 오른쪽
-		vec.x = static_cast<int>(screenSize.x) + 50;
-		vec.y = rand() % static_cast<int>(screenSize.y / 2.f);
+		pos.x = screenSize.x + marginX;
+		pos.y = static_cast<float>(rand() % static_cast<int>(screenSize.y / 2.f));
 		break;
+
 	default:
-		vec.x = 0;
-		vec.y = 0;
+		pos = Vector2{ 0.f, 0.f };
 		break;
 	}
-	return vec;
+
+	return pos;
 }
 
 

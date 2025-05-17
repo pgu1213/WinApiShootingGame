@@ -13,7 +13,7 @@
 #include "../../02.Component/Collider.h"
 #include "../../02.Component/Rigidbody.h"
 
-CBullet::CBullet(CActor& _shooter, float _damage) : m_shooter(_shooter), m_damage(_damage)
+CBullet::CBullet(CActor& _shooter, float _damage, float _speed) : m_shooter(_shooter), m_damage(_damage), m_speed(_speed)
 {
 }
 
@@ -29,7 +29,7 @@ void CBullet::Init(Entity id, EntityType type)
 	const Transform& shooterTransform = m_shooter.GetComponent<TransformSystem>()->GetData();
 
 	Transform* transform = new Transform{ shooterTransform.position, 0.f, Vector2{30.f, 30.f} };
-	Rigidbody* rigid = new Rigidbody{ Vector2{0.f, -100.f} };
+	Rigidbody* rigid = new Rigidbody{ Vector2{m_speed, m_speed}};
 	Collider* collider = new Collider{ {0.f, 0.f}, transform->scale };
 
 	TransformSystem* transformSystem = new TransformSystem(this, transform);
@@ -79,20 +79,11 @@ void CBullet::Release()
 {
 }
 
-void CBullet::SetBulletDestination(CActor* target)
+void CBullet::SetBulletDirection(Vector2 _dir)
 {
-	Vector2 shooterPos = m_shooter.GetComponent<TransformSystem>()->GetData().position;
-
-	Vector2 targetPos = target->GetComponent<TransformSystem>()->GetData().position;
-
-	Vector2 vec = { targetPos.x - shooterPos.x , targetPos.y - shooterPos.y };
-	Vector2 dir = Normalize(vec);
-	Vector2 vel = Vector2{ dir.x * 80.f, dir.y * 80.f };
-
+	Vector2 vel = Vector2{ _dir.x * m_speed, _dir.y * m_speed };
 	Rigidbody* rigid = new Rigidbody{ vel };
-
 	GetComponent<RigidbodySystem>()->GetData() = *rigid;
-
 }
 float CBullet::GetDamage()
 {

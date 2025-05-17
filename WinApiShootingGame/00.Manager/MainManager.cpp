@@ -34,6 +34,7 @@ void MainManager::LateInit()
 	ResourceManager::GetInstance()->LoadSprite(L"05.Resource/01.Sprite/Fly.png");
 	ResourceManager::GetInstance()->LoadSprite(L"05.Resource/01.Sprite/Bullet.png");
 	ResourceManager::GetInstance()->LoadSprite(L"05.Resource/01.Sprite/EnemyTest.png");
+	ResourceManager::GetInstance()->LoadSprite(L"05.Resource/01.Sprite/CBoss1.png");
 }
 
 void MainManager::Update()

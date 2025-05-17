@@ -23,6 +23,7 @@ private:
 	Entity CreateEntity();
 	void GeneratePlayer();
 	void GenerateEnemy();	
+	void GenerateBoss1();
 
 	void AddEntityTable(Entity id, CActor* obj);
 	void RemoveEntity(Entity id);
@@ -40,7 +41,7 @@ public:
 	const EntityTable* GetEntityTable();
 	void AddRemoveVector(Entity id);
 
-	CActor* SpawnBullet(Entity shooterId, float _damage);
-	CActor* SpawnBullet(Entity shooterId, float _damage, Entity targetId);
+	CActor* SpawnBullet(Entity shooterId, float _damage, float _speed, Vector2 bulletDirection);
+
 };
 

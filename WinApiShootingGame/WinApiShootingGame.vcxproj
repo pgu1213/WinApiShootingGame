@@ -144,6 +144,7 @@
     <ClInclude Include="01.Object\02.Player\CPlayer.h" />
     <ClInclude Include="01.Object\99_EnemyMove\FixedPath\EnemyMove_FixedPathMove.h" />
     <ClInclude Include="01.Object\99_EnemyMove\Static\EnemyMove_StaticMove.h" />
+    <ClInclude Include="01.Object\IBulletType.h" />
     <ClInclude Include="01.Object\IEnemyMove.h" />
     <ClInclude Include="02.Component\Collider.h" />
     <ClInclude Include="02.Component\CoolTime.h" />
@@ -166,14 +167,18 @@
     <ClInclude Include="01.Object\01.Actor\CActor.h" />
     <ClInclude Include="01.Object\03_Bullet\CBullet.h" />
     <ClInclude Include="01.Object\04_Enemy\CEnemy.h" />
+    <ClInclude Include="01.Object\05_Boss\CBoss1.h" />
+    <ClInclude Include="01.Object\98_BulletType\02.CircleBullet\CircleBullet.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="00.Manager\MainManager.h" />
     <ClInclude Include="00.Manager\01.GameManager\GameManager.h" />
     <ClInclude Include="01.Object\00.Default\CObject.h" />
+    <ClInclude Include="01.Object\98_BulletType\01.NWayBullet\NWayBullet.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="01.Object\99_EnemyMove\RandomMove\EnemyMove_RandomMove.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="00.Manager\02.SceneManager\SceneManager.h" />
+    <ClInclude Include="01.Object\98_BulletType\00.SingleBullet\SingleBullet.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Client.h" />
     <ClInclude Include="00.Manager\03.TimeManager\TimeManager.h" />
@@ -198,6 +203,9 @@
     <ClCompile Include="01.Object\01.Actor\CActor.cpp" />
     <ClCompile Include="01.Object\03_Bullet\CBullet.cpp" />
     <ClCompile Include="01.Object\04_Enemy\CEnemy.cpp" />
+    <ClCompile Include="01.Object\05_Boss\CBoss1.cpp" />
+    <ClCompile Include="01.Object\98_BulletType\01.NWayBullet\NWayBullet.cpp" />
+    <ClCompile Include="01.Object\98_BulletType\02.CircleBullet\CircleBullet.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -208,6 +216,7 @@
     <ClCompile Include="00.Manager\03.TimeManager\TimeManager.cpp" />
     <ClCompile Include="00.Manager\02.SceneManager\SceneManager.cpp" />
     <ClCompile Include="01.Object\99_EnemyMove\RandomMove\EnemyMove_RandomMove.cpp" />
+    <ClCompile Include="01.Object\98_BulletType\00.SingleBullet\SingleBullet.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="WinApiShootingGame.rc" />
