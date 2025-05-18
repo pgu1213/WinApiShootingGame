@@ -89,18 +89,18 @@ void CEnemy::Init(Entity id, EntityType type)
 	if (spawnPoint.y < 0)  // 위에서 스폰
 	{
 		float targetX = spawnPoint.x;
-		float targetY = 100.f + static_cast<float>(rand() % 101);
+		float targetY = 100.f + static_cast<float>(rand() % 301);
 		moveDestination = Vector2{ targetX, targetY };
 	}
 	else if (spawnPoint.x < 0)  // 왼쪽에서 스폰
 	{
-		float targetX = 100.f + static_cast<float>(rand() % 101);
+		float targetX = 100.f + static_cast<float>(rand() % 301);
 		float targetY = spawnPoint.y;
 		moveDestination = Vector2{ targetX, targetY };
 	}
 	else if (spawnPoint.x > screenSize.x)  // 오른쪽에서 스폰
 	{
-		float targetX = screenSize.x - (100.f + static_cast<float>(rand() % 101));
+		float targetX = screenSize.x - (100.f + static_cast<float>(rand() % 301));
 		float targetY = spawnPoint.y;
 		moveDestination = Vector2{ targetX, targetY };
 	}

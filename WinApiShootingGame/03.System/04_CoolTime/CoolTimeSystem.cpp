@@ -24,7 +24,7 @@ void CoolTimeSystem::AddTimer(const string& key, float coolTime, function<void()
     timer.coolTime = coolTime;
     timer.currentTime = 0.0f;
     timer.isActive = false;
-    timer.onCompleteEvent = onComplete;
+    timer.onActiveEvent = onComplete;
 
     timerMap[key] = timer;
 }
@@ -41,20 +41,20 @@ void CoolTimeSystem::StartCooldown(const std::string& key)
 
 void CoolTimeSystem::Update(float deltaTime)
 {
-    for (auto& [key, timer] : timerMap)
+    for (auto& timer : timerMap)
     {
-        if (!timer.isActive)
+        if (!timer.second.isActive)
             continue;
 
-        timer.currentTime += deltaTime;
+        timer.second.currentTime += deltaTime;
 
-        if (timer.currentTime >= timer.coolTime)
+        if (timer.second.currentTime >= timer.second.coolTime)
         {
-            timer.isActive = false;
-            timer.currentTime = timer.coolTime;
+            timer.second.isActive = false;
+            timer.second.currentTime = timer.second.coolTime;
 
-            if (timer.onCompleteEvent)
-                timer.onCompleteEvent();
+            if (timer.second.onActiveEvent)
+                timer.second.onActiveEvent();
         }
     }
 }
