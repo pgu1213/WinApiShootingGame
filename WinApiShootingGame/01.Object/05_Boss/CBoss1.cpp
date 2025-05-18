@@ -92,7 +92,7 @@ void CBoss1::Init(Entity id, EntityType type)
 
 	rigidSystem->AddEvent([=]() {
 		Vector2 currentPos = transform->position;
-		Vector2 currentScale = transform->scale;
+  		Vector2 currentScale = transform->scale;
 
 		float distToTarget = GetDistance(currentPos, moveDestination);
 		if (distToTarget < 5.f && isMoveAble)
