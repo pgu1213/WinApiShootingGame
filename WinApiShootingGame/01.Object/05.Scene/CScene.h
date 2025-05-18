@@ -16,6 +16,7 @@ public:
 protected:
     void GeneratePlayer();
     void GenerateEnemy();
+    void GenerateBoss1();
 
     void AddEntityTable(Entity id, CActor* obj);
     void RemoveEntity(Entity id);
