@@ -27,5 +27,7 @@ public:
 public:
 	static Vector2 GetScreenSize();
 	Entity CreateEntity();
+private:
+	void CheckStageClear();
 };
 

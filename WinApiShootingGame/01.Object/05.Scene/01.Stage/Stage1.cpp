@@ -14,6 +14,4 @@ void Stage1::Init(Entity id, EntityType type)
     GeneratePlayer();
 
     GenerateEnemy();
-    GenerateEnemy();
-    GenerateEnemy();
 }

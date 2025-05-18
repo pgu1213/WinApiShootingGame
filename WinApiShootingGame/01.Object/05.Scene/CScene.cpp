@@ -56,7 +56,6 @@ void CScene::Render(HDC hdc)
 
 void CScene::Release()
 {
-    // 장면에 있는 모든 오브젝트 메모리 해제
     for (auto& obj : m_SceneObjectList)
     {
         if (obj.second) // 유효성 체크

@@ -6,10 +6,7 @@
 
 #include "../../01.Object/00.Default/CObject.h"
 #include "../../01.Object/01.Actor/CActor.h"
-#include "../../01.Object/02.Player/CPlayer.h"
-#include "../../01.Object/03_Bullet/CBullet.h"
-#include "../../01.Object/04_Enemy/CEnemy.h"
-#include "../../01.Object/05_Boss/CBoss1.h"
+#include "../../01.Object/05.Scene/CScene.h"
 
 GameManager::GameManager()
 {
@@ -47,6 +44,8 @@ void GameManager::Update(float DeltaTime)
 	SceneManager::GetInstance()->Update(DeltaTime);
 
 	collisionManager->ProcessCollisions();
+
+	CheckStageClear();
 }
 
 void GameManager::Render(HDC hdc)
@@ -86,6 +85,26 @@ void GameManager::Render(HDC hdc)
 Entity GameManager::CreateEntity()
 {
 	return ++currentEntityID == NULL ? 0 : currentEntityID;
+}
+
+void GameManager::CheckStageClear()  
+{  
+   const auto* sceneObjectList = SceneManager::GetInstance()->GetCurrentScene()->GetSceneObjectList();  
+
+   if (sceneObjectList == nullptr)  
+   {  
+       return;  
+   }  
+
+   for (const auto& obj : *sceneObjectList)  
+   {  
+       if (obj.second->GetType() == EntityType::Enemy)
+       {  
+		   return;
+       } 
+   }
+   SceneManager::GetInstance()->ReleaseCurrentScene();
+   SceneManager::GetInstance()->ChangeScene("Stage2");
 }
 
 Vector2 GameManager::GetScreenSize()
