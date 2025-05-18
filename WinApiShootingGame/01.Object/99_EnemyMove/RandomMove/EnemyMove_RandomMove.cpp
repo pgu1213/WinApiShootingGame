@@ -28,30 +28,7 @@ Vector2 EnemyMove_RandomMove::GetNextPosition(const Vector2& nowPos, const Vecto
 
 	float minAngle = 0.f;
 	float maxAngle = 360.f;
-
-	// 이동 각도 설정
-	if (nowPos.x - dynamicRadius < moveMinX) {		//왼쪽
-		minAngle = -90.f;
-		maxAngle = 90.f;
-	}
-	else if (nowPos.x + dynamicRadius > moveMaxX) {	// 오른쪽
-		minAngle = 90.f;
-		maxAngle = 270.f;
-	}
-
-	if (nowPos.y - dynamicRadius < moveMinY) {		// 위쪽
-		minAngle = max(minAngle, 0.f);
-		maxAngle = min(maxAngle, 180.f);
-	}
-	else if (nowPos.y + dynamicRadius > moveMaxY) {	// 아래쪽
-		minAngle = max(minAngle, 180.f);
-		maxAngle = min(maxAngle, 360.f);
-	}
 	
-	if (maxAngle - minAngle < 0.01f) {
-		minAngle = 0.f;
-		maxAngle = 360.f;
-	}
 	// 랜덤 각도 계산 및 위치 리턴
 	float randFloat = static_cast<float>(rand()) / RAND_MAX;
 	
@@ -61,10 +38,10 @@ Vector2 EnemyMove_RandomMove::GetNextPosition(const Vector2& nowPos, const Vecto
 
 	Vector2 pos = { nowPos.x + dynamicRadius * cosf(rad), nowPos.y + dynamicRadius * sinf(rad) };
 
-	//if (pos.x < moveMinX || pos.x > moveMaxX || pos.y < moveMinY || pos.y > moveMaxY) {		
- //		pos.x = clamp(pos.x, moveMinX, moveMaxX);
-	//	pos.y = clamp(pos.y, moveMinY, moveMaxY);
-	//}
+	if (pos.x < moveMinX || pos.x > moveMaxX || pos.y < moveMinY || pos.y > moveMaxY) {		
+ 		pos.x = clamp(pos.x, moveMinX, moveMaxX);
+		pos.y = clamp(pos.y, moveMinY, moveMaxY);
+	}
 
 	return pos;
 }

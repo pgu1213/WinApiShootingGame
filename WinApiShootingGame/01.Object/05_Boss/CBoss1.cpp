@@ -47,7 +47,7 @@ CBoss1::~CBoss1()
 void CBoss1::Init(Entity id, EntityType type)
 {
 
-	moveLogic = new EnemyMove_RandomMove(600.f,0,0,0,100);
+	moveLogic = new EnemyMove_RandomMove(600.f,0,0,0,50);
 
 	bulletType.resize((int)BulletType::None);
 
@@ -76,7 +76,7 @@ void CBoss1::Init(Entity id, EntityType type)
 	m_componentTable[typeid(SpriteRendererSystem)] = spriteSystem;
 
 	Vector2 screenSize = GameManager::GetInstance()->GetScreenSize();
-	transform->position = Vector2{ screenSize.x / 2.f, 0.f - transform->scale.y };
+	transform->position = Vector2{ screenSize.x / 2.f, -transform->scale.y };
 
 	moveDestination = Vector2{ transform->position.x, transform->scale.y / 2.f };
 
