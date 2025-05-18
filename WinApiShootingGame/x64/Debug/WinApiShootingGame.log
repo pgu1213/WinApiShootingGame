@@ -1,4 +1,50 @@
-﻿  Stage1.cpp
+﻿  GameManager.cpp
+C:\Dev\WinApiShootingGame\WinApiShootingGame\00.Manager\01.GameManager\GameManager.cpp(59,74): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Dev\WinApiShootingGame\WinApiShootingGame\00.Manager\01.GameManager\GameManager.cpp(59,60): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Dev\WinApiShootingGame\WinApiShootingGame\00.Manager\01.GameManager\GameManager.cpp(70,38): warning C4838: 'float'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+C:\Dev\WinApiShootingGame\WinApiShootingGame\00.Manager\01.GameManager\GameManager.cpp(70,38): warning C4244: '초기화 중': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Dev\WinApiShootingGame\WinApiShootingGame\00.Manager\01.GameManager\GameManager.cpp(70,52): warning C4838: 'float'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+C:\Dev\WinApiShootingGame\WinApiShootingGame\00.Manager\01.GameManager\GameManager.cpp(70,52): warning C4244: '초기화 중': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Dev\WinApiShootingGame\WinApiShootingGame\00.Manager\01.GameManager\GameManager.cpp(77,44): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Dev\WinApiShootingGame\WinApiShootingGame\00.Manager\01.GameManager\GameManager.cpp(77,30): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  SceneManager.cpp
+  CollisionManager.cpp
+C:\Dev\WinApiShootingGame\WinApiShootingGame\03.System\02_Collider\ColliderSystem.h(3,8): warning C4099: 'Collider': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  (소스 파일 '00.Manager/05.CollisionManager/CollisionManager.cpp'을(를) 컴파일하는 중)
+      C:\Dev\WinApiShootingGame\WinApiShootingGame\00.Manager\05.CollisionManager\CollisionManager.h(4,7):
+      'Collider' 선언을 참조하십시오.
+  
+C:\Dev\WinApiShootingGame\WinApiShootingGame\03.System\00_Transform\TransformSystem.h(2,8): warning C4099: 'Transform': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  (소스 파일 '00.Manager/05.CollisionManager/CollisionManager.cpp'을(를) 컴파일하는 중)
+      C:\Dev\WinApiShootingGame\WinApiShootingGame\00.Manager\05.CollisionManager\CollisionManager.h(3,7):
+      'Transform' 선언을 참조하십시오.
+  
+C:\Dev\WinApiShootingGame\WinApiShootingGame\02.Component\Collider.h(5,8): warning C4099: 'Collider': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  (소스 파일 '00.Manager/05.CollisionManager/CollisionManager.cpp'을(를) 컴파일하는 중)
+      C:\Dev\WinApiShootingGame\WinApiShootingGame\02.Component\Collider.h(5,8):
+      'Collider' 선언을 참조하십시오.
+  
+C:\Dev\WinApiShootingGame\WinApiShootingGame\02.Component\Transform.h(4,8): warning C4099: 'Transform': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  (소스 파일 '00.Manager/05.CollisionManager/CollisionManager.cpp'을(를) 컴파일하는 중)
+      C:\Dev\WinApiShootingGame\WinApiShootingGame\02.Component\Transform.h(4,8):
+      'Transform' 선언을 참조하십시오.
+  
+  CBullet.cpp
+C:\Dev\WinApiShootingGame\WinApiShootingGame\01.Object\03_Bullet\CBullet.cpp(9,10): warning C4067: 전처리기 지시문 다음에 예기치 않은 토큰이 있습니다. 줄 바꿈 문자가 필요합니다.
+  CEnemy.cpp
+C:\Dev\WinApiShootingGame\WinApiShootingGame\01.Object\04_Enemy\CEnemy.cpp(143,54): warning C4244: '-=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Dev\WinApiShootingGame\WinApiShootingGame\01.Object\04_Enemy\CEnemy.cpp(158,52): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Stage1.cpp
+  Stage2.cpp
   CScene.cpp
+  CBoss1.cpp
+C:\Dev\WinApiShootingGame\WinApiShootingGame\01.Object\05_Boss\CBoss1.cpp(117,54): warning C4244: '-=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Dev\WinApiShootingGame\WinApiShootingGame\01.Object\05_Boss\CBoss1.cpp(132,52): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Dev\WinApiShootingGame\WinApiShootingGame\01.Object\05_Boss\CBoss1.cpp(142,50): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Dev\WinApiShootingGame\WinApiShootingGame\01.Object\05_Boss\CBoss1.cpp(152,52): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  SingleBullet.cpp
+  NWayBullet.cpp
+C:\Dev\WinApiShootingGame\WinApiShootingGame\01.Object\98_BulletType\01.NWayBullet\NWayBullet.cpp(8,90): warning C4244: '초기화 중': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  CircleBullet.cpp
   코드를 생성하고 있습니다...
   WinApiShootingGame.vcxproj -> C:\Dev\WinApiShootingGame\x64\Debug\WinApiShootingGame.exe

@@ -86,6 +86,16 @@ void CScene::GenerateEnemy()
     obj->Init(enemyId, EntityType::Enemy);
 }
 
+void CScene::GenerateBoss1()
+{
+    Entity bossId = GameManager::GetInstance()->CreateEntity();
+    CActor* obj = new CBoss1();
+    AddEntityTable(bossId, obj);
+
+    static_cast<CEnemy*>(obj)->SetTarget(playerId);
+    obj->Init(bossId, EntityType::Enemy);
+}
+
 CActor* CScene::SpawnBullet(Entity shooterId, float _damage, float _speed, Vector2 bulletDirection)
 {
     Entity bulletId = GameManager::GetInstance()->CreateEntity();
