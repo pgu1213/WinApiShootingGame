@@ -1,12 +1,13 @@
 #include "../../pch.h"
 #include "CollisionManager.h"
-#include "../01.GameManager/GameManager.h"
+#include "../02.SceneManager/SceneManager.h"
+#include "../../01.Object/05.Scene/CScene.h"
 #include "../../03.System/02_Collider/ColliderSystem.h"
 #include "../../03.System/00_Transform/TransformSystem.h"
 #include "../../02.Component/Collider.h"
 #include "../../02.Component/Transform.h"
 
-CollisionManager::CollisionManager(GameManager* gameMgr):gameManager(gameMgr)
+CollisionManager::CollisionManager(SceneManager* sceneMgr) :sceneManager(sceneMgr)
 {
 
 }
@@ -50,9 +51,9 @@ void CollisionManager::ProcessCollisions()
 {
     vector<CActor*> entities;
 
-    for (auto& obj : *gameManager->GetEntityTable()) {
-        if (obj.second->GetComponent<ColliderSystem>() && obj.second->GetComponent<TransformSystem>()) {
-            entities.push_back(obj.second);
+    for (auto& [id, obj] : *sceneManager->GetCurrentScene()->GetSceneObjectList()) {
+        if (obj->GetComponent<ColliderSystem>() && obj->GetComponent<TransformSystem>()) {
+            entities.push_back(obj);
         }
     }
 

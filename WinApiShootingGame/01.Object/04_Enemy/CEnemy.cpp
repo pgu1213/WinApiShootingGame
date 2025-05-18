@@ -1,6 +1,7 @@
 #include "../../pch.h"
 #include "CEnemy.h"
 #include "../../00.Manager/01.GameManager/GameManager.h"
+#include "../../00.Manager/02.SceneManager/SceneManager.h"
 #include "../../03.System/ComponentSystem.h"
 
 #include "../../03.System/00_Transform/TransformSystem.h"
@@ -15,6 +16,7 @@
 #include "../../02.Component/Rigidbody.h"
 #include "../../02.Component/CoolTime.h"
 
+#include "../05.Scene/CScene.h"
 #include "../03_Bullet/CBullet.h"
 #include "../IBulletType.h"
 #include "../98_BulletType/00.SingleBullet/SingleBullet.h"
@@ -141,9 +143,9 @@ void CEnemy::Init(Entity id, EntityType type)
 			currentHP -= static_cast<CBullet*>(obj)->GetDamage();
 			if (currentHP <= 0) {
 				m_bIsValid = false;
-				GameManager::GetInstance()->AddRemoveVector(id);
+				SceneManager::GetInstance()->GetCurrentScene()->AddRemoveVector(id);
 			}
-			GameManager::GetInstance()->AddRemoveVector(obj->GetId());
+			SceneManager::GetInstance()->GetCurrentScene()->AddRemoveVector(obj->GetId());
 		}
 		});
 
@@ -244,7 +246,7 @@ CActor* CEnemy::GetTarget()
 
 void CEnemy::SetTarget(Entity id)
 {
-	target = GameManager::GetInstance()
-		->GetEntityTable()->find(id)->second;
+	target = SceneManager::GetInstance()->GetCurrentScene()
+		->GetSceneObjectList()->find(id)->second;
 }
 

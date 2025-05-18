@@ -1,11 +1,11 @@
 #pragma
 #include "../99.SingTonManager/SingTonManager.h"
 
-class CObject;
+class CScene;
 
 class SceneManager : public SingleTon<SceneManager>
 {
-friend class SingleTon<SceneManager>;
+	friend class SingleTon<SceneManager>;
 private:
 	explicit SceneManager();
 public:
@@ -13,15 +13,15 @@ public:
 public:
 	void Init();
 	void Release();
-	void Update();
+	void Update(float DeltaTime);
 	void Render(HDC hdc);
-
-	// 씬을 추가하는 함수
-	// 씬 이름과 씬 객체를 매개변수로 받아서 SceneList에 추가
-	// 씬에 object을 추가하는 함수
+public:
+	void AddScene(CScene* Scene);
+	bool ChangeScene(const std::string& sceneName);
+	CScene* GetCurrentScene() const;
+	void ReleaseCurrentScene();
 private:
-	CObject* m_pCurrentScene;
-	CObject* m_pNextScene;
-	map<string, CObject*> SceneList;
+	CScene* m_pCurrentScene;
+	map<string, CScene*> m_SceneList;
 };
 

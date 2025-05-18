@@ -10,9 +10,6 @@ class GameManager : public SingleTon<GameManager>
 {
 	friend class SingleTon<GameManager>;
 private:
-	EntityTable m_entityTable;
-	vector<Entity> removeEntityVec;
-
 	CollisionManager* collisionManager;
 
 	Entity playerId;
@@ -20,28 +17,17 @@ private:
 	HDC hdc;
 
 private:
-	Entity CreateEntity();
-	void GeneratePlayer();
-	void GenerateEnemy();	
-	void GenerateBoss1();
-
-	void AddEntityTable(Entity id, CActor* obj);
-	void RemoveEntity(Entity id);
-
-private:
 	explicit GameManager();
 public:
-	virtual ~GameManager();	
+	virtual ~GameManager();
 public:
 	bool Init();
 	void Update(float DeltaTime);
 	void Render(HDC hdc);
-public:	
+public:
 	static Vector2 GetScreenSize();
-	const EntityTable* GetEntityTable();
-	void AddRemoveVector(Entity id);
-
-	CActor* SpawnBullet(Entity shooterId, float _damage, float _speed, Vector2 bulletDirection);
-
+	Entity CreateEntity();
+private:
+	void CheckStageClear();
 };
 
