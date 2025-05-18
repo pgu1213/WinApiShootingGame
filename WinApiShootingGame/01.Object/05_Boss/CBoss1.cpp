@@ -83,7 +83,7 @@ void CBoss1::Init(Entity id, EntityType type)
 	isEnteringScreen = true;
 
 	CActor::Init(id, type);
-
+  
 	render = dynamic_cast<IRenderer*>(m_componentTable[typeid(SpriteRendererSystem)]);
 
 	SpriteRenderer& playerSpriteData = spriteSystem->GetModifyData();

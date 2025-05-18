@@ -1,16 +1,5 @@
-﻿  CPlayer.cpp
-C:\Users\seif4\Documents\GitHub\WinApiShootingGame\WinApiShootingGame\01.Object\02.Player\CPlayer.cpp(9,10): warning C4067: 전처리기 지시문 다음에 예기치 않은 토큰이 있습니다. 줄 바꿈 문자가 필요합니다.
-C:\Users\seif4\Documents\GitHub\WinApiShootingGame\WinApiShootingGame\01.Object\02.Player\CPlayer.cpp(93,16): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\seif4\Documents\GitHub\WinApiShootingGame\WinApiShootingGame\01.Object\02.Player\CPlayer.cpp(94,16): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\seif4\Documents\GitHub\WinApiShootingGame\WinApiShootingGame\01.Object\02.Player\CPlayer.cpp(119,27): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  CEnemy.cpp
-C:\Users\seif4\Documents\GitHub\WinApiShootingGame\WinApiShootingGame\01.Object\04_Enemy\CEnemy.cpp(143,54): warning C4244: '-=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\seif4\Documents\GitHub\WinApiShootingGame\WinApiShootingGame\01.Object\04_Enemy\CEnemy.cpp(158,52): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  CBoss1.cpp
-C:\Users\seif4\Documents\GitHub\WinApiShootingGame\WinApiShootingGame\01.Object\05_Boss\CBoss1.cpp(117,54): warning C4244: '-=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\seif4\Documents\GitHub\WinApiShootingGame\WinApiShootingGame\01.Object\05_Boss\CBoss1.cpp(132,52): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\seif4\Documents\GitHub\WinApiShootingGame\WinApiShootingGame\01.Object\05_Boss\CBoss1.cpp(142,50): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\seif4\Documents\GitHub\WinApiShootingGame\WinApiShootingGame\01.Object\05_Boss\CBoss1.cpp(152,52): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  CoolTimeSystem.cpp
+﻿  SceneManager.cpp
+  Stage1.cpp
+  Stage2.cpp
   코드를 생성하고 있습니다...
-  WinApiShootingGame.vcxproj -> C:\Users\seif4\Documents\GitHub\WinApiShootingGame\x64\Debug\WinApiShootingGame.exe
+  WinApiShootingGame.vcxproj -> C:\Dev\WinApiShootingGame\x64\Debug\WinApiShootingGame.exe
