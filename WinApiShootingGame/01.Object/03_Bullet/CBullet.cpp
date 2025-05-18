@@ -26,8 +26,6 @@ CBullet::~CBullet()
 
 void CBullet::Init(Entity id, EntityType type)
 {
-	GameManager* mgr = GameManager::GetInstance();
-
 	const Transform& shooterTransform = m_shooter.GetComponent<TransformSystem>()->GetData();
 
 	Transform* transform = new Transform{ shooterTransform.position, 0.f, Vector2{30.f, 30.f} };

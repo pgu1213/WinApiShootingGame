@@ -16,10 +16,11 @@
 #include "../../02.Component/Collider.h"
 #include "../../02.Component/Rigidbody.h"
 
+#include "../03_Bullet/CBullet.h"
 #include "../IBulletType.h"
 #include "../../01.Object/98_BulletType/00.SingleBullet/SingleBullet.h"
 
-CPlayer::CPlayer() : m_inputManager(nullptr), bulletType(nullptr), currentHP(3), maxHP(3), speed(300.f), damage(1), m_direction(Vector2{ 0.f, 1.f }), bulletSpeed(-200.f), attackAble(true)
+CPlayer::CPlayer() : m_inputManager(nullptr), bulletType(nullptr), currentHP(4), maxHP(3), speed(300.f), damage(1), m_direction(Vector2{ 0.f, 1.f }), bulletSpeed(-200.f), attackAble(true)
 {
 }
 
@@ -75,7 +76,7 @@ void CPlayer::Init(Entity id, EntityType type)
 			transform->scale.y / 2,
 			GameManager::GetScreenSize().y - transform->scale.y / 2
 		);
-		});
+	});
 
 	//colliderSystem->SetOnCollisionEvent([=](CActor* obj) {
 	//	if (obj->GetType() == EntityType::EnemyBullet) {
@@ -101,7 +102,7 @@ void CPlayer::Init(Entity id, EntityType type)
 
 		rigid->velocity.x = inputVec.x * speed;
 		rigid->velocity.y = inputVec.y * speed;
-		});
+	});
 
 	coolTimeSystem->AddTimer("shoot", 0.3f, [=]() {
 		attackAble = true;

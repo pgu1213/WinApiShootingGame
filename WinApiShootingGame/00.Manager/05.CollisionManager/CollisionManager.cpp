@@ -51,9 +51,9 @@ void CollisionManager::ProcessCollisions()
 {
     vector<CActor*> entities;
 
-    for (auto& [id, obj] : *sceneManager->GetCurrentScene()->GetSceneObjectList()) {
-        if (obj->GetComponent<ColliderSystem>() && obj->GetComponent<TransformSystem>()) {
-            entities.push_back(obj);
+    for (auto& obj : *sceneManager->GetCurrentScene()->GetSceneObjectList()) {
+        if (obj.second->GetComponent<ColliderSystem>() && obj.second->GetComponent<TransformSystem>()) {
+            entities.push_back(obj.second);
         }
     }
 
@@ -66,6 +66,7 @@ void CollisionManager::ProcessCollisions()
             auto* bCol = b->GetComponent<ColliderSystem>();
             auto* aTrans = a->GetComponent<TransformSystem>();
             auto* bTrans = b->GetComponent<TransformSystem>();
+
             const Collider& colliderA = aCol->GetData();
             const Collider& colliderB = bCol->GetData();
 

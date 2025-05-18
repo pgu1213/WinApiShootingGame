@@ -16,7 +16,7 @@ const unordered_map<string, int>& InputManager::GetKeyBindings() const
     return m_keyBindings;
 }
 
-int InputManager::GetAxis(const std::string& axisName) const {
+int InputManager::GetAxis(const string& axisName) const {
     int value = 0;
 
     auto it = m_axisKeyBindings.find(axisName);
