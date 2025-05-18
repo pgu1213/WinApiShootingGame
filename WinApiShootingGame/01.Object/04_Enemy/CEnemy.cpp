@@ -229,14 +229,14 @@ Vector2 CEnemy::GetMoveTward(Vector2 current, Vector2 target)
 
 void CEnemy::Release()
 {
-	delete moveLogic;
+    delete moveLogic;
 	moveLogic = nullptr;
 
 	for (auto& iter : bulletType)
 	{
 		delete iter;
 	}
-	bulletType.clear();
+ 	bulletType.clear();
 }
 
 CActor* CEnemy::GetTarget()

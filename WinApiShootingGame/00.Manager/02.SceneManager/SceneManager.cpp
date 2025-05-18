@@ -97,7 +97,7 @@ void SceneManager::ReleaseCurrentScene()
 {
     if (m_pCurrentScene)
     {
-        m_pCurrentScene->Release();
+        delete m_pCurrentScene;
         m_pCurrentScene = nullptr;
     }
 }
