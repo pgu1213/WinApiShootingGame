@@ -60,7 +60,6 @@ void CScene::Release()
     {
         if (obj.second) // 유효성 체크
         {
-            obj.second->Release(); // 오브젝트 정리 함수 호출
             delete obj.second; // 메모리 해제
         }
     }

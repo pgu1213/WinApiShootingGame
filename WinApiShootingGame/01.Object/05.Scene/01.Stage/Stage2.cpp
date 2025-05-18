@@ -16,7 +16,6 @@ void Stage2::Init(Entity id, EntityType type)
     GenerateEnemy();
     GenerateEnemy();
     GenerateEnemy();
-    GenerateEnemy();
-    GenerateEnemy();
-    GenerateEnemy();
+
+    GenerateBoss1();
 }

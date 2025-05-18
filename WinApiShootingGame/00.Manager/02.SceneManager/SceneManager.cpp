@@ -80,7 +80,7 @@ bool SceneManager::ChangeScene(const std::string& sceneName)
 
     m_pCurrentScene = NextScene;
 
-    // 새 장면 초기화
+    // 새로운 씬 초기화
     if (m_pCurrentScene)
     {
         Entity SceneId = GameManager::GetInstance()->CreateEntity();
@@ -97,7 +97,7 @@ void SceneManager::ReleaseCurrentScene()
 {
     if (m_pCurrentScene)
     {
-        m_pCurrentScene->Release();
+        delete m_pCurrentScene;
         m_pCurrentScene = nullptr;
     }
 }
